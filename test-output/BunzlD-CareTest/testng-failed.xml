@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [BunzlD-CareTest]">
+  <parameter name="PDFRequiredPerTestCase" value="True"/>
+  <parameter name="site" value="D-Care"/>
+  <parameter name="selenium.host" value="localhost"/>
+  <parameter name="testcasename" value="ConsolidatedPDF"/>
+  <parameter name="channel" value="D_Care-NL-Test"/>
+  <parameter name="selenium.browser.version" value="36"/>
+  <parameter name="locale" value="nl-NL"/>
+  <parameter name="comchannel" value="COM-D_Care-Test"/>
+  <parameter name="selenium.browser" value="firefox"/>
+  <parameter name="platform" value="Desktop"/>
+  <test name="DeleteAllOrderTemplates(failed)">
+    <classes>
+      <class name="com.eperium.jumpstart.JumpStartTestSuite">
+        <methods>
+          <include name="setUpBeforeclass"/>
+          <include name="deleteAllOrderTemplate"/>
+          <include name="setupBeforeSuite"/>
+          <include name="setupAfterSuite"/>
+          <include name="setupAfterTest"/>
+        </methods>
+      </class> <!-- com.eperium.jumpstart.JumpStartTestSuite -->
+    </classes>
+  </test> <!-- DeleteAllOrderTemplates(failed) -->
+</suite> <!-- Failed suite [BunzlD-CareTest] -->

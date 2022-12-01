@@ -1,0 +1,260 @@
+<channel>
+	<modules>
+	<module name="siteNavigationModule" id="siteNavigationModule">
+		
+			<method name="enterAndSearchStringDoubleWord" id ="enterAndSearchStringDoubleWord">
+				<textbox id="signInCredentials">
+					<text id="searchTerm_Header" name="searchTerm_Header">a b</text>
+				</textbox>
+				<click>
+				  	<button id="search" name="search" value="//*[@class='primary small searchClick']">
+						<verifyText>
+							<visibleTextElement id="confirmationText2">//label[@class='left']</visibleTextElement>
+						</verifyText>
+					</button>
+				</click>
+				<timeout id="timeout" name="timeout">10</timeout>
+			</method>
+			
+			
+			<method name="enterAndSearchStringDoubleWordWithAnd" id ="enterAndSearchStringDoubleWordWithAnd">
+				<textbox id="signInCredentials">
+					<text id="searchTerm_Header" name="searchTerm_Header">b and c</text>
+				</textbox>
+				<click>
+				  	<button id="search" name="search" value="//*[@class='primary small searchClick']">
+						<verifyText>
+							<visibleTextElement id="confirmationText2">//label[@class='left']</visibleTextElement>
+						</verifyText> 
+					</button>
+				</click>
+				<timeout id="timeout" name="timeout">10</timeout>
+			</method>
+			
+			<method name="enterAndSearchPitem" id ="enterAndSearchPitem">
+				<textbox id="signInCredentials">
+					<text id="searchTerm_Header" name="searchTerm_Header">112227</text>
+				</textbox>
+				<click>
+				  	<button id="SearchButtonClick" name="SearchButtonClick" value="//*[@class='primary small searchClick']">
+						<verifyText>
+							<visibleTextElement id="confirmationText2">//*[@class='rwd-desktop right']</visibleTextElement>
+						</verifyText>
+					</button>
+				</click>
+				<timeout id="timeout" name="timeout">10</timeout>
+			</method>			
+			
+			<method name="enterAndSearchStringSpecialCharacters" id ="enterAndSearchStringSpecialCharacters">
+				<textbox id="signInCredentials">
+					<text id="searchTerm_Header" name="searchTerm_Header">bakker*</text>
+				</textbox>
+				<click>
+				  	<button id="search" name="search" value="//*[@class='primary small searchClick']">
+						<verifyText>
+							<visibleTextElement id="confirmationText2">//label[@class='left']</visibleTextElement>
+						</verifyText>
+					</button>
+				</click>
+				<timeout id="timeout" name="timeout">10</timeout>
+			</method>
+			
+			<method name="enterAndSearchStringNoProductFound" id ="enterAndSearchStringNoProductFound">
+				<textbox id="signInCredentials">
+					<text id="searchTerm_Header" name="searchTerm_Header">abcdefgh</text>
+				</textbox>
+				<click>
+				  	<button id="search" name="search" value="//*[@class='primary small searchClick']">
+						<verifyText>
+							<visibleTextElement id="confirmationText2">//*[@class='ish-search-noResults grid-12']</visibleTextElement>
+						</verifyText>
+					</button>
+				</click>
+				<timeout id="timeout" name="timeout">10</timeout>
+			</method>
+			
+			<method name="enterAndSearchStringSingleWord" id ="enterAndSearchStringSingleWord">
+				<textbox id="signInCredentials">
+					<text id="searchTerm_Header" name="searchTerm_Header">a</text>
+				</textbox>
+				<click>
+				  	<button id="search" name="search" value="//*[@class='primary small searchClick']">
+						<verifyText>
+							<visibleTextElement id="confirmationText2">//label[@class='left']</visibleTextElement>
+						</verifyText>
+					</button>
+				</click>
+				<timeout id="timeout" name="timeout">10</timeout>
+			</method>
+			
+			<method name="loginCustomerBuyer" id ="loginCustomerBuyer">
+				<textbox id="signInCredentials">
+					<text id="ShopLoginForm_Login" name="user">sprakash@salmon.com</text>
+					<text id="ShopLoginForm_Password" name ="password">Eperium123</text>
+				</textbox>
+				<click>
+				<button id="loginButton" name="loginButton" value="//*[@class='ish-field-buttonGroup']/button">
+						<verifyText>
+							<visibleTextElement id="confirmationText2">//*[@class='breadcrumb rwd-tablet rwd-desktop']</visibleTextElement>
+							<visibleTextElement id="confirmationText2">//*[@class='grid-6']</visibleTextElement>
+						</verifyText>
+					</button>
+				</click>
+				<timeout id="timeout" name="timeout">5</timeout>
+			</method>
+			
+			
+			<method name="verifyCustomer" id ="verifyCustomer">	
+				<elements>
+					<element id="GetValue" name="GetValue" value="//*[@id='preferredDelivery']"/>
+				</elements>						
+				<verifyText>
+					<visibleTextElement id="confirmationText2">//*[@class='breadcrumb rwd-tablet rwd-desktop']</visibleTextElement>
+					<visibleTextElement id="confirmationText2">//*[@class='grid-6']</visibleTextElement>
+				</verifyText>				
+				<timeout id="timeout" name="timeout">5</timeout>
+			</method>
+			
+
+			<method name="loginCustomerApprover" id ="loginCustomerApprover">
+				<textbox id="signInCredentials">
+					<text id="ShopLoginForm_Login" name="user">sprakash@salmon.com</text>
+					<text id="ShopLoginForm_Password" name ="password">Eperium123</text>
+				</textbox>
+				<click>
+					<button id="loginButton" name="loginButton" value="//*[@class='ish-field-buttonGroup']/button">
+					
+					<verifyText>
+					<visibleTextElement id="confirmationText2">//*[@class='breadcrumb rwd-tablet rwd-desktop']</visibleTextElement>
+					<visibleTextElement id="confirmationText2">//*[@id='preferredDelivery']</visibleTextElement>
+					</verifyText>
+					</button>
+				</click>
+				<timeout id="timeout" name="timeout">5</timeout>
+			</method>
+
+
+			<method name="loginCustomerAccountAdmin" id ="loginCustomerAccountAdmin">
+				<textbox id="signInCredentials">
+					<text id="ShopLoginForm_Login" name="user">sprakash@salmon.com</text>
+					<text id="ShopLoginForm_Password" name ="password">Eperium123</text>
+				</textbox>
+				<click>
+					<button id="loginButton" name="loginButton" value="//*[@class='ish-field-buttonGroup']/button">
+					<verifyText>
+					<visibleTextElement id="confirmationText2">//*[@class='breadcrumb rwd-tablet rwd-desktop']</visibleTextElement>
+					<visibleTextElement id="confirmationText2">//*[@id='preferredDelivery']</visibleTextElement>
+					</verifyText>
+					</button>
+				</click>
+				<timeout id="timeout" name="timeout">5</timeout>
+			</method>
+			
+			<method name="loginProspect" id ="loginProspect">
+				<textbox id="signInCredentials">
+					<text id="ShopLoginForm_Login" name="user">prospect@salmon.com</text>
+					<text id="ShopLoginForm_Password" name ="password">Eperium123</text>
+				</textbox>
+				<click>
+					<button id="loginButton" name="loginButton" value="//*[@class='ish-field-buttonGroup']/button">
+						<verifyText>
+							<visibleTextElement id="confirmationText2">//*[@class='breadcrumb rwd-tablet rwd-desktop']</visibleTextElement>
+							<visibleTextElement id="confirmationText2">//*[@class='grid-6']</visibleTextElement>
+						</verifyText>
+					</button>
+				</click>
+				<timeout id="timeout" name="timeout">5</timeout>
+			</method>
+		
+			<method name="loginCustomer" id ="loginCustomer">
+				<textbox id="signInCredentials">
+					<text id="ShopLoginForm_Login" name="user">sprakash@salmon.com</text>
+					<text id="ShopLoginForm_Password" name ="password">Eperium123</text>
+				</textbox>
+				<click>
+				<button id="loginButton" name="loginButton" value="//*[@class='ish-field-buttonGroup']/button">
+						<verifyText>
+							<visibleTextElement id="confirmationText2">//*[@class='breadcrumb rwd-tablet rwd-desktop']</visibleTextElement>
+							<visibleTextElement id="confirmationText2">//*[@class='grid-6']</visibleTextElement>
+						</verifyText>
+					</button>
+				</click>
+				<timeout id="timeout" name="timeout">5</timeout>
+			</method>
+			
+						<method name="goToContactUsPage" id ="goToContactUsPage">			
+				<click>
+					<button id="ContactUsButton" name="ContactUsButton" value="//*[@id='container']/header/div[4]/div[2]/ul/li[5]/a">
+						<verifyText>
+							<visibleTextElement id="confirmationText2">//*[@id='BunzlContactUsForm_CustomerName']</visibleTextElement>
+							<visibleTextElement id="confirmationText2">//*[@id='BunzlContactUsForm_Order']</visibleTextElement>
+							<visibleTextElement id="confirmationText2">//*[@id='BunzlContactUsForm_Email']</visibleTextElement>
+							<visibleTextElement id="confirmationText2">//*[@id='BunzlContactUsForm_Name']</visibleTextElement>
+						</verifyText>
+					</button>
+				</click>
+				<timeout id="timeout" name="timeout">5</timeout>
+			</method>
+
+
+			<method name="enterContactDetails" id="enterContactDetails">
+				<textbox id="ContactDetails">
+					<text id="ContactUsForm_CustomerName" name ="//*[@id='BunzlContactUsForm_Name']">Satya</text>					
+					<text id="ContactUsForm_Order" name ="//*[@id='BunzlContactUsForm_Order']">1234</text>					
+					<text id="ContactUsForm_Name" name ="//*[@id='BunzlContactUsForm_Name']">Test</text>						
+					<text id="ContactUsForm_Phone" name ="//*[@id='BunzlContactUsForm_Phone']">9898989898</text>	
+					<text id="ContactUsForm_Email" name ="//*[@id='BunzlContactUsForm_Email']">sprakash@salmon.com</text>						
+					<text id="ContactUsForm_Comments" name ="//*[@id='BunzlContactUsForm_Comments']">Test 1234</text>
+				</textbox>
+				<elements>
+					<element id="subject" name="subject" value="//*[@id='BunzlContactUsForm_Subject']"/>
+				</elements>
+				<click>
+					<button id="CreateAccount" name="CreateAccount" value="//*[@name='send']">
+						<verifyText>
+							<visibleTextElement id="confirmationText2">//*[@class='ish-shiftContent']</visibleTextElement>
+						</verifyText>
+					</button>
+				</click>
+				<timeout id="timeout" name="timeout">10</timeout>
+			</method>
+				
+				<method name="clickOnMyAccountLink" id ="clickOnMyAccountLink">	
+				<click>
+					<button id="loginButton" name="loginButton" value="//*[@id='container']/header//li//a[contains(@href,'account')]">
+						<verifyText>
+							<visibleTextElement id="confirmationText1">//*[@id='kor-infoBox-horizontalGroupRight']</visibleTextElement>
+						</verifyText>
+					</button>
+				</click>
+				<timeout id="timeout" name="timeout">5</timeout>
+			</method>
+			
+   <method name="clickOnOCIOrderHistoryLink" id ="clickOnOCIOrderHistoryLink">	
+				<click>
+					<button id="OCIOrderHistoryLink" name="OCIOrderHistoryLink" value="//*[@class='rwd-tablet rwd-desktop']/ul/li[2]">
+						<verifyText>
+							<visibleTextElement id="confirmationText1">//*[@class='grid-18']</visibleTextElement>
+						</verifyText>
+					</button>
+				</click>
+				<timeout id="timeout" name="timeout">5</timeout>
+			</method>	
+			<method name="cartToReview" id ="cartToReview">
+				<verifyText>
+					<visibleTextElement id="confirmationText2">//*[@class='kor-noLabelErrorColor']</visibleTextElement>
+					<visibleTextElement id="confirmationText2">//*[@name='sendOrder']</visibleTextElement>
+				</verifyText>
+				<timeout id="timeout" name="timeout">15</timeout>
+			</method>
+			<method name="orderConfirmation" id ="orderConfirmation">
+				<elements>
+					<element id="hookUrl" name="hookUrl" value="https://equallevel.com/punchout/oci_punchin.php"/>
+				</elements>
+				<timeout id="timeout" name="timeout">15</timeout>
+			</method>
+	
+		</module>
+		
+	</modules>
+</channel>

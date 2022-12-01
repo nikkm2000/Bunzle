@@ -1,0 +1,785 @@
+<channel>
+	<modules>
+		
+		<module name="siteNavigationModule" id="siteNavigationModule">			
+			
+		    <method name="changeDaCheckButtonDisbaled" id="changeDaCheckButtonDisbaled">						
+				<elements>
+				   <element id="SelectDa" name="SelectDa" value="//select[@id='ShippingAddressID']/option[2]"/>
+				   <element id="DisabledButton" name="DisabledButton" value="delivery-Address-Checkout"/>
+				</elements>
+   				<timeout id="timeout" name="timeout">50</timeout>
+			</method>
+		    
+		    
+			<method name="GoToUsers" id="GoToUsers">						
+				<click>
+					<button id="//*[contains(text(),'Gebruikers')]" name="//*[contains(text(),'Gebruikers')]" value="//*[contains(text(),'Gebruikers')]">			
+						<verifyText>
+							<loopMsg id= "Countryname">Gebruikers</loopMsg>																
+						</verifyText>			
+					</button>
+				</click>
+      			<timeout id="timeout" name="timeout">50</timeout>
+			</method>
+	
+			<method name="enterAndSearchPitem" id ="enterAndSearchPitem">
+				<textbox id="signInCredentials">
+					<text id="searchTerm_Header" name="searchTerm_Header">112227</text>
+				</textbox>
+				<click>
+				  	<button id="SearchButtonClick" name="SearchButtonClick" value="//*[@class='primary small searchClick']">
+						<verifyText>
+							<visibleTextElement id="confirmationText2">//*[@class='rwd-desktop right']</visibleTextElement>
+						</verifyText>
+					</button>
+				</click>
+				<timeout id="timeout" name="timeout">10</timeout>
+			</method>
+				
+			<method name="UserDetails" id="UserDetails">						
+				<click>
+					<button id=".//*[@id='user-container']/tbody/tr[1]/td[2]/a" name="User" value=".//*[@id='user-container']/tbody/tr[1]/td[2]/a">			
+						<verifyText>
+							<loopMsg id= "Countryname">Details gebruiker</loopMsg>																
+						</verifyText>			
+					</button>
+				</click>
+     			<timeout id="timeout" name="timeout">50</timeout>
+			</method>
+	
+		<method name="goToContactUsPage" id ="goToContactUsPage">			
+				<click>
+					<button id="ContactUsButton" name="ContactUsButton" value="//*[@id='container']/header/div[4]/div[2]/ul/li[6]/a">
+						<verifyText>
+							<visibleTextElement id="confirmationText2">//*[@id='ContactUsForm_CustomerName']</visibleTextElement>
+							<visibleTextElement id="confirmationText2">//*[@id='ContactUsForm_Order']</visibleTextElement>
+							<visibleTextElement id="confirmationText2">//*[@id='ContactUsForm_Email']</visibleTextElement>
+							<visibleTextElement id="confirmationText2">//*[@id='ContactUsForm_Name']</visibleTextElement>
+						</verifyText>
+					</button>
+				</click>
+				<timeout id="timeout" name="timeout">5</timeout>
+		</method>
+
+
+			<method name="enterContactDetails" id="enterContactDetails">
+				<textbox id="ContactDetails">
+					<text id="ContactUsForm_CustomerName" name ="//*[@id='ContactUsForm_Name']">Satya</text>					
+					<text id="ContactUsForm_Order" name ="//*[@id='ContactUsForm_Order']">1234</text>					
+					<text id="ContactUsForm_Name" name ="//*[@id='ContactUsForm_Name']">Test</text>						
+					<text id="ContactUsForm_Phone" name ="//*[@id='ContactUsForm_Phone']">9898989898</text>	
+					<text id="ContactUsForm_Email" name ="//*[@id='ContactUsForm_Email']">sprakash@salmon.com</text>						
+					<text id="ContactUsForm_Comments" name ="//*[@id='ContactUsForm_Comments']">Test 1234</text>
+				</textbox>
+				<elements>
+					<element id="subject" name="subject" value="//*[@id='ContactUsForm_Subject']"/>
+				</elements>
+				<click>
+					<button id="CreateAccount" name="CreateAccount" value="//*[@name='send']">
+						<verifyText>
+							<visibleTextElement id="confirmationText2">//*[@class='ish-shiftContent']</visibleTextElement>
+						</verifyText>
+					</button>
+				</click>
+				<timeout id="timeout" name="timeout">10</timeout>
+			</method>
+			
+			
+			
+			<method name="SelectAddress" id="SelectAddress">						
+				<click>
+					<button id=".//*[@id='main']/div[3]/div/div[4]/div[3]/a" name="Wijzig" value=".//*[@id='main']/div[3]/div/div[4]/div[3]/a">			
+						<verifyText>
+							<loopMsg id= "Countryname">Details gebruiker</loopMsg>																
+						</verifyText>			
+					</button>
+				</click>
+       			<timeout id="timeout" name="timeout">50</timeout>
+			</method>
+			
+	
+			<method name="SelectALLAddress" id="SelectALLAddress">						
+				<click>
+					<button id=".//*[@id='A']/table/tbody/tr/td/a" name="Select ALL" value=".//*[@id='A']/table/tbody/tr/td/a">			
+						<verifyText>
+							<loopMsg id= "Countryname">Beschikbare afleveradressen</loopMsg>																
+						</verifyText>			
+					</button>
+				</click>
+       			<timeout id="timeout" name="timeout">50</timeout>
+			</method>
+			
+	
+			<method name="ClearALLAddress" id="ClearALLAddress">						
+				<click>
+					<button id=".//*[@id='B']/table/tbody/tr/td/a" name="Select ALL" value=".//*[@id='B']/table/tbody/tr/td/a">			
+						<verifyText>
+							<loopMsg id= "Countryname">Beschikbare afleveradressen</loopMsg>																
+						</verifyText>			
+					</button>
+				</click>
+       			<timeout id="timeout" name="timeout">50</timeout>
+			</method>
+			
+	
+			<method name="PackagingInfoListerpage" id="PackagingInfoListerpage">
+				<verifyText>
+					<visibleTextElement id="confirmationText1">.//*[@class='row no-margin rwd-tablet rwd-desktop lister-tile']/div/div/div/div[3]</visibleTextElement>
+				</verifyText>
+       			<timeout id="timeout" name="timeout">50</timeout>
+			</method>
+	
+	
+			<method name="navigateAddUserPage" id="navigateAddUserPage">					
+				<elements>
+				   <element id="NavUserPage" name="NavUserPage" value="//*[@id='kor-infoBox-horizontalGroupRight']/div[2]/p/a"/>
+				</elements>
+				<verifyText>
+					<visibleTextElement id="confirmationText1">//*[@id='CreateUserForm_FirstName']</visibleTextElement>
+					<visibleTextElement id="confirmationText2">//*[@id='CreateUserForm_Login']</visibleTextElement>
+					<visibleTextElement id="confirmationText2">//*[@id='CreateUserForm_Phone']</visibleTextElement>
+				</verifyText> 
+				<timeout id="timeout" name="timeout">5</timeout>
+			</method>
+
+				
+			<method name="loginProspect" id ="loginProspect">
+				<textbox id="signInCredentials">
+					<text id="ShopLoginForm_Login" name="user">testdrdprospect@gmail.com</text>
+					<text id="ShopLoginForm_Password" name ="password">Eperium123</text>
+				</textbox>
+				<click>
+					<button id="loginButton" name="loginButton" value="//*[@class='ish-field-buttonGroup']/button">
+						<verifyText>
+							<visibleTextElement id="confirmationText2">//*[@class='breadcrumb rwd-tablet rwd-desktop']</visibleTextElement>
+							<visibleTextElement id="confirmationText2">//*[@class='grid-6']</visibleTextElement>
+						</verifyText>
+					</button>
+				</click>
+				<timeout id="timeout" name="timeout">5</timeout>
+			</method>
+			
+		
+			<method name="loginCustomer" id ="loginCustomer">
+				<textbox id="signInCredentials">
+					<text id="ShopLoginForm_Login" name="user">jyoti.singhdrd@eperiumindia.com</text>
+					<text id="ShopLoginForm_Password" name ="password">Eperium123</text>
+				</textbox>
+				<click>
+					<button id="loginButton" name="loginButton" value="//*[@class='ish-field-buttonGroup']/button">
+						<verifyText>
+							<visibleTextElement id="confirmationText2">//*[@class='breadcrumb rwd-tablet rwd-desktop']</visibleTextElement>
+							<visibleTextElement id="confirmationText2">//*[@class='grid-6']</visibleTextElement>
+						</verifyText>
+					</button>
+				</click>
+				<timeout id="timeout" name="timeout">5</timeout>
+			</method>		
+			
+
+			<method name="gotoSavedAddressPage" id ="gotoSavedAddressPage">	
+				<verifyText>
+					<visibleTextElement id="confirmationText2">//*[@class='kor-myAccount-addressBook']</visibleTextElement>
+				</verifyText>
+				<timeout id="timeout" name="timeout">5</timeout>
+			</method>
+	
+	
+			<method name="addUser" id="addUser">
+				<textbox id="registrationCredentials">
+					<text id="CreateUserForm_FirstName" name ="CreateUserForm_FirstName">Test</text>
+					<text id="CreateUserForm_LastName" name ="CreateUserForm_LastName">test</text>							
+					<text id="CreateUserForm_Login" name="user" email="true" random="true">atest@test.com</text>
+					<text id="CreateUserForm_Email" name="user" email="true" random="true">atest@test.com</text>
+					<text id="CreateUserForm_Phone" name ="CreateUserForm_Phone">123456789</text>						
+				</textbox>
+				<dropdown>
+					<selected id="//select[@id='CreateUserForm_Gender']" name="CreateUserForm_Gender" index="Vrouw"></selected> 
+					<selected id="//select[@id='CreateUserForm_Function']" name="CreateUserForm_Function" index="Hoofd Inkoop"></selected>				
+					<selected id="//select[@id='CreateUserForm_Birthday_Day']" name="CreateUserForm_Birthday_Day" index="17"></selected>
+					<selected id="//select[@id='CreateUserForm_Birthday_Month']" name="CreateUserForm_Birthday_Month" index="10"></selected>
+					<selected id="//select[@id='CreateUserForm_Birthday_Year']" name="CreateUserForm_Birthday_Year" index="9"></selected>
+				</dropdown>
+				<timeout id="timeout" name="timeout">10</timeout>
+			</method>
+	
+	
+			<method name="assignAddressk" id ="assignAddressk">
+				 <click>
+				  	<button id="link" name="link" value="//*[@id='DeliveryAddressSelectionList kor-myAccount-actionLinks-']/a">
+						<verifyText>
+							<visibleTextElement id="confirmationText2">//*[@class='kor-overlay kor-active-content']</visibleTextElement>
+						</verifyText> 
+					</button>
+				</click> 
+				<timeout id="timeout" name="timeout">5</timeout>
+			</method>
+	
+	
+			<method name="assignCatalogk" id ="assignCatalogk">
+				<verifyText>
+					<visibleTextElement id="confirmationText2">//*[@id='CreateUserForm_Gender']</visibleTextElement>
+				</verifyText> 
+			</method>
+			
+			
+			<method name="loginCustomerBuyer" id ="loginCustomerBuyer">
+				<textbox id="signInCredentials">
+					<text id="ShopLoginForm_Login" name="user">testdrd@gmail.com</text>
+					<text id="ShopLoginForm_Password" name ="password">Eperium123</text>
+				</textbox>
+				<click>
+				<button id="loginButton" name="loginButton" value="//*[@class='ish-field-buttonGroup']/button">
+					<verifyText>
+						<visibleTextElement id="Myaccount">//*[@id='container']/header//li//a[contains(@href,'account')]</visibleTextElement>
+						<visibleTextElement id="confirmationText2">//*[@class='breadcrumb rwd-tablet rwd-desktop']</visibleTextElement>
+						<visibleTextElement id="confirmationText2">//*[@class='grid-6']</visibleTextElement>
+					</verifyText>
+					</button>
+				</click>
+				<timeout id="timeout" name="timeout">5</timeout>
+			</method>
+			
+			
+		  	<method name="verifyCustomer" id ="verifyCustomer">	
+				<elements>
+					<element id="GetValue" name="GetValue" value="//*[@id='preferredDelivery']"/>
+				</elements>						
+				<verifyText>
+					<visibleTextElement id="confirmationText2">//*[@class='breadcrumb rwd-tablet rwd-desktop']</visibleTextElement>
+					<visibleTextElement id="confirmationText2">//*[@class='grid-6']</visibleTextElement>
+				</verifyText>				
+				<timeout id="timeout" name="timeout">5</timeout>
+			</method>
+			
+
+
+			<method name="loginCustomerApprover" id ="loginCustomerApprover">
+				<textbox id="signInCredentials">
+					<text id="ShopLoginForm_Login" name="user">ashwani.singladrd@eperiumindia.com</text>
+					<text id="ShopLoginForm_Password" name ="password">Eperium123</text>
+				</textbox>
+				<click>
+					<button id="loginButton" name="loginButton" value="//*[@class='ish-field-buttonGroup']/button">
+						<verifyText>
+							<visibleTextElement id="confirmationText2">//*[@class='breadcrumb rwd-tablet rwd-desktop']</visibleTextElement>
+							<visibleTextElement id="confirmationText2">//*[@id='preferredDelivery']</visibleTextElement>
+						</verifyText>
+					</button>
+				</click>
+				<timeout id="timeout" name="timeout">5</timeout>
+			</method>
+
+
+			<method name="loginCustomerAccountAdmin" id ="loginCustomerAccountAdmin">
+				<textbox id="signInCredentials">
+					<text id="ShopLoginForm_Login" name="user">jyoti.singhdrd@eperiumindia.com</text>
+					<text id="ShopLoginForm_Password" name ="password">Eperium123</text>
+				</textbox>
+				<click>
+					<button id="loginButton" name="loginButton" value="//*[@class='ish-field-buttonGroup']/button">
+						<verifyText>
+							<visibleTextElement id="confirmationText2">//*[@class='breadcrumb rwd-tablet rwd-desktop']</visibleTextElement>
+							<visibleTextElement id="confirmationText2">//*[@id='preferredDelivery']</visibleTextElement>
+						</verifyText>
+					</button>
+				</click>
+				<timeout id="timeout" name="timeout">5</timeout>
+			</method>
+			
+	
+			<method name="saveUser" id ="saveUser">
+				<click>
+				  	<button id="CategoryLink" name="CategoryLink" value="//*[@name='Create']">
+						<verifyText>
+							<visibleTextElement id="confirmationText2">//*[@class='button primary small']</visibleTextElement>
+							<visibleTextElement id="confirmationText2">//*[@class='kor-open-as-dialog-check-login ish-button ish-button-secondary']</visibleTextElement>
+						</verifyText>
+					</button>
+				</click>
+				<timeout id="timeout" name="timeout">10</timeout>
+			</method>
+
+
+ 			<method name="editAddressDetailsAndAddCostCenter" id ="editAddressDetailsAndAddCostCenter">
+				<verifyText>
+					<visibleTextElement id="confirmationText2">//*[@class='kor-myAccount-addressBook']</visibleTextElement>
+				</verifyText>
+				<timeout id="timeout" name="timeout">20</timeout>
+			</method>
+
+
+			<method name="editAddressDetailsAndDeleteCostCenter" id ="editAddressDetailsAndDeleteCostCenter">
+				<verifyText>
+					<visibleTextElement id="confirmationText2">//*[@class='kor-myAccount-addressBook']</visibleTextElement>
+				</verifyText>
+				<timeout id="timeout" name="timeout">20</timeout>
+			</method>
+			
+
+			<method name="DeleteAllCostCenter" id ="DeleteAllCostCenter">
+				<verifyText>
+					<visibleTextElement id="confirmationText2">//*[@class='kor-myAccount-addressBook']</visibleTextElement>
+				</verifyText>
+		 		<timeout id="timeout" name="timeout">15</timeout>
+			</method>
+
+
+			<method name="enterAndSearchStringSingleWord" id ="enterAndSearchStringSingleWord">
+				<textbox id="signInCredentials">
+					<text id="searchTerm_Header" name="searchTerm_Header">Handschoen</text>
+				</textbox>
+				<click>
+				  	<button id="search" name="search" value="//*[@class='primary small']">
+						<verifyText>
+							<visibleTextElement id="confirmationText2">//*[@class='rwd-desktop right']</visibleTextElement>
+						</verifyText>
+					</button>
+				</click>
+				<timeout id="timeout" name="timeout">10</timeout>
+			</method>
+			
+			
+			<method name="enterAndSearchStringDoubleWord" id ="enterAndSearchStringDoubleWord">
+				<textbox id="signInCredentials">
+					<text id="searchTerm_Header" name="searchTerm_Header">Handschoen snijvast</text>
+				</textbox>
+				<click>
+				  	<button id="search" name="search" value="//*[@class='primary small']">
+						<verifyText>
+							<visibleTextElement id="confirmationText2">//*[@class='rwd-desktop right']</visibleTextElement>
+						</verifyText>
+					</button>
+				</click>
+				<timeout id="timeout" name="timeout">10</timeout>
+			</method>
+			
+			
+			<method name="enterAndSearchStringDoubleWordWithAnd" id ="enterAndSearchStringDoubleWordWithAnd">
+				<textbox id="signInCredentials">
+					<text id="searchTerm_Header" name="searchTerm_Header">b and c</text>
+				</textbox>
+				<click>
+				  	<button id="search" name="search" value="//*[@class='primary small']">
+						<verifyText>
+							<visibleTextElement id="confirmationText2">//*[@class='rwd-desktop right']</visibleTextElement>
+						</verifyText> 
+					</button>
+				</click>
+				<timeout id="timeout" name="timeout">10</timeout>
+			</method>
+		
+		
+			<method name="enterAndSearchStringSpecialCharacters" id ="enterAndSearchStringSpecialCharacters">
+				<textbox id="signInCredentials">
+					<text id="searchTerm_Header" name="searchTerm_Header">ç ë é ü 's ‘t)</text>
+				</textbox>
+				<click>
+				  	<button id="search" name="search" value="//*[@class='primary small']">
+						<verifyText>
+							<visibleTextElement id="confirmationText2">//*[@class='rwd-desktop right']</visibleTextElement>
+						</verifyText>
+					</button>
+				</click>
+				<timeout id="timeout" name="timeout">10</timeout>
+			</method>
+			
+			
+			<method name="enterAndSearchStringNoProductFound" id ="enterAndSearchStringNoProductFound">
+				<textbox id="signInCredentials">
+					<text id="searchTerm_Header" name="searchTerm_Header">abcdefgh</text>
+				</textbox>
+				<click>
+				  	<button id="search" name="search" value="//*[@class='primary small']">
+						<verifyText>
+							<visibleTextElement id="confirmationText2">//*[@class='ish-search-noResults grid-12']</visibleTextElement>
+						</verifyText>
+					</button>
+				</click>
+				<timeout id="timeout" name="timeout">10</timeout>
+			</method>
+
+
+			<method name="navigateChangeEmailPage" id ="navigateChangeEmailPage">			
+				<verifyText>
+					<visibleTextElement id="confirmationText1">//*[@id='UpdateEmailForm_Email']</visibleTextElement>
+					<visibleTextElement id="confirmationText2">//*[@id='UpdateEmailForm_EmailConfirmation']</visibleTextElement>
+				</verifyText>
+				 <timeout id="timeout" name="timeout">15</timeout>
+			</method>
+
+
+			<method name="saveChanges" id ="saveChanges">
+				<click>
+					<button id="SaveChanges" name="SaveChanges" value="//*[@name='UpdateEmail']">
+						<verifyText>
+							<loopMsg id= "loginText">Voer uw wachtwoord in</loopMsg>
+							<Mandatory id= "loginText">Controleer goed dat u uw e-mailadres iedere keer juist invoert</Mandatory>						
+							<Mandatory id= "loginText">Vul een geldig e-mailadres in</Mandatory>						
+						</verifyText>
+					</button>
+					</click>
+				 	<timeout id="timeout" name="timeout">30</timeout>
+			</method>
+
+
+			<method name="cancelChangeEmail" id ="cancelChangeEmail">
+				<click>
+					<button id="cancelButton" name="cancelButton" value="//*[@class='button ish-button-secondary ish-button-cancel']">
+						<verifyText>
+							<visibleTextElement id="confirmationText1">(//*[contains(text(),'Wijzig')])[2]</visibleTextElement>
+							<visibleTextElement id="confirmationText2">(//*[contains(text(),'Wijzig')])[3]</visibleTextElement>
+						</verifyText>
+					</button>
+				</click>
+				<timeout id="timeout" name="timeout">30</timeout>
+			</method>
+
+
+			<method name="navigateToUpdateCompanyProfilePage" id ="navigateToUpdateCompanyProfilePage">
+				<verifyText>
+						<loopMsg id= "Functie">Bestellen</loopMsg>
+						<Mandatory id= "Bedrijfsnaam">Bestellen</Mandatory>					
+				</verifyText>
+				<timeout id="timeout" name="timeout">15</timeout>
+			</method>
+
+
+			<method name="updateCompanyDetails" id ="updateCompanyDetails">
+				<click>
+					<button id="updateCompanyDetails" name="updateCompanyDetails" value="//button[contains(text(),'Bewaar wijzigingen')]">
+						<verifyText>
+							<loopMsg id= "loginText">Bedrijfsprofiel</loopMsg>
+							<Mandatory id= "loginText">Uw profiel</Mandatory>						
+							<Mandatory id= "loginText">Profiel instellingen</Mandatory>						
+						</verifyText>
+					</button>
+				</click>
+				<timeout id="timeout" name="timeout">30</timeout>
+			</method>
+
+
+			<method name="rollBackCompanyDetails" id ="rollBackCompanyDetails">
+				<click>
+					<button id="save" name="save" value="//button[contains(text(),'Bewaar wijzigingen')]">
+					<verifyText>
+						<loopMsg id= "loginText">Voer uw wachtwoord in</loopMsg>
+						<Mandatory id= "loginText">Controleer goed dat u uw e-mailadres iedere keer juist invoert</Mandatory>						
+						<Mandatory id= "loginText">Vul een geldig e-mailadres in</Mandatory>						
+					</verifyText>
+					</button>
+				</click>
+				<timeout id="timeout" name="timeout">30</timeout>
+			</method>
+
+		
+			<method name="cancelChangeCompanyProfile" id ="cancelChangeCompanyProfile">
+				<click>
+					<button id="cancelButton" name="cancelButton" value="//a[contains(text(),'Annuleren')]">
+						<verifyText>
+							<loopMsg id= "loginText">Bedrijfsprofiel</loopMsg>
+							<Mandatory id= "loginText">Uw profiel</Mandatory>						
+							<Mandatory id= "loginText">Profiel instellingen</Mandatory>						
+						</verifyText>
+					</button>
+				</click>
+				<timeout id="timeout" name="timeout">30</timeout>
+			</method>
+
+
+			<method name="navigateToUpdateYourProfilePage" id ="navigateToUpdateYourProfilePage">
+				<verifyText>
+					<visibleTextElement id="confirmationText1">//*[@id='UpdateProfileForm_Title']</visibleTextElement>
+					<visibleTextElement id="confirmationText2">//*[@id='UpdateProfileForm_FirstName']</visibleTextElement>
+					<visibleTextElement id="confirmationText2">//*[@name='UpdateProfile']</visibleTextElement>
+				</verifyText>
+				<timeout id="timeout" name="timeout">15</timeout>
+			</method>
+
+
+			<method name="updateYourDetails" id ="updateYourDetails">
+				<verifyText>
+						<loopMsg id= "Text">Wij hebben de aanpassing(en) succesvol verwerkt.</loopMsg>
+				</verifyText>
+				<timeout id="timeout" name="timeout">15</timeout>
+			</method>
+	
+	
+			<method name="cancelChangeYourProfile" id ="cancelChangeYourProfile">
+				<click>
+					<button id="cancelButton" name="cancelButton" value="//a[contains(text(),'Annuleren')]">
+						<verifyText>
+							<loopMsg id= "loginText">Bedrijfsprofiel</loopMsg>
+							<Mandatory id= "loginText">Uw profiel</Mandatory>						
+							<Mandatory id= "loginText">Profiel instellingen</Mandatory>						
+						</verifyText>
+					</button>
+				</click>
+				<timeout id="timeout" name="timeout">30</timeout>
+			</method>
+		
+	
+			<method name="ValidateViaAddingDuplicateCostCenter" id ="ValidateViaAddingDuplicateCostCenter">
+				<verifyText>
+					<visibleTextElement id="confirmationText2">//*[@class='error']</visibleTextElement>
+				</verifyText>
+				<timeout id="timeout" name="timeout">15</timeout>
+			</method>
+
+
+			<method name="loginProspectUser" id ="loginProspectUser">
+				<textbox id="signInCredentials">
+					<text id="ShopLoginForm_Login" name="user">testdrdprospect@gmail.com</text>
+					<text id="ShopLoginForm_Password" name ="password">Eperium123</text>
+				</textbox>
+				<click>
+					<button id="loginButton" name="loginButton" value="//*[@class='ish-field-buttonGroup']/button">
+						<verifyText>
+							<visibleTextElement id="confirmationText2">//*[@class='kor-myAccount-addressBook']</visibleTextElement>
+							<visibleTextElement id="confirmationText2">//*[@class='grid-6']</visibleTextElement>
+						</verifyText>
+					</button>
+				</click>
+				<timeout id="timeout" name="timeout">5</timeout>
+			</method>
+	
+	
+			<method name="goToChangePasswordPage" id ="goToChangePasswordPage">
+				<verifyText>
+					<visibleTextElement id="confirmationText1">//*[@id='UpdatePasswordForm_Password']</visibleTextElement>
+					<visibleTextElement id="confirmationText2">//*[@name='UpdatePassword']</visibleTextElement>
+				</verifyText>
+				 <timeout id="timeout" name="timeout">5</timeout>
+			</method>	
+
+
+			<method name="updatePassword" id ="updatePassword">
+				<verifyText>
+					<visibleTextElement id="confirmationText1">//*[@class='ish-message']</visibleTextElement>
+				</verifyText>
+				<timeout id="timeout" name="timeout">5</timeout>
+			</method>			
+	
+	
+			<method name="reLoginProspectWithChangedPassword" id ="reLoginProspectWithChangedPassword">
+				<textbox id="signInCredentials">
+					<text id="ShopLoginForm_Login" name="user">testdrdprospect@gmail.com</text>
+					<text id="ShopLoginForm_Password" name ="password">Ebsi@123</text>
+				</textbox>
+				<click>
+					<button id="loginButton" name="loginButton" value="//*[@class='ish-field-buttonGroup']/button">
+						<verifyText>
+							<loopMsg id= "logoutText">Uitloggen</loopMsg>
+						</verifyText>
+					</button>
+				</click>
+				<timeout id="timeout" name="timeout">5</timeout>
+			</method>
+			
+	
+			<method name="goToChangePasswordPageAgain" id ="goToChangePasswordPageAgain">
+				<verifyText>
+					<visibleTextElement id="confirmationText1">//*[@id='UpdatePasswordForm_Password']</visibleTextElement>
+					<visibleTextElement id="confirmationText2">//*[@name='UpdatePassword']</visibleTextElement>
+				</verifyText>
+			 	<timeout id="timeout" name="timeout">5</timeout>
+			</method>	
+
+
+			<method name="restoreOriginalPassword" id ="restoreOriginalPassword">
+				<verifyText>
+					<visibleTextElement id="confirmationText1">//*[@class='ish-message']</visibleTextElement>
+				</verifyText>
+				<timeout id="timeout" name="timeout">5</timeout>
+			</method>
+	
+		
+			<method name="loginForOrderTemplate" id ="loginForOrderTemplate">
+				<textbox id="signInCredentials">
+					<text id="ShopLoginForm_Login" name="user">sprakash@salmon.com</text>
+					<text id="ShopLoginForm_Password" name ="password">Eperium123</text>
+				</textbox>
+				<click>
+					<button id="loginButton" name="loginButton" value="//*[@class='ish-field-buttonGroup']/button">
+						<verifyText>
+							<loopMsg id= "loginText">Uitloggen</loopMsg>
+						</verifyText>
+					</button>
+				</click>
+				<timeout id="timeout" name="timeout">5</timeout>
+			</method>	
+	
+
+			<method name="navigateToUserUpdateRolePage" id ="navigateToUserUpdateRolePage">
+					<verifyText>
+						<loopMsg id="textSignInPage">Wijzig gebruikersrollen en budgetten</loopMsg>
+					</verifyText>
+				 	<timeout id="timeout" name="timeout">5</timeout>
+			</method>
+
+						
+			<method name="loginAccountAdminInNewWindow" id ="loginAccountAdminInNewWindow">
+				<textbox id="signInCredentials">
+					<text id="ShopLoginForm_Login" name="user">jyoti.singhdrd@eperiumindia.com</text>
+					<text id="ShopLoginForm_Password" name ="password">Eperium123</text>
+				</textbox>
+				<click>
+					<button id="loginButton" name="loginButton" value="//*[@class='ish-field-buttonGroup']/button">
+						<verifyText>
+							<visibleTextElement id="confirmationText2">//*[@id='preferredDelivery']</visibleTextElement>
+						</verifyText>
+					</button>
+				</click>
+				<timeout id="timeout" name="timeout">5</timeout>
+		   </method>
+		   
+		   
+			<method name="setPreferredIdToRevoke" id ="setPreferredIdToRevoke">					
+				<timeout id="timeout" name="timeout">10</timeout>
+			</method>
+		
+		
+			<method name="revokePrefferedDaOfUser" id ="revokePrefferedDaOfUser">					
+				<timeout id="timeout" name="timeout">10</timeout>
+			</method>
+			
+			
+			<method name="redirectCustomerToDashboard" id ="redirectCustomerToDashboard">
+				<verifyText>
+					<visibleTextElement id="confirmationText2">//*[@class='primary quick']</visibleTextElement>
+				</verifyText>
+				<timeout id="timeout" name="timeout">10</timeout>
+			</method>
+			
+
+			<method name="reassignRevokedDaToUser" id ="reassignRevokedDaToUser">				
+				<timeout id="timeout" name="timeout">10</timeout>
+			</method>
+			
+	
+			<method name="closeNewWindow" id ="closeNewWindow">				
+				<timeout id="timeout" name="timeout">10</timeout>
+			</method>
+       </module>
+					
+	
+	   <module name="SolrPrice" id="SolrPrice">	 
+	       	 <method name="setUuidForPriceChangeInSolr" id="setUuidForPriceChangeInSolr">	                  
+		          <timeout id="timeout" name="timeout">5</timeout>
+             </method>
+       
+             <method name="goToSolrPriceQuery" id="goToSolrPriceQuery">	  
+	             <verifyText>
+	                    <loopMsg id="checkSolr">Apache SOLR</loopMsg>
+	             </verifyText>                
+	          	 <timeout id="timeout" name="timeout">5</timeout>
+             </method>
+             
+             
+             <method name="checkSalesUnitOfUuid" id="checkSalesUnitOfUuid">
+             	 <loopMsg id="uuid">UUID</loopMsg>
+	             <loopMsg id="price">price</loopMsg>
+	             <loopMsg id="timestamp">timestamp</loopMsg>
+	             <loopMsg id="salesUnit">salesUnit</loopMsg>
+	             <loopMsg id="ean">ean</loopMsg>
+	             <loopMsg id="packagingInfo">packagingInfo</loopMsg>
+	             
+              	 <timeout id="timeout" name="timeout">5</timeout>             
+             </method>
+	
+	
+	        <method name="createQueryToChangePrice" id="createQueryToChangePrice">	  
+	             <verifyText>
+	                    <loopMsg id="checkSolr">Apache SOLR</loopMsg>
+	             </verifyText>                
+	          	 <timeout id="timeout" name="timeout">5</timeout>
+            </method>	
+	 </module>
+	
+	
+	 <module name="DAsoftlogin" id="DAsoftlogin">
+	       	 <method name="changeDA" id="changeDA">	                  
+	          	<timeout id="timeout" name="timeout">5</timeout>
+             </method>
+             
+             
+             <method name="chkAddAtHeader" id="chkAddAtHeader">	                  
+	          	<timeout id="timeout" name="timeout">5</timeout>
+             </method>
+             
+             
+             <method name="logoutChkHeader" id="logoutChkHeader">	                  
+	          	<timeout id="timeout" name="timeout">5</timeout>
+             </method>
+             
+             
+             <method name="changeChkoutAddress" id="changeChkoutAddress">
+             	<timeout id="timeout" name="timeout">5</timeout>
+             </method>
+           
+           
+           	 <method name="viewUserNameOnDashboard" id="viewUserNameOnDashboard">
+             	<timeout id="timeout" name="timeout">5</timeout>
+             </method>
+           
+           
+           	<method name="viewUserNameAtHeader" id="viewUserNameAtHeader">
+             	<timeout id="timeout" name="timeout">5</timeout>
+           	</method>
+           
+           
+           <method name="viewUpdatedNameOnDashboard" id="viewUpdatedNameOnDashboard">                
+               <timeout id="timeout" name="timeout">5</timeout>         
+           </method>
+           
+                      
+           <method name="viewUpdatedNameAtHeader" id="viewUpdatedNameAtHeader">
+                <timeout id="timeout" name="timeout">5</timeout>
+           </method>
+           
+           
+           <method name="resetUserName" id="resetUserName">
+                <textbox id="updateFirstLastName">
+					<text id="UpdateProfileForm_FirstName">Satya</text>
+					<text id="UpdateProfileForm_LastName">Prakash</text>
+				</textbox>
+				<click>
+				    <button id="updateProfileButton" name="updateProfileButton" value="//button[@name='UpdateProfile']"/>
+				</click>           
+           </method>
+           
+           
+           <method name="logoutViewUpdatedNameAtHeader" id="logoutViewUpdatedNameAtHeader">
+                   <timeout id="timeout" name="timeout">5</timeout>
+           </method>
+	  </module>
+	  
+	  
+	 /* Added new test case for KING 44 */	
+	 <module name="LimitCountryListKing" id="LimitCountryListKing">		
+		 <method name="LimitCountryList" id="LimitCountryList">						
+			<click>
+				<button id=".//*[@id='AddressForm_CountryCode']" name=".//*[@id='AddressForm_CountryCode']" value=".//*[@id='AddressForm_CountryCode']">					
+					<verifyText>
+							<loopMsg id= "Countryname">Belgium</loopMsg>
+							<loopMsg id= "Countryname">Bulgaria</loopMsg>
+							<loopMsg id= "Countryname">Croatia</loopMsg>
+							<loopMsg id= "Countryname">Czech Republic</loopMsg>
+							<loopMsg id= "Countryname">Denmark</loopMsg>
+							<loopMsg id= "Countryname">France</loopMsg>
+							<loopMsg id= "Countryname">Poland</loopMsg>
+							<loopMsg id= "Countryname">Spain</loopMsg>
+							<loopMsg id= "Countryname">Switzerland</loopMsg>
+							<loopMsg id= "Countryname">Netherlands</loopMsg>
+							<loopMsg id= "Countryname">United Kingdom</loopMsg>
+							<loopMsg id= "Countryname">Germany</loopMsg>										
+					</verifyText>
+				</button>
+			</click>
+	        <timeout id="timeout" name="timeout">5</timeout>
+		</method>
+     </module>
+     
+  </modules>
+</channel>

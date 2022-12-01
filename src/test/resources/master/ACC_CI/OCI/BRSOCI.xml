@@ -1,0 +1,744 @@
+<suite name="BunzlBRSOCITest" verbose="1" >
+	<parameter name="site" value="BRSOCI" />
+	<parameter name="locale" value="nl-NL" />
+	<parameter name="channel" value="BRSOCI-NL-Test" />
+	<parameter name="comchannel" value="COM-OCI-Test" />
+	<parameter name="selenium.host" value="localhost" />
+<!-- 	<parameter name="platform" value="Linux" /> -->
+	<parameter name="platform" value="Desktop" />
+	<parameter name="selenium.browser" value= "chrome" />
+<!-- 	<parameter name="selenium.browser" value= "firefox" /> -->
+<!-- 	<parameter name="selenium.browser.version" value="36" /> -->	
+<!-- 	<parameter name="selenium.browser" value= "PhantomJS" /> -->
+	<parameter name="PDFRequiredPerTestCase" value="True" />
+	<parameter name="testcasename" value="ConsolidatedPDF" />
+    
+     <listeners>
+       <listener class-name="com.eperium.jumpstart.testframework.utils.SuiteReportUtils"/>
+       <listener class-name="com.eperium.jumpstart.testframework.utils.IListenEverything"/>
+       <listener class-name="com.eperium.jumpstart.testframework.utils.ReportUtil"/>
+       
+       <listener class-name="com.eperium.jumpstart.testframework.utils.SetOverViewReport1"/>
+       <listener class-name="com.eperium.jumpstart.testframework.utils.SetOverViewReportData"/>
+       <listener class-name="com.eperium.jumpstart.testframework.utils.HtmlReport"/>
+
+		<listener class-name="org.uncommons.reportng.HTMLReporter" /> 
+		<listener class-name="org.uncommons.reportng.JUnitXMLReporter" />
+    </listeners>
+
+ 	<test name="CustomerSiteNavigation" preserve-order="true">  
+	    <classes>
+	      <class name="com.eperium.jumpstart.JumpStartTestSuite">
+	        <methods>
+				<include name="launchHomePage" />
+				<exclude name="closeCookieWarning"/>	
+  		  		<include name="browseFromAssortimentCategoryToListerPage" />		  		
+ 				<include name="VerifyPagination" />	
+ 				<include name="VerifyPDPCustomer"/>		
+ 		  		<exclude name="browseSpecialsCategory" />		
+		    </methods>
+	      </class>
+	    </classes>
+ 	</test>	
+
+ 
+ 	<test name="CookieWarningMessage" preserve-order="true">
+      <classes>
+		<class name="com.eperium.jumpstart.JumpStartTestSuite">
+       		<methods>
+				<include name="launchHomePage" />
+				<include name="chkCookieWarningAppear" />	
+				<exclude name="closeCookieWarning"/>
+				<exclude name="browseChkCookieWarningNotAppear"/>			            	            				      		  			  		  				
+			</methods>	
+		</class>
+      </classes>
+	</test>
+ 
+  	
+ 	<test name="SearchingFilteringAndSortingAsCustomer" preserve-order="true">
+	    <classes>
+	      <class name="com.eperium.jumpstart.JumpStartTestSuite">
+	        <methods>
+				<include name="launchHomePage" /> 
+				<exclude name="closeCookieWarning"/>		
+				<exclude name="verifyCustomer" />
+				<include name="enterAndSearchStringSTAR" />
+				<include name="sortAtoZ" />
+				<include name="filter" />
+				<include name="enterAndSearchStringSingleWord" />
+				<include name="enterAndSearchStringDoubleWord" />
+				<include name="enterAndSearchStringDoubleWordWithAnd" />
+				<include name="enterAndSearchStringSpecialCharacters" />
+				<include name="enterAndSearchStringNoProductFound" />														
+		    </methods>   
+	      </class>   
+	    </classes>
+ 	</test>
+ 
+ 
+ 	<test name="ChangeItemsPerPageInGridView" preserve-order="true">
+         <classes>
+		   <class name="com.eperium.jumpstart.JumpStartTestSuite">
+	        <methods>
+	            <include name="launchHomePage" />	            
+	            <include name="enterAndSearchStringSTAR" />
+	            <exclude name="closeCookieWarning"/>
+				<include name="checkItemPerPageDropDownOptions" />
+				<include name="select9ItemsPerPage"/>
+				<include name="validate9ItemPerPage"/>
+				<include name="select12ItemsPerPage"/>
+				<include name="validate12ItemPerPage"/>
+				<include name="select15ItemsPerPage"/>
+				<include name="validate15ItemPerPage"/>
+				<include name="select24ItemsPerPage"/>
+				<include name="validate24ItemPerPage"/>													            				            				      		  			  		  				
+		    </methods>	
+		  </class>
+        </classes>
+	</test>  	
+	
+	    
+	<test name="ChangeItemsPerPageInListView" preserve-order="true">
+       <classes>
+		 <class name="com.eperium.jumpstart.JumpStartTestSuite">
+	       <methods>
+	            <include name="launchHomePage" />	            
+	            <include name="enterAndSearchStringSTAR" />
+	            <exclude name="closeCookieWarning"/>
+				<include name="listView" />
+				<include name="checkItemPerPageDropDownOptions" />
+				<include name="select9ItemsPerPage"/>
+				<include name="validate9ItemPerPage"/>
+				<include name="select12ItemsPerPage"/>
+				<include name="validate12ItemPerPage"/>
+				<include name="select15ItemsPerPage"/>
+				<include name="validate15ItemPerPage"/>
+				<include name="select24ItemsPerPage"/>
+				<include name="validate24ItemPerPage"/>													            				            				      		  			  		  				
+		    </methods>	
+		   </class>
+        </classes>
+	</test>
+ 
+ 
+  	<test name="ContactUsWithAllValues" preserve-order="true">
+	    <classes>
+	      <class name="com.eperium.jumpstart.JumpStartTestSuite">
+	        <methods>
+				<include name="launchHomePage" />				
+				<include name="goToContactUsPage" />
+				<exclude name="closeCookieWarning"/>	
+				<include name="enterContactDetails" />								
+			</methods>
+	      </class>
+	    </classes>
+ 	</test>
+ 
+ 
+	<test name="AddProductToCompareList" preserve-order="true">
+	    <classes>
+	      <class name="com.eperium.jumpstart.JumpStartTestSuite">
+	        <methods>
+				<include name="launchHomePage" />
+				<exclude name="closeCookieWarning"/>
+				<include name="enterAndSearchStringSTAR" />
+				<include name="gotoFirstPDP" />
+				<include name="addFirstPDPToCompareList" />
+				<include name="enterAndSearchStringSTAR1" />
+				<include name="GoToSecondPage" />				
+				<include name="gotoSecondPDP" />
+				<include name="addSecondPDPToCompareList" />
+				<include name="addProductToCartFromComparePageAndVerify" />											
+		    </methods>   
+	      </class>   
+	    </classes>
+ 	</test>
+ 	
+ 	
+ 	<test name="comparePageCheckNavigation" preserve-order="true">
+	    <classes>
+	      <class name="com.eperium.jumpstart.JumpStartTestSuite">
+	        <methods>
+				<include name="launchHomePage" />
+				<exclude name="closeCookieWarning"/>
+				<include name="enterAndSearchStringSTAR" />	
+				<include name="gotoFirstPDP" />
+				<include name="addFirstPDPToCompareList" />
+				<include name="enterAndSearchStringSTAR1" />
+				<include name="GoToSecondPage" />
+				<include name="gotoSecondPDP" />
+				<include name="addSecondPDPToCompareList" />
+				<include name="enterAndSearchStringSTAR2" />
+				<include name="GoTothirdPage" />
+				<include name="gotoThirdPDP" />
+				<include name="addThirdPDPToCompareList" />
+				<include name="enterAndSearchStringSTAR3" />
+				<include name="GoToFourthPage" />
+				<include name="gotoFourthPDP" />
+				<include name="addPDPToCompareListAndVerifyNavigation" />				
+		    </methods>   
+	      </class>   
+	    </classes> 
+ 	</test>
+
+
+	<test name="DeleteAllProductsFromCompareList" preserve-order="true">
+	    <classes>
+	      <class name="com.eperium.jumpstart.JumpStartTestSuite">
+	        <methods>
+				<include name="launchHomePage" />	
+				<exclude name="closeCookieWarning"/>
+				<include name="enterAndSearchStringSTAR" />		
+				<include name="gotoFirstPDP" />
+				<include name="addFirstPDPToCompareList" />
+ 				<include name="deleteAllProductsFromComparePage" />									
+		    </methods>   
+	      </class>   
+	    </classes>
+ 	</test>
+	  
+	  
+<!--  //38387 - Automation Test case for Recently viewed products -->
+ 	<test name="RecentlyViewedProductsOnPDP" preserve-order="true">
+	      <classes>
+		  <class name="com.eperium.jumpstart.JumpStartTestSuite">
+      		  <methods>
+				<include name="launchHomePage" />	
+				<include name="closeCookieWarning"/>					            
+	            <include name="enterAndSearchStringSTAR"/>	            
+	            <include name="gotoFirstPDP" />
+	            <include name="enterAndSearchStringSTAR1" />
+	            <include name="GoToSecondPage" />				
+				<include name="gotoSecondPDP" />	            
+	            <include name="chkbrowsedProductsInRecentView" />				      		  			  		  				
+			  </methods>	
+		   </class>
+	      </classes>
+	  </test>  
+
+ 
+ 	<test name="AddProductToCart" preserve-order="true">
+	    <classes>
+	      <class name="com.eperium.jumpstart.JumpStartTestSuite">
+	        <methods>
+	       		<include name="launchHomePage" />
+				<exclude name="closeCookieWarning"/>			
+				<include name="enterAndSearchStringSTAR" />
+				<include name="gotoFirstPDP" />
+				<include name="addProducttoCartFromPDP" />							
+		    </methods>   
+	      </class>   
+	    </classes>
+ 	</test>
+ 	
+ 	
+	<test name="CheckoutAsBuyer" preserve-order="true">
+	    <classes>
+	      <class name="com.eperium.jumpstart.JumpStartTestSuite">
+	        <methods>
+	       		<include name="launchHomePage" />
+				<exclude name="closeCookieWarning"/>		
+				<include name="enterAndSearchStringSTAR" />
+				<include name="gotoFirstPDP" />
+				<include name="addProducttoCartFromPDP" />	
+				<include name="shoppingCartToAddressPage" />				
+				<include name="orderConfirmation" />			
+		    </methods>   
+	      </class>   
+	    </classes>
+ 	</test>
+
+===not for OCI
+<!-- 	<test name="CheckoutWithReferenceAndMessageToMerchant" preserve-order="true"> -->
+<!-- 	    <classes> -->
+<!-- 	      <class name="com.eperium.jumpstart.JumpStartTestSuite"> -->
+<!-- 	        <methods> -->
+<!-- 				<include name="launchHomePage" /> -->
+<!-- 				<exclude name="closeCookieWarning"/>				 -->
+<!-- 				<include name="enterAndSearchStringSTAR" /> -->
+<!-- 				<include name="gotoFirstPDP" /> -->
+<!-- 				<include name="addProducttoCartFromPDP" />	 -->
+<!-- 				<include name="shoppingCartToAddressPage" />	 -->
+<!-- 				<include name="orderConfirmationWithMerchantMessage" />		 -->
+<!-- 		    </methods>    -->
+<!-- 	      </class>    -->
+<!-- 	    </classes> -->
+<!--  	</test> -->
+  
+  
+	<test name="CheckoutBarReverseNavigation" preserve-order="true">
+	    <classes>
+	      <class name="com.eperium.jumpstart.JumpStartTestSuite">
+	        <methods>
+				<include name="launchHomePage" />
+				<exclude name="closeCookieWarning"/>
+				<include name="enterAndSearchStringSTAR" />
+				<include name="gotoFirstPDP" />
+				<include name="addProducttoCartFromPDP" />	
+				<include name="shoppingCartToAddressPage" />
+				<include name="enterRefIdAndName" />	
+				<include name="orderConfirmation" />			
+		    </methods>   
+	      </class>   
+	    </classes>
+ 	</test>
+ 
+ 
+ 	<test name="RemoveAllProductsFromCart" preserve-order="true">
+	    <classes>
+	      <class name="com.eperium.jumpstart.JumpStartTestSuite">
+	        <methods>
+				<include name="launchHomePage" />	
+				<exclude name="closeCookieWarning"/>
+				<include name="enterAndSearchStringSTAR" />	
+				<include name="gotoFirstPDP" />
+				<include name="addProducttoCartFromPDP" />
+				<include name="enterAndSearchStringSTAR1" />
+				<include name="gotoSecondPDP" />
+				<include name="addProducttoCartFromPDP1" />
+				<include name="removeProductAndVerifyCart" />
+		    </methods>   
+	      </class>   
+	    </classes>
+ 	</test>
+ 	
+ 	
+ 	<test name="CheckoutWithProductQuantityGreaterThenOne" preserve-order="true">
+	    <classes>
+	      <class name="com.eperium.jumpstart.JumpStartTestSuite">
+	        <methods>
+				<include name="launchHomePage" />
+				<exclude name="closeCookieWarning"/>			
+				<include name="enterAndSearchStringSTAR" />	
+				<include name="gotoFirstPDP" />
+				<include name="addProducttoCartFromPDPWithQtyGreaterThenOne" />
+				<include name="shoppingCartToAddressPage" />
+				<include name="enterRefIdAndName" />		
+				<include name="orderConfirmation" />
+		    </methods>   
+	      </class>   
+	    </classes>
+ 	</test>
+ 	
+ 	
+	<test name="CustomerInfoVerificationInCheckout" preserve-order="true">
+	    <classes>
+	      <class name="com.eperium.jumpstart.JumpStartTestSuite">
+	        <methods>
+				<include name="launchHomePage" />
+				<exclude name="closeCookieWarning"/>
+				<include name="getCustomerAddress" />				
+				<exclude name="navigateToUpdateYourProfilePage" />			
+				<include name="getCustomerName" />
+  				<include name="enterAndSearchStringSTAR" />	
+				<include name="gotoFirstPDP" />
+				<include name="addProducttoCartFromPDP" />
+				<include name="shoppingCartToAddressPage" />
+				<include name="getAndVerifyCustomerDetailOnAddressPage" />
+				<include name="enterRefIdAndName" />							
+				<include name="orderConfirmation" />
+		    </methods>   
+	      </class>   
+	    </classes>
+ 	</test>
+ 	
+ 	
+<!--     <test name="ConfirmOrderWithoutSelectingTerms_Validation" preserve-order="true"> -->
+<!-- 	    <classes> -->
+<!-- 	      <class name="com.eperium.jumpstart.JumpStartTestSuite"> -->
+<!-- 	        <methods> -->
+<!-- 				<include name="launchHomePage" />	 -->
+<!-- 				<include name="goToLoginPage" /> -->
+<!-- 				<include name="loginCustomerBuyer" />	 -->
+<!-- 				<exclude name="closeCookieWarning"/>		 -->
+<!--   				<include name="enterAndSearchStringSTAR" />	 -->
+<!-- 				<include name="gotoFirstPDP" /> -->
+<!-- 				<include name="addProducttoCartFromPDP" /> -->
+<!-- 				<include name="shoppingCartToAddressPage" />				 -->
+<!-- 				<include name="enterRefIdAndName" />				 -->
+<!-- 				<include name="uncheckTermsCheckbox" />			 -->
+<!-- 		    </methods>    -->
+<!-- 	      </class>    -->
+<!-- 	    </classes> -->
+<!--  	</test> -->
+ 
+ 
+ 	<test name="AddressVerificationInCheckout" preserve-order="true">
+	    <classes>
+	      <class name="com.eperium.jumpstart.JumpStartTestSuite">
+	        <methods>
+				<include name="launchHomePage" />
+				<exclude name="closeCookieWarning"/>			
+				<include name="getAddressDetails" />
+  				<include name="enterAndSearchStringSTAR" />	
+				<include name="gotoFirstPDP" />
+				<include name="addProducttoCartFromPDP" />
+				<include name="shoppingCartToAddressPage" />
+				<include name="getAndVerifyAddressDetailOnAddressPage" />				
+				<include name="orderConfirmation" />										
+		    </methods>   
+	      </class>   
+	    </classes>
+ 	</test>
+ 	
+ 	
+<!-- 	<test name="MiniCartVerification" preserve-order="true"> -->
+<!--        <classes> -->
+<!-- 		  <class name="com.eperium.jumpstart.JumpStartTestSuite"> -->
+<!-- 	       <methods> -->
+<!-- 	            <include name="launchHomePage" /> -->
+<!-- 	            <exclude name="guestViewMiniCart" /> -->
+<!-- 	            <exclude name="goToLoginPage" /> -->
+<!-- 	            <exclude name="loginCustomerBuyer" /> -->
+<!-- 	            <exclude name="enterAndSearchStringSTAR" /> -->
+<!-- 				<exclude name="gotoFirstPDP" /> -->
+<!-- 				<exclude name="addProducttoCartFromPDP" /> -->
+<!-- 				<exclude name="getCartDetails"/> -->
+<!-- 				<exclude name="checkItemsInMinicart"/> -->
+<!-- 				<exclude name="navCheckoutBtnMiniCart"/>			            				            				      		  			  		  				 -->
+<!-- 		    </methods>	 -->
+<!-- 		   </class> -->
+<!--         </classes> -->
+<!-- 	</test> -->
+	
+	
+ 	<test name="QuickOrderFormValidations" preserve-order="true">
+    	<classes>
+     		<class name="com.eperium.jumpstart.JumpStartTestSuite">
+      			<methods>
+				<include name="launchHomePage" />
+	            <exclude name="closeCookieWarning"/>		            
+	            <include name="chkBlankSkuQty" />
+	            <include name="chkBlankSku" />
+	            <include name="chkBlankQty" />
+	            <include name="resetQuickOrderForm" />	
+	            <include name="chkValidSkuInvalidQty"/>								  			  		  				
+    		</methods>	
+     	   </class>
+    	</classes>
+	</test>
+	    
+	    
+ 	<test name="QuickOrdering" preserve-order="true">
+	    <classes>
+	      <class name="com.eperium.jumpstart.JumpStartTestSuite">
+	        <methods>
+				<include name="launchHomePage" />		
+				<exclude name="closeCookieWarning"/>						
+				<include name="enterAndSearchStringSTAR" />
+				<include name="quickOrdertoCart" />
+				<include name="shoppingCartToAddressPage" />
+				<include name="orderConfirmation" />					
+		    </methods>   
+	      </class>   
+	    </classes>
+ 	</test>	
+ 	
+ 	
+ 	<test name="QuickOrderwithInvalidskucsvfile" preserve-order="true">
+	    <classes>
+	      <class name="com.eperium.jumpstart.JumpStartTestSuite">
+	        <methods>
+				<include name="launchHomePage" />
+				<exclude name="closeCookieWarning"/>							
+				<include name="uploadFileInvalidSku" />			
+		    </methods>   
+	      </class>   
+	    </classes>
+ 	</test>
+ 	
+ 	
+ 	<test name="QuickOrderwithInvalidFileExtn" preserve-order="true">
+	    <classes>
+	      <class name="com.eperium.jumpstart.JumpStartTestSuite">
+	        <methods>
+				<include name="launchHomePage" />	
+				<exclude name="closeCookieWarning"/>						
+				<include name="uploadFileInvalidFileExtn" />			
+		    </methods>   
+	      </class>   
+	    </classes>
+ 	</test>
+ 	
+ 	
+ 	<test name="QuickOrderwithInvalidMissingSkuQtyfile" preserve-order="true">
+	    <classes>
+	      <class name="com.eperium.jumpstart.JumpStartTestSuite">
+	        <methods>
+				<include name="launchHomePage" />	
+				<exclude name="closeCookieWarning"/>					
+				<include name="uploadFileInvalidMissingSkuQty" />							
+		    </methods>   
+	      </class>   
+	    </classes>
+ 	</test> 
+ 	
+ 	
+ 	<test name="QuickOrderwithFileInvalidQtyNonnumeric" preserve-order="true">
+	    <classes>
+	      <class name="com.eperium.jumpstart.JumpStartTestSuite">
+	        <methods>
+				<include name="launchHomePage" />	
+				<exclude name="closeCookieWarning"/>						
+				<include name="uploadFileInvalidQtyNonnumeric" />			
+		    </methods>   
+	      </class>   
+	    </classes>
+ 	</test> 
+ 	
+ 	
+ 	<test name="QuickOrderwithvalidcsvfile100items" preserve-order="true">
+	    <classes>
+	      <class name="com.eperium.jumpstart.JumpStartTestSuite">
+	        <methods>
+				<include name="launchHomePage" />
+				<exclude name="closeCookieWarning"/>							
+				<include name="uploadValidCsvAtQuickOrder" />
+				<include name="shoppingCartToAddressPage" />	
+				<include name="enterRefIdAndName" />		
+				<include name="orderConfirmation" />				
+		    </methods>   
+	      </class>   
+	    </classes>
+ 	</test>
+
+
+<!--   	<test name="DeleteAllOrderTemplates" preserve-order="true"> -->
+<!-- 	    <classes> -->
+<!-- 	      <class name="com.eperium.jumpstart.JumpStartTestSuite"> -->
+<!-- 	        <methods> -->
+<!-- 				<include name="launchHomePage" />					 -->
+<!-- 				<include name="goToLoginPage" /> -->
+<!-- 				<include name="loginCustomerBuyer" /> -->
+<!-- 				<exclude name="closeCookieWarning"/> -->
+<!-- 				<include name="deleteAllOrderTemplate" /> -->
+<!-- 		    </methods>    -->
+<!-- 	      </class>    -->
+<!-- 	    </classes> -->
+<!--  	</test>  -->
+ 	
+ 	 		
+  	<test name="AddProductToOrderTemplate" preserve-order="true">
+	    <classes>
+	      <class name="com.eperium.jumpstart.JumpStartTestSuite">
+	        <methods>
+				<include name="launchHomePage" />
+				<exclude name="closeCookieWarning"/>		
+				<include name="enterAndSearchStringSTAR" />
+				<include name="gotoFirstPDP" />
+				<include name="addProductToOrderTemplateFromPDP" />
+				<include name="saveOrderTemplate" />	              				    				
+ 				<include name="enterAndSearchStringSTAR1" />              				
+   				<exclude name="addProductToOrderTemplateFromListView" />
+				<exclude name="saveOrderTemplateFromListView" />		
+		    </methods>   
+	      </class>   
+	    </classes>
+ 	</test> 
+ 
+ 
+	<test name="AddBasketToOrderTemplate" preserve-order="true">
+	    <classes>
+	      <class name="com.eperium.jumpstart.JumpStartTestSuite">
+	        <methods>
+				<include name="launchHomePage" />	
+				<exclude name="closeCookieWarning"/>
+				<include name="enterAndSearchStringSTAR" />
+				<include name="gotoFirstPDP" />
+				<include name="addProducttoCartFromPDP" />
+ 				<include name="addProductToOrderTemplateFromCart" />
+				<include name="saveOrderTemplateFromCart" />
+             	<include name="navigatetoMyAccount" />	
+				<include name="navigateToOrderTempateDetailPage" />
+				<include name="OrderTemplateDetailPage" />
+		    </methods>   
+	      </class>   
+	    </classes>
+ 	</test>
+ 
+ 
+	<test name="AddOrderTemplateToBasket" preserve-order="true">
+	    <classes>
+	      <class name="com.eperium.jumpstart.JumpStartTestSuite">
+	        <methods>
+				<include name="launchHomePage" />	
+				<exclude name="closeCookieWarning"/>
+				<include name="addOrderTemplateFromMyAccount" />
+				<include name="navigatetoMyAccount" />
+				<include name="navigateToOrderTempateDetailPage" />
+				<include name="addOrderTemplateFromDetailPage" />
+		    </methods>   
+	      </class>   
+	    </classes>
+ 	</test>
+
+
+  	<test name="MoveProductFromOneOrderTemplateToAnother" preserve-order="true">
+	    <classes>
+	      <class name="com.eperium.jumpstart.JumpStartTestSuite">
+	        <methods>
+				<include name="launchHomePage" />	
+				<exclude name="closeCookieWarning"/>
+				<exclude name="deleteAllOrderTemplate" />
+				<include name="enterAndSearchStringSTAR1" />
+				<include name="gotoFirstPDP" />
+				<include name="addProductToOrderTemplateFromPDPWithQTYFive" />
+				<include name="saveOrderTemplate" />	
+				<include name="enterAndSearchStringSTAR" />
+				<include name="GoToSecondPage" />
+				<include name="gotoSecondPDP" />         
+ 				<include name="addProductToOrderTemplateFromPDPWithQTYTen" />	
+                <include name="saveOrderTemplate2" />		
+                <include name="navigatetoMyAccount" />		
+				<include name="navigateToOrderTempateDetailPage2" />	
+				<include name="openFirstOrderTemplateIncreaseQTYAndMoveProduct" />
+				<include name="navigatetoMyAccount1" />	
+                <include name="navigateToOrderTempateDetailPage" />
+				<include name="openSecondOrderTemplateAndVerifyProduct" />
+		    </methods>   
+	      </class>   
+	    </classes>
+ 	</test> 
+ 
+ 
+ 	<test name="SaveOrderToDefaultOrderTemplate" preserve-order="true">
+     <classes>
+          <class name="com.eperium.jumpstart.JumpStartTestSuite">
+      	   <methods>
+				<include name="launchHomePage" />	
+				<exclude name="closeCookieWarning"/>				
+				<include name="enterAndSearchStringSTAR" />
+				<include name="quickOrdertoCart" />
+				<include name="shoppingCartToAddressPage" />
+				<include name="enterRefIdAndName" />		
+				<include name="orderConfirmation" />
+				<exclude name="validateOrdertoDefaultOrderTemplate" />
+				<exclude name="validateQtyInOrderTemplate"/>								  			  		  				
+            </methods>	
+          </class>
+       </classes>
+	</test>
+ 
+ 
+ 	<test name="SaveOrderTemplateWithoutName_Validation" preserve-order="true">
+	    <classes>
+	      <class name="com.eperium.jumpstart.JumpStartTestSuite">
+	        <methods>
+				<include name="launchHomePage" />	
+				<exclude name="closeCookieWarning"/>		
+				<include name="enterAndSearchStringSTAR" />
+				<include name="gotoFirstPDP" />/
+				<include name="verifyBlankOrderTemplateName" />		
+		    </methods>   
+	      </class>   
+	    </classes>
+ 	</test>
+
+ 
+<!--  	<test name="AddCartToQuote" preserve-order="true"> -->
+<!-- 	    <classes> -->
+<!-- 	      <class name="com.eperium.jumpstart.JumpStartTestSuite"> -->
+<!-- 	        <methods> -->
+<!-- 				<include name="launchHomePage" />	 -->
+<!-- 				<exclude name="goToLoginPage" /> -->
+<!-- 				<exclude name="loginCustomerBuyer" />			 -->
+<!--   				<exclude name="enterAndSearchStringSTAR" />	 -->
+<!-- 				<exclude name="gotoFirstPDP" /> -->
+<!-- 				<exclude name="getProductSkuAndOpenQuotePopUp" />				 -->
+<!-- 		 		<exclude name="verifyQuote" /> -->
+<!-- 		 		<exclude name="sendQuoteDetails" />		 									 -->
+<!-- 		    </methods>    -->
+<!-- 	      </class>    -->
+<!-- 	    </classes> -->
+<!--  	</test> -->
+	  
+	  
+	<test name="Add_Items_to_Cart_From_Order_Template_Details_Page" preserve-order="true">
+      <classes>
+           <class name="com.eperium.jumpstart.JumpStartTestSuite">
+      		<methods>
+				<include name="launchHomePage" />	
+				<exclude name="closeCookieWarning"/>
+				<include name="enterAndSearchStringSTAR1" />
+				<include name="gotoFirstPDP" />
+				<include name="addProductToOrderTemplateFromPDPWithQTYFive" />
+				<include name="saveOrderTemplate" />
+          		<include name="navigatetoMyAccount" />		
+				<include name="navigateToOrderTempateDetailPage2" />		
+				<include name="openOrderTemplateAndAddProductToCartAndVerify" />  		  				
+            </methods>	
+           </class>
+       </classes> 
+	 </test>
+	 
+	    
+ 	<test name="CustomerRoleVerification" preserve-order="true">
+	    <classes>
+	      <class name="com.eperium.jumpstart.JumpStartTestSuite">
+	        <methods>
+				<include name="launchHomePage" />	
+				<exclude name="closeCookieWarning"/>
+				<include name="verifyUserRole1" />
+				<include name="logout" />						
+		    </methods>   
+	      </class>   
+	    </classes>
+ 	</test>
+	  
+	  
+	<test name="AddBlankOrderTemplateToBasket" preserve-order="true">
+	    <classes>
+	      <class name="com.eperium.jumpstart.JumpStartTestSuite">
+	        <methods>
+				<include name="launchHomePage" />	
+				<exclude name="closeCookieWarning"/>
+				<include name="navigateToOrderTempateDetailPage" />
+				<include name="addBlankOrderTemplate" />
+				<include name="addBlankOrderTemplateToBlankBasket" />
+		    </methods>   
+	      </class>   
+	    </classes>
+ 	</test>
+	 
+	  
+	<test name="CheckPackagingInfoOrderProcessing" preserve-order="true">
+	    <classes>
+	      <class name="com.eperium.jumpstart.JumpStartTestSuite">
+	        <methods>
+	       		<include name="launchHomePage" />
+				<exclude name="closeCookieWarning"/>		
+				<include name="enterAndSearchStringSTAR" />
+				<include name="gotoFirstPDP" />
+				<include name="getPackagingInfoFromPDP" />
+				<include name="addProducttoCartFromPDP" />			
+				<include name="shoppingCartToAddressPage" />
+				<exclude name="verifyPackagingInfoOnAddressPage" />				
+				<include name="enterRefIdAndName" />
+				<include name="orderConfirmation" />
+		    </methods>   
+	      </class>   
+	    </classes>
+ 	</test>
+ 	
+ 	
+ 	<test name="OrderDetailPageCheckingPackagingInfo" preserve-order="true">
+	    <classes>
+	      <class name="com.eperium.jumpstart.JumpStartTestSuite">
+	        <methods>
+	       		<include name="launchHomePage" />
+				<exclude name="closeCookieWarning"/>		
+				<include name="enterAndSearchStringSTAR" />
+				<include name="gotoFirstPDP" />				
+				<include name="getPackagingInfoFromPDP" />
+				<include name="addProducttoCartFromPDP" />			
+				<include name="shoppingCartToAddressPage" />
+				<include name="enterRefIdAndName" />
+				<include name="orderConfirmation" />
+				<exclude name="navigateOrderDetailPage" />							
+		    </methods>   
+	      </class>   
+	    </classes>
+ 	</test>
+	
+</suite>

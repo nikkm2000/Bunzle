@@ -1,0 +1,21 @@
+<suite name="Suite" verbose="1" parallel = "tests">   
+
+        <parallel> 
+	     <tests path="ACC_REG/BDD.xml"/>
+	     <tests path="ACC_REG/MAJ.xml"/>
+<!--         <suite-file path="ACC_REG/KBE.xml"/>   -->
+<!--         <suite-file path="ACC_REG/King.xml"/>  -->
+<!--  		<suite-file path="ACC_REG/BVP.xml"/> -->
+<!--  		<suite-file path="ACC_REG/BRS.xml"/> -->
+<!--  		<suite-file path="ACC_REG/BFS.xml"/> -->
+<!--  		<suite-file path="ACC_REG/GLO.xml"/> -->
+<!--  		<suite-file path="ACC_REG/MLN.xml"/> 		 -->
+<!-- 		<suite-file path="ACC_REG/KINGOCI.xml"/> -->
+<!-- 		<suite-file path="ACC_REG/DRD.xml"/> -->
+<!-- 		<suite-file path="ACC_REG/BDDOCI.xml"/> -->
+<!-- 		<suite-file path="ACC_REG/D-Care.xml"/> -->
+<!-- 		<suite-file path="ACC_REG/BVPOCI.xml"/> 	     -->
+          </parallel>  
+
+    
+</suite>

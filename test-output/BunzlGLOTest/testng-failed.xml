@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite verbose="10" name="Failed suite [BunzlGLOTest]">
+  <parameter name="PDFRequiredPerTestCase" value="True"/>
+  <parameter name="site" value="GLO"/>
+  <parameter name="selenium.host" value="localhost"/>
+  <parameter name="testcasename" value="ConsolidatedPDF"/>
+  <parameter name="channel" value="GLO-NL-Test"/>
+  <parameter name="selenium.browser.version" value="36"/>
+  <parameter name="locale" value="nl-NL"/>
+  <parameter name="comchannel" value="COM-X-Test"/>
+  <parameter name="selenium.browser" value="firefox"/>
+  <parameter name="platform" value="Desktop"/>
+  <listeners>
+    <listener class-name="com.eperium.jumpstart.testframework.utils.SuiteReportUtils"/>
+    <listener class-name="com.eperium.jumpstart.testframework.utils.IListenEverything"/>
+    <listener class-name="com.eperium.jumpstart.testframework.utils.ReportUtil"/>
+  </listeners>
+  <test name="QuickOrderwithvalidcsvfile100items(failed)">
+    <classes>
+      <class name="com.eperium.jumpstart.JumpStartTestSuite">
+        <methods>
+          <include name="setUpBeforeclass"/>
+          <include name="setupBeforeSuite"/>
+          <include name="setupAfterSuite"/>
+          <include name="uploadValidCsvAtQuickOrder"/>
+          <include name="setupAfterTest"/>
+        </methods>
+      </class> <!-- com.eperium.jumpstart.JumpStartTestSuite -->
+    </classes>
+  </test> <!-- QuickOrderwithvalidcsvfile100items(failed) -->
+</suite> <!-- Failed suite [BunzlGLOTest] -->

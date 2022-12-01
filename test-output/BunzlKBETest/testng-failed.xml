@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite verbose="10" name="Failed suite [BunzlKBETest]">
+  <parameter name="PDFRequiredPerTestCase" value="True"/>
+  <parameter name="site" value="KBE"/>
+  <parameter name="selenium.host" value="localhost"/>
+  <parameter name="testcasename" value="ConsolidatedPDF"/>
+  <parameter name="channel" value="KBE-NL-Test"/>
+  <parameter name="locale" value="nl-BE"/>
+  <parameter name="comchannel" value="COM-X-Test"/>
+  <parameter name="selenium.browser" value="chrome"/>
+  <parameter name="platform" value="Desktop"/>
+  <listeners>
+    <listener class-name="com.eperium.jumpstart.testframework.utils.SuiteReportUtils"/>
+    <listener class-name="com.eperium.jumpstart.testframework.utils.IListenEverything"/>
+    <listener class-name="com.eperium.jumpstart.testframework.utils.ReportUtil"/>
+    <listener class-name="com.eperium.jumpstart.testframework.utils.SetOverViewReport1"/>
+    <listener class-name="com.eperium.jumpstart.testframework.utils.SetOverViewReportData"/>
+    <listener class-name="com.eperium.jumpstart.testframework.utils.HtmlReport"/>
+  </listeners>
+  <test thread-count="5" verbose="10" name="GuestSiteNavigation(failed)">
+    <classes>
+      <class name="com.eperium.jumpstart.JumpStartTestSuite">
+        <methods>
+          <include name="setUpBeforeclass"/>
+          <include name="browseFromAssortimentCategoryToListerPage"/>
+          <include name="setupBeforeSuite"/>
+          <include name="setupAfterSuite"/>
+          <include name="setupAfterTest"/>
+        </methods>
+      </class> <!-- com.eperium.jumpstart.JumpStartTestSuite -->
+    </classes>
+  </test> <!-- GuestSiteNavigation(failed) -->
+</suite> <!-- Failed suite [BunzlKBETest] -->

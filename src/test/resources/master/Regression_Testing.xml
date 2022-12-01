@@ -1,0 +1,21 @@
+<suite name="suites" verbose="1">
+    <suite-files> 
+ <!-- REGRESSION TESTING SUITES --> 
+         <suite-file path="ACC_REG/BDD.xml"/>
+         <suite-file path="ACC_REG/MAJ.xml"/>
+         <suite-file path="ACC_REG/KBE.xml"/>  
+         <suite-file path="ACC_REG/King.xml"/> 
+ 		 <suite-file path="ACC_REG/BVP.xml"/>
+ 		 <suite-file path="ACC_REG/BRS.xml"/>
+ 		 <suite-file path="ACC_REG/BFS.xml"/>
+ 		 <suite-file path="ACC_REG/GLO.xml"/>
+ 		 <suite-file path="ACC_REG/MLN.xml"/> 
+ 		 <suite-file path="ACC_REG/SAEBE.xml"/> 		 		
+ 		 <suite-file path="ACC_REG/CLC.xml"/> 	
+		 <suite-file path="ACC_REG/KingOCI.xml"/>
+		 <suite-file path="ACC_REG/D-Care.xml"/>
+		 <suite-file path="ACC_REG/BVPOCI.xml"/> 
+		 <suite-file path="ACC_REG/DRD.xml"/> 
+		 <suite-file path="ACC_REG/BDDOCI.xml"/>
+    </suite-files>
+</suite>

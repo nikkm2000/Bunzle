@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [BunzlKingOCITest]">
+  <parameter name="PDFRequiredPerTestCase" value="True"/>
+  <parameter name="site" value="Kingoci"/>
+  <parameter name="selenium.host" value="localhost"/>
+  <parameter name="testcasename" value="ConsolidatedPDF"/>
+  <parameter name="channel" value="Kingoci-NL-Test"/>
+  <parameter name="locale" value="nl-NL"/>
+  <parameter name="comchannel" value="COM-OCI-Test"/>
+  <parameter name="selenium.browser" value="PhantomJS"/>
+  <parameter name="platform" value="Desktop"/>
+  <listeners>
+    <listener class-name="com.eperium.jumpstart.testframework.utils.SuiteReportUtils"/>
+    <listener class-name="com.eperium.jumpstart.testframework.utils.IListenEverything"/>
+    <listener class-name="com.eperium.jumpstart.testframework.utils.ReportUtil"/>
+    <listener class-name="com.eperium.jumpstart.testframework.utils.SetOverViewReport1"/>
+    <listener class-name="com.eperium.jumpstart.testframework.utils.SetOverViewReportData"/>
+    <listener class-name="com.eperium.jumpstart.testframework.utils.HtmlReport"/>
+  </listeners>
+  <test thread-count="5" name="CheckoutAsBuyer(failed)">
+    <classes>
+      <class name="com.eperium.jumpstart.JumpStartTestSuite">
+        <methods>
+          <include name="setUpBeforeclass"/>
+          <include name="gotoFirstPDP"/>
+          <include name="orderConfirmation"/>
+          <include name="setupBeforeSuite"/>
+          <include name="cartToReview"/>
+          <include name="setupAfterSuite"/>
+          <include name="setupAfterTest"/>
+          <include name="addProducttoCartFromPDP"/>
+        </methods>
+      </class> <!-- com.eperium.jumpstart.JumpStartTestSuite -->
+    </classes>
+  </test> <!-- CheckoutAsBuyer(failed) -->
+</suite> <!-- Failed suite [BunzlKingOCITest] -->

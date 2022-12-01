@@ -1,0 +1,148 @@
+<suite name="BunzlMLNTest" verbose="10" >
+	<parameter name="site" value="MLN" />
+	<parameter name="locale" value="da-DK" />
+	<parameter name="channel" value="MLN-DK-Test" />
+	<parameter name="comchannel" value="COM-X-Test" />
+	<parameter name="selenium.host" value="localhost" />
+<!-- 	<parameter name="platform" value="Linux" /> -->
+	<parameter name="platform" value="Desktop" />
+	<parameter name="selenium.browser" value= "chrome" />
+<!-- 	<parameter name="selenium.browser" value= "headless" /> -->
+<!-- 	<parameter name="selenium.browser" value= "firefox" /> -->
+<!-- 	<parameter name="selenium.browser.version" value="36" /> -->	
+<!-- 	<parameter name="selenium.browser" value= "PhantomJS" /> -->
+	<parameter name="PDFRequiredPerTestCase" value="True" />
+	<parameter name="testcasename" value="ConsolidatedPDF" />
+    <listeners>
+       <listener class-name="com.eperium.jumpstart.testframework.utils.SuiteReportUtils"/>
+       <listener class-name="com.eperium.jumpstart.testframework.utils.IListenEverything"/>
+       <listener class-name="com.eperium.jumpstart.testframework.utils.ReportUtil"/>
+       
+       <listener class-name="com.eperium.jumpstart.testframework.utils.SetOverViewReport1"/>
+       <listener class-name="com.eperium.jumpstart.testframework.utils.SetOverViewReportData"/>
+       <listener class-name="com.eperium.jumpstart.testframework.utils.HtmlReport"/>
+
+<!-- 		<listener class-name="org.uncommons.reportng.HTMLReporter" />  -->
+<!-- 		<listener class-name="org.uncommons.reportng.JUnitXMLReporter" /> -->
+   </listeners>	
+	
+  
+<!--  	<test name="RemoveAllProductsFromCart" preserve-order="true"> -->
+<!-- 	    <classes> -->
+<!-- 	      <class name="com.eperium.jumpstart.JumpStartTestSuite"> -->
+<!-- 	        <methods> -->
+<!-- 				<include name="launchHomePage" />	 -->
+<!-- 				<include name="goToLoginPage" />				 -->
+<!-- 				<include name="loginCustomerBuyer" /> -->
+<!-- 				<include name="closeCookieWarning"/> -->
+<!-- 				<include name="enterAndSearchStringSTAR" />	 -->
+<!-- 				<include name="gotoFirstPDP" /> -->
+<!-- 				<include name="addProducttoCartFromPDP" /> -->
+<!-- 				<include name="enterAndSearchStringSTAR1" /> -->
+<!-- 				<include name="gotoSecondPDP" /> -->
+<!-- 				<include name="addProducttoCartFromPDP1" /> -->
+<!-- 				<include name="removeProductAndVerifyCart" /> -->
+<!-- 		    </methods>    -->
+<!-- 	      </class>    -->
+<!-- 	    </classes> -->
+<!--  	</test> -->	
+
+	    
+ 	<test name="QuickOrdering" preserve-order="true">
+	    <classes>
+	      <class name="com.eperium.jumpstart.JumpStartTestSuite">
+	        <methods>
+				<include name="launchHomePage" />	 
+				<include name="goToLoginPage" />				
+				<include name="loginCustomerBuyer" />	
+				<include name="closeCookieWarning"/>						
+				<include name="enterAndSearchStringSTAR" />
+				<include name="quickOrdertoCart" />
+				<include name="shoppingCartToAddressPage" />
+				<include name="orderConfirmation" />					
+		    </methods>   
+	      </class>   
+	    </classes>
+ 	</test>	
+
+ 	
+<!--  	<test name="QuickOrderwithInvalidskucsvfile" preserve-order="true"> -->
+<!-- 	    <classes> -->
+<!-- 	      <class name="com.eperium.jumpstart.JumpStartTestSuite"> -->
+<!-- 	        <methods> -->
+<!-- 				<include name="launchHomePage" />					         -->
+<!-- 				<include name="goToLoginPage" />				 -->
+<!-- 				<include name="loginCustomerBuyer" /> -->
+<!-- 				<include name="closeCookieWarning"/>							 -->
+<!-- 				<include name="uploadFileInvalidSku" />			 -->
+<!-- 		    </methods>    -->
+<!-- 	      </class>    -->
+<!-- 	    </classes> -->
+<!--  	</test> -->
+ 	
+ 	
+<!--  	<test name="QuickOrderwithInvalidFileExtn" preserve-order="true"> -->
+<!-- 	    <classes> -->
+<!-- 	      <class name="com.eperium.jumpstart.JumpStartTestSuite"> -->
+<!-- 	        <methods> -->
+<!-- 				<include name="launchHomePage" />					         -->
+<!-- 				<include name="goToLoginPage" />				 -->
+<!-- 				<include name="loginCustomerBuyer" />	 -->
+<!-- 				<include name="closeCookieWarning"/>						 -->
+<!-- 				<include name="uploadFileInvalidFileExtn" />			 -->
+<!-- 		    </methods>    -->
+<!-- 	      </class>    -->
+<!-- 	    </classes> -->
+<!--  	</test> -->
+ 	
+ 	
+<!--  	<test name="QuickOrderwithInvalidMissingSkuQtyfile" preserve-order="true"> -->
+<!-- 	    <classes> -->
+<!-- 	      <class name="com.eperium.jumpstart.JumpStartTestSuite"> -->
+<!-- 	        <methods> -->
+<!-- 				<include name="launchHomePage" />					         -->
+<!-- 				<include name="goToLoginPage" />				 -->
+<!-- 				<include name="loginCustomerBuyer" />		 -->
+<!-- 				<include name="closeCookieWarning"/>					 -->
+<!-- 				<include name="uploadFileInvalidMissingSkuQty" />							 -->
+<!-- 		    </methods>    -->
+<!-- 	      </class>    -->
+<!-- 	    </classes> -->
+<!--  	</test>  -->
+ 	
+
+<!--  	<test name="QuickOrderwithFileInvalidQtyNonnumeric" preserve-order="true"> -->
+<!-- 	    <classes> -->
+<!-- 	      <class name="com.eperium.jumpstart.JumpStartTestSuite"> -->
+<!-- 	        <methods> -->
+<!-- 				<include name="launchHomePage" />					         -->
+<!-- 				<include name="goToLoginPage" />				 -->
+<!-- 				<include name="loginCustomerBuyer" />	 -->
+<!-- 				<include name="closeCookieWarning"/>						 -->
+<!-- 				<include name="uploadFileInvalidQtyNonnumeric" />			 -->
+<!-- 		    </methods>    -->
+<!-- 	      </class>    -->
+<!-- 	    </classes> -->
+<!--  	</test>  -->
+
+ 	
+<!--  	<test name="QuickOrderwithvalidcsvfile100items" preserve-order="true"> -->
+<!-- 	    <classes> -->
+<!-- 	      <class name="com.eperium.jumpstart.JumpStartTestSuite"> -->
+<!-- 	        <methods> -->
+<!-- 				<include name="launchHomePage" />					         -->
+<!-- 				<include name="goToLoginPage" />				 -->
+<!-- 				<include name="loginCustomerBuyer" /> -->
+<!-- 				<include name="closeCookieWarning"/>							 -->
+<!-- 				<include name="uploadValidCsvAtQuickOrder" /> -->
+<!-- 				<include name="shoppingCartToAddressPage" />	 -->
+<!-- 				<include name="enterRefIdAndName" />		 -->
+<!-- 				<include name="orderConfirmation" />				 -->
+<!-- 		    </methods>    -->
+<!-- 	      </class>    -->
+<!-- 	    </classes> -->
+<!--  	</test> -->
+ 	 	
+</suite>
+
+

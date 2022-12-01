@@ -1,0 +1,1314 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+  <meta charset='utf-8'>
+  <title>TestNG reports</title>
+
+    <link type="text/css" href="testng-reports.css" rel="stylesheet" />
+    <script type="text/javascript" src="jquery-1.7.1.min.js"></script>
+    <script type="text/javascript" src="testng-reports.js"></script>
+    <script type="text/javascript" src="https://www.google.com/jsapi"></script>
+    <script type='text/javascript'>
+      google.load('visualization', '1', {packages:['table']});
+      google.setOnLoadCallback(drawTable);
+      var suiteTableInitFunctions = new Array();
+      var suiteTableData = new Array();
+    </script>
+    <!--
+      <script type="text/javascript" src="jquery-ui/js/jquery-ui-1.8.16.custom.min.js"></script>
+     -->
+  </head>
+
+  <body>
+    <div class="top-banner-root">
+      <span class="top-banner-title-font">Test results</span>
+      <br/>
+      <span class="top-banner-font-1">1 suite, 6 failed tests</span>
+    </div> <!-- top-banner-root -->
+    <div class="navigator-root">
+      <div class="navigator-suite-header">
+        <span>All suites</span>
+        <a href="#" class="collapse-all-link" title="Collapse/expand all the suites">
+          <img class="collapse-all-icon" src="collapseall.gif">
+          </img> <!-- collapse-all-icon -->
+        </a> <!-- collapse-all-link -->
+      </div> <!-- navigator-suite-header -->
+      <div class="suite">
+        <div class="rounded-window">
+          <div class="suite-header light-rounded-window-top">
+            <a href="#" class="navigator-link" panel-name="suite-BunzlMLNTest">
+              <span class="suite-name border-failed">BunzlMLNTest</span>
+            </a> <!-- navigator-link -->
+          </div> <!-- suite-header light-rounded-window-top -->
+          <div class="navigator-suite-content">
+            <div class="suite-section-title">
+              <span>Info</span>
+            </div> <!-- suite-section-title -->
+            <div class="suite-section-content">
+              <ul>
+                <li>
+                  <a href="#" class="navigator-link " panel-name="test-xml-BunzlMLNTest">
+                    <span>F:\automation_test_suites_bunzl\Automation\src\test\resources\master\Testing.xml</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+                <li>
+                  <a href="#" class="navigator-link " panel-name="testlist-BunzlMLNTest">
+                    <span class="test-stats">1 test</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+                <li>
+                  <a href="#" class="navigator-link " panel-name="group-BunzlMLNTest">
+                    <span>0 groups</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+                <li>
+                  <a href="#" class="navigator-link " panel-name="times-BunzlMLNTest">
+                    <span>Times</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+                <li>
+                  <a href="#" class="navigator-link " panel-name="reporter-BunzlMLNTest">
+                    <span>Reporter output</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+                <li>
+                  <a href="#" class="navigator-link " panel-name="ignored-methods-BunzlMLNTest">
+                    <span>Ignored methods</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+                <li>
+                  <a href="#" class="navigator-link " panel-name="chronological-BunzlMLNTest">
+                    <span>Chronological view</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+              </ul>
+            </div> <!-- suite-section-content -->
+            <div class="result-section">
+              <div class="suite-section-title">
+                <span>Results</span>
+              </div> <!-- suite-section-title -->
+              <div class="suite-section-content">
+                <ul>
+                  <li>
+                    <span class="method-stats">8 methods, 6 failed,   2 passed</span>
+                  </li>
+                  <li>
+                    <span class="method-list-title failed">Failed methods</span>
+                    <span class="show-or-hide-methods failed">
+                      <a href="#" panel-name="suite-BunzlMLNTest" class="hide-methods failed suite-BunzlMLNTest"> (hide)</a> <!-- hide-methods failed suite-BunzlMLNTest -->
+                      <a href="#" panel-name="suite-BunzlMLNTest" class="show-methods failed suite-BunzlMLNTest"> (show)</a> <!-- show-methods failed suite-BunzlMLNTest -->
+                    </span>
+                    <div class="method-list-content failed suite-BunzlMLNTest">
+                      <span>
+                        <img width="3%" src="failed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-BunzlMLNTest" title="com.eperium.jumpstart.JumpStartTestSuite" hash-for-method="closeCookieWarning">closeCookieWarning</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="failed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-BunzlMLNTest" title="com.eperium.jumpstart.JumpStartTestSuite" hash-for-method="enterAndSearchStringSTAR">enterAndSearchStringSTAR</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="failed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-BunzlMLNTest" title="com.eperium.jumpstart.JumpStartTestSuite" hash-for-method="loginCustomerBuyer">loginCustomerBuyer</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="failed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-BunzlMLNTest" title="com.eperium.jumpstart.JumpStartTestSuite" hash-for-method="orderConfirmation">orderConfirmation</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="failed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-BunzlMLNTest" title="com.eperium.jumpstart.JumpStartTestSuite" hash-for-method="quickOrdertoCart">quickOrdertoCart</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="failed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-BunzlMLNTest" title="com.eperium.jumpstart.JumpStartTestSuite" hash-for-method="shoppingCartToAddressPage">shoppingCartToAddressPage</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                    </div> <!-- method-list-content failed suite-BunzlMLNTest -->
+                  </li>
+                  <li>
+                    <span class="method-list-title passed">Passed methods</span>
+                    <span class="show-or-hide-methods passed">
+                      <a href="#" panel-name="suite-BunzlMLNTest" class="hide-methods passed suite-BunzlMLNTest"> (hide)</a> <!-- hide-methods passed suite-BunzlMLNTest -->
+                      <a href="#" panel-name="suite-BunzlMLNTest" class="show-methods passed suite-BunzlMLNTest"> (show)</a> <!-- show-methods passed suite-BunzlMLNTest -->
+                    </span>
+                    <div class="method-list-content passed suite-BunzlMLNTest">
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-BunzlMLNTest" title="com.eperium.jumpstart.JumpStartTestSuite" hash-for-method="goToLoginPage">goToLoginPage</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-BunzlMLNTest" title="com.eperium.jumpstart.JumpStartTestSuite" hash-for-method="launchHomePage">launchHomePage</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                    </div> <!-- method-list-content passed suite-BunzlMLNTest -->
+                  </li>
+                </ul>
+              </div> <!-- suite-section-content -->
+            </div> <!-- result-section -->
+          </div> <!-- navigator-suite-content -->
+        </div> <!-- rounded-window -->
+      </div> <!-- suite -->
+    </div> <!-- navigator-root -->
+    <div class="wrapper">
+      <div class="main-panel-root">
+        <div panel-name="suite-BunzlMLNTest" class="panel BunzlMLNTest">
+          <div class="suite-BunzlMLNTest-class-failed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="failed.png"/>
+              <span class="class-name">com.eperium.jumpstart.JumpStartTestSuite</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="closeCookieWarning">
+                  </a> <!-- closeCookieWarning -->
+                  <span class="method-name">closeCookieWarning</span>
+                  <div class="stack-trace">org.openqa.selenium.NoSuchWindowException: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=101.0.4951.64)
+  (Driver info: chromedriver=2.42.591088 (7b2b2dca23cca0862f674758c9a3933e685c27d5),platform=Windows NT 10.0.19042 x86_64) (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 19 milliseconds
+Build info: version: &apos;2.53.0&apos;, revision: &apos;35ae25b1534ae328c771e0856c93e187490ca824&apos;, time: &apos;2016-03-15 10:43:46&apos;
+System info: host: &apos;IN04144&apos;, ip: &apos;172.17.135.59&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_151&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities [{mobileEmulationEnabled=false, hasTouchScreen=false, platform=XP, acceptSslCerts=false, goog:chromeOptions={debuggerAddress=localhost:64705}, acceptInsecureCerts=false, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, setWindowRect=true, unexpectedAlertBehaviour=, applicationCacheEnabled=false, rotatable=false, networkConnectionEnabled=false, chrome={chromedriverVersion=2.42.591088 (7b2b2dca23cca0862f674758c9a3933e685c27d5), userDataDir=C:\Users\sprakash\AppData\Local\Temp\scoped_dir10728_9554}, takesHeapSnapshot=true, pageLoadStrategy=normal, databaseEnabled=false, handlesAlerts=true, version=101.0.4951.64, browserConnectionEnabled=false, nativeEvents=true, locationContextEnabled=true, cssSelectorsEnabled=true}]
+Session ID: b91210e95de7aa2916321dd66f5c34bc
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:206)
+	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:158)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:678)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:701)
+	at org.openqa.selenium.remote.RemoteWebDriver.getWindowHandle(RemoteWebDriver.java:555)
+	at com.eperium.jumpstart.Setup.initialize(Setup.java:590)
+	at com.eperium.jumpstart.JumpStartTestSuite.closeCookieWarning(JumpStartTestSuite.java:9084)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:108)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:661)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:869)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1193)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:126)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at org.testng.TestRunner.privateRun(TestRunner.java:744)
+	at org.testng.TestRunner.run(TestRunner.java:602)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:380)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:375)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:340)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:289)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1301)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1226)
+	at org.testng.TestNG.runSuites(TestNG.java:1144)
+	at org.testng.TestNG.run(TestNG.java:1115)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+
+</div> <!-- stack-trace -->
+                  <em>
+(check that cookie warning closes)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="enterAndSearchStringSTAR">
+                  </a> <!-- enterAndSearchStringSTAR -->
+                  <span class="method-name">enterAndSearchStringSTAR</span>
+                  <div class="stack-trace">org.openqa.selenium.NoSuchWindowException: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=101.0.4951.64)
+  (Driver info: chromedriver=2.42.591088 (7b2b2dca23cca0862f674758c9a3933e685c27d5),platform=Windows NT 10.0.19042 x86_64) (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 9 milliseconds
+Build info: version: &apos;2.53.0&apos;, revision: &apos;35ae25b1534ae328c771e0856c93e187490ca824&apos;, time: &apos;2016-03-15 10:43:46&apos;
+System info: host: &apos;IN04144&apos;, ip: &apos;172.17.135.59&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_151&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities [{mobileEmulationEnabled=false, hasTouchScreen=false, platform=XP, acceptSslCerts=false, goog:chromeOptions={debuggerAddress=localhost:64705}, acceptInsecureCerts=false, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, setWindowRect=true, unexpectedAlertBehaviour=, applicationCacheEnabled=false, rotatable=false, networkConnectionEnabled=false, chrome={chromedriverVersion=2.42.591088 (7b2b2dca23cca0862f674758c9a3933e685c27d5), userDataDir=C:\Users\sprakash\AppData\Local\Temp\scoped_dir10728_9554}, takesHeapSnapshot=true, pageLoadStrategy=normal, databaseEnabled=false, handlesAlerts=true, version=101.0.4951.64, browserConnectionEnabled=false, nativeEvents=true, locationContextEnabled=true, cssSelectorsEnabled=true}]
+Session ID: b91210e95de7aa2916321dd66f5c34bc
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:206)
+	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:158)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:678)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:701)
+	at org.openqa.selenium.remote.RemoteWebDriver.getWindowHandle(RemoteWebDriver.java:555)
+	at com.eperium.jumpstart.Setup.initialize(Setup.java:590)
+	at com.eperium.jumpstart.JumpStartTestSuite.enterAndSearchStringSTAR(JumpStartTestSuite.java:2116)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:108)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:661)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:869)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1193)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:126)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at org.testng.TestRunner.privateRun(TestRunner.java:744)
+	at org.testng.TestRunner.run(TestRunner.java:602)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:380)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:375)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:340)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:289)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1301)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1226)
+	at org.testng.TestNG.runSuites(TestNG.java:1144)
+	at org.testng.TestNG.run(TestNG.java:1115)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+
+</div> <!-- stack-trace -->
+                  <em>
+(Search with * Search String)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="loginCustomerBuyer">
+                  </a> <!-- loginCustomerBuyer -->
+                  <span class="method-name">loginCustomerBuyer</span>
+                  <div class="stack-trace">java.lang.NullPointerException
+	at org.openqa.selenium.remote.RemoteWebDriver.findElements(RemoteWebDriver.java:397)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementsByLinkText(RemoteWebDriver.java:432)
+	at org.openqa.selenium.By$ByLinkText.findElements(By.java:241)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElements(RemoteWebDriver.java:351)
+	at com.eperium.jumpstart.testframework.xml.ValidateableXMLElement.validateTextForElement(ValidateableXMLElement.java:72)
+	at com.eperium.jumpstart.testframework.xml.VisibleTextElement$1.apply(VisibleTextElement.java:43)
+	at com.eperium.jumpstart.testframework.xml.VisibleTextElement$1.apply(VisibleTextElement.java:1)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:238)
+	at com.eperium.jumpstart.testframework.xml.VisibleTextElement._validate(VisibleTextElement.java:38)
+	at com.eperium.jumpstart.testframework.xml.VisibleTextElement.validateAfterClick(VisibleTextElement.java:29)
+	at com.eperium.jumpstart.testframework.utils.TestCaseUtil.checkAllTextMsgs(TestCaseUtil.java:53)
+	at com.eperium.jumpstart.JumpStartTestSuite.loginCustomerBuyer(JumpStartTestSuite.java:1544)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:108)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:661)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:869)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1193)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:126)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at org.testng.TestRunner.privateRun(TestRunner.java:744)
+	at org.testng.TestRunner.run(TestRunner.java:602)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:380)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:375)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:340)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:289)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1301)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1226)
+	at org.testng.TestNG.runSuites(TestNG.java:1144)
+	at org.testng.TestNG.run(TestNG.java:1115)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+
+</div> <!-- stack-trace -->
+                  <em>
+(Login Buyer)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="orderConfirmation">
+                  </a> <!-- orderConfirmation -->
+                  <span class="method-name">orderConfirmation</span>
+                  <div class="stack-trace">org.openqa.selenium.NoSuchWindowException: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=101.0.4951.64)
+  (Driver info: chromedriver=2.42.591088 (7b2b2dca23cca0862f674758c9a3933e685c27d5),platform=Windows NT 10.0.19042 x86_64) (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 7 milliseconds
+Build info: version: &apos;2.53.0&apos;, revision: &apos;35ae25b1534ae328c771e0856c93e187490ca824&apos;, time: &apos;2016-03-15 10:43:46&apos;
+System info: host: &apos;IN04144&apos;, ip: &apos;172.17.135.59&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_151&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities [{mobileEmulationEnabled=false, hasTouchScreen=false, platform=XP, acceptSslCerts=false, goog:chromeOptions={debuggerAddress=localhost:64705}, acceptInsecureCerts=false, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, setWindowRect=true, unexpectedAlertBehaviour=, applicationCacheEnabled=false, rotatable=false, networkConnectionEnabled=false, chrome={chromedriverVersion=2.42.591088 (7b2b2dca23cca0862f674758c9a3933e685c27d5), userDataDir=C:\Users\sprakash\AppData\Local\Temp\scoped_dir10728_9554}, takesHeapSnapshot=true, pageLoadStrategy=normal, databaseEnabled=false, handlesAlerts=true, version=101.0.4951.64, browserConnectionEnabled=false, nativeEvents=true, locationContextEnabled=true, cssSelectorsEnabled=true}]
+Session ID: b91210e95de7aa2916321dd66f5c34bc
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:206)
+	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:158)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:678)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:701)
+	at org.openqa.selenium.remote.RemoteWebDriver.getWindowHandle(RemoteWebDriver.java:555)
+	at com.eperium.jumpstart.Setup.initialize(Setup.java:590)
+	at com.eperium.jumpstart.JumpStartTestSuite.orderConfirmation(JumpStartTestSuite.java:1883)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:108)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:661)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:869)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1193)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:126)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at org.testng.TestRunner.privateRun(TestRunner.java:744)
+	at org.testng.TestRunner.run(TestRunner.java:602)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:380)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:375)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:340)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:289)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1301)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1226)
+	at org.testng.TestNG.runSuites(TestNG.java:1144)
+	at org.testng.TestNG.run(TestNG.java:1115)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+
+</div> <!-- stack-trace -->
+                  <em>
+(Order Confirmation)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="quickOrdertoCart">
+                  </a> <!-- quickOrdertoCart -->
+                  <span class="method-name">quickOrdertoCart</span>
+                  <div class="stack-trace">org.openqa.selenium.NoSuchWindowException: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=101.0.4951.64)
+  (Driver info: chromedriver=2.42.591088 (7b2b2dca23cca0862f674758c9a3933e685c27d5),platform=Windows NT 10.0.19042 x86_64) (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 18 milliseconds
+Build info: version: &apos;2.53.0&apos;, revision: &apos;35ae25b1534ae328c771e0856c93e187490ca824&apos;, time: &apos;2016-03-15 10:43:46&apos;
+System info: host: &apos;IN04144&apos;, ip: &apos;172.17.135.59&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_151&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities [{mobileEmulationEnabled=false, hasTouchScreen=false, platform=XP, acceptSslCerts=false, goog:chromeOptions={debuggerAddress=localhost:64705}, acceptInsecureCerts=false, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, setWindowRect=true, unexpectedAlertBehaviour=, applicationCacheEnabled=false, rotatable=false, networkConnectionEnabled=false, chrome={chromedriverVersion=2.42.591088 (7b2b2dca23cca0862f674758c9a3933e685c27d5), userDataDir=C:\Users\sprakash\AppData\Local\Temp\scoped_dir10728_9554}, takesHeapSnapshot=true, pageLoadStrategy=normal, databaseEnabled=false, handlesAlerts=true, version=101.0.4951.64, browserConnectionEnabled=false, nativeEvents=true, locationContextEnabled=true, cssSelectorsEnabled=true}]
+Session ID: b91210e95de7aa2916321dd66f5c34bc
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:206)
+	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:158)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:678)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:701)
+	at org.openqa.selenium.remote.RemoteWebDriver.getWindowHandle(RemoteWebDriver.java:555)
+	at com.eperium.jumpstart.Setup.initialize(Setup.java:590)
+	at com.eperium.jumpstart.JumpStartTestSuite.quickOrdertoCart(JumpStartTestSuite.java:6642)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:108)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:661)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:869)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1193)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:126)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at org.testng.TestRunner.privateRun(TestRunner.java:744)
+	at org.testng.TestRunner.run(TestRunner.java:602)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:380)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:375)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:340)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:289)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1301)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1226)
+	at org.testng.TestNG.runSuites(TestNG.java:1144)
+	at org.testng.TestNG.run(TestNG.java:1115)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+
+</div> <!-- stack-trace -->
+                  <em>
+(fetch all sku from list view & input sku in quick order from and add to cart)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="shoppingCartToAddressPage">
+                  </a> <!-- shoppingCartToAddressPage -->
+                  <span class="method-name">shoppingCartToAddressPage</span>
+                  <div class="stack-trace">org.openqa.selenium.NoSuchWindowException: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=101.0.4951.64)
+  (Driver info: chromedriver=2.42.591088 (7b2b2dca23cca0862f674758c9a3933e685c27d5),platform=Windows NT 10.0.19042 x86_64) (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 10 milliseconds
+Build info: version: &apos;2.53.0&apos;, revision: &apos;35ae25b1534ae328c771e0856c93e187490ca824&apos;, time: &apos;2016-03-15 10:43:46&apos;
+System info: host: &apos;IN04144&apos;, ip: &apos;172.17.135.59&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_151&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities [{mobileEmulationEnabled=false, hasTouchScreen=false, platform=XP, acceptSslCerts=false, goog:chromeOptions={debuggerAddress=localhost:64705}, acceptInsecureCerts=false, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, setWindowRect=true, unexpectedAlertBehaviour=, applicationCacheEnabled=false, rotatable=false, networkConnectionEnabled=false, chrome={chromedriverVersion=2.42.591088 (7b2b2dca23cca0862f674758c9a3933e685c27d5), userDataDir=C:\Users\sprakash\AppData\Local\Temp\scoped_dir10728_9554}, takesHeapSnapshot=true, pageLoadStrategy=normal, databaseEnabled=false, handlesAlerts=true, version=101.0.4951.64, browserConnectionEnabled=false, nativeEvents=true, locationContextEnabled=true, cssSelectorsEnabled=true}]
+Session ID: b91210e95de7aa2916321dd66f5c34bc
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:206)
+	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:158)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:678)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:701)
+	at org.openqa.selenium.remote.RemoteWebDriver.getWindowHandle(RemoteWebDriver.java:555)
+	at com.eperium.jumpstart.Setup.initialize(Setup.java:590)
+	at com.eperium.jumpstart.JumpStartTestSuite.shoppingCartToAddressPage(JumpStartTestSuite.java:1636)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:108)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:661)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:869)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1193)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:126)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at org.testng.TestRunner.privateRun(TestRunner.java:744)
+	at org.testng.TestRunner.run(TestRunner.java:602)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:380)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:375)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:340)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:289)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1301)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1226)
+	at org.testng.TestNG.runSuites(TestNG.java:1144)
+	at org.testng.TestNG.run(TestNG.java:1115)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+
+</div> <!-- stack-trace -->
+                  <em>
+(Shopping Cart To Address Page)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-BunzlMLNTest-class-failed -->
+          <div class="suite-BunzlMLNTest-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">com.eperium.jumpstart.JumpStartTestSuite</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="goToLoginPage">
+                  </a> <!-- goToLoginPage -->
+                  <span class="method-name">goToLoginPage</span>
+                  <em>
+(Navigate To login page)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="launchHomePage">
+                  </a> <!-- launchHomePage -->
+                  <span class="method-name">launchHomePage</span>
+                  <em>
+(Launch Home Page)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-BunzlMLNTest-class-passed -->
+        </div> <!-- panel BunzlMLNTest -->
+        <div panel-name="test-xml-BunzlMLNTest" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">F:\automation_test_suites_bunzl\Automation\src\test\resources\master\Testing.xml</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+            <pre>
+&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
+&lt;!DOCTYPE suite SYSTEM &quot;http://testng.org/testng-1.0.dtd&quot;&gt;
+&lt;suite verbose=&quot;10&quot; name=&quot;BunzlMLNTest&quot;&gt;
+  &lt;parameter name=&quot;PDFRequiredPerTestCase&quot; value=&quot;True&quot;/&gt;
+  &lt;parameter name=&quot;site&quot; value=&quot;MLN&quot;/&gt;
+  &lt;parameter name=&quot;selenium.host&quot; value=&quot;localhost&quot;/&gt;
+  &lt;parameter name=&quot;testcasename&quot; value=&quot;ConsolidatedPDF&quot;/&gt;
+  &lt;parameter name=&quot;channel&quot; value=&quot;MLN-DK-Test&quot;/&gt;
+  &lt;parameter name=&quot;locale&quot; value=&quot;da-DK&quot;/&gt;
+  &lt;parameter name=&quot;comchannel&quot; value=&quot;COM-X-Test&quot;/&gt;
+  &lt;parameter name=&quot;selenium.browser&quot; value=&quot;chrome&quot;/&gt;
+  &lt;parameter name=&quot;platform&quot; value=&quot;Desktop&quot;/&gt;
+  &lt;listeners&gt;
+    &lt;listener class-name=&quot;com.eperium.jumpstart.testframework.utils.SuiteReportUtils&quot;/&gt;
+    &lt;listener class-name=&quot;com.eperium.jumpstart.testframework.utils.IListenEverything&quot;/&gt;
+    &lt;listener class-name=&quot;com.eperium.jumpstart.testframework.utils.ReportUtil&quot;/&gt;
+    &lt;listener class-name=&quot;com.eperium.jumpstart.testframework.utils.SetOverViewReport1&quot;/&gt;
+    &lt;listener class-name=&quot;com.eperium.jumpstart.testframework.utils.SetOverViewReportData&quot;/&gt;
+    &lt;listener class-name=&quot;com.eperium.jumpstart.testframework.utils.HtmlReport&quot;/&gt;
+  &lt;/listeners&gt;
+  &lt;test name=&quot;QuickOrdering&quot;&gt;
+    &lt;classes&gt;
+      &lt;class name=&quot;com.eperium.jumpstart.JumpStartTestSuite&quot;&gt;
+        &lt;methods&gt;
+          &lt;include name=&quot;launchHomePage&quot;/&gt;
+          &lt;include name=&quot;goToLoginPage&quot;/&gt;
+          &lt;include name=&quot;loginCustomerBuyer&quot;/&gt;
+          &lt;include name=&quot;closeCookieWarning&quot;/&gt;
+          &lt;include name=&quot;enterAndSearchStringSTAR&quot;/&gt;
+          &lt;include name=&quot;quickOrdertoCart&quot;/&gt;
+          &lt;include name=&quot;shoppingCartToAddressPage&quot;/&gt;
+          &lt;include name=&quot;orderConfirmation&quot;/&gt;
+        &lt;/methods&gt;
+      &lt;/class&gt; &lt;!-- com.eperium.jumpstart.JumpStartTestSuite --&gt;
+    &lt;/classes&gt;
+  &lt;/test&gt; &lt;!-- QuickOrdering --&gt;
+&lt;/suite&gt; &lt;!-- BunzlMLNTest --&gt;
+            </pre>
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="testlist-BunzlMLNTest" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">Tests for BunzlMLNTest</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+            <ul>
+              <li>
+                <span class="test-name">QuickOrdering (1 class)</span>
+              </li>
+            </ul>
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="group-BunzlMLNTest" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">Groups for BunzlMLNTest</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="times-BunzlMLNTest" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">Times for BunzlMLNTest</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+            <div class="times-div">
+              <script type="text/javascript">
+suiteTableInitFunctions.push('tableData_BunzlMLNTest');
+function tableData_BunzlMLNTest() {
+var data = new google.visualization.DataTable();
+data.addColumn('number', 'Number');
+data.addColumn('string', 'Method');
+data.addColumn('string', 'Class');
+data.addColumn('number', 'Time (ms)');
+data.addRows(8);
+data.setCell(0, 0, 0)
+data.setCell(0, 1, 'loginCustomerBuyer')
+data.setCell(0, 2, 'com.eperium.jumpstart.JumpStartTestSuite')
+data.setCell(0, 3, 16469);
+data.setCell(1, 0, 1)
+data.setCell(1, 1, 'launchHomePage')
+data.setCell(1, 2, 'com.eperium.jumpstart.JumpStartTestSuite')
+data.setCell(1, 3, 11618);
+data.setCell(2, 0, 2)
+data.setCell(2, 1, 'goToLoginPage')
+data.setCell(2, 2, 'com.eperium.jumpstart.JumpStartTestSuite')
+data.setCell(2, 3, 3178);
+data.setCell(3, 0, 3)
+data.setCell(3, 1, 'closeCookieWarning')
+data.setCell(3, 2, 'com.eperium.jumpstart.JumpStartTestSuite')
+data.setCell(3, 3, 23);
+data.setCell(4, 0, 4)
+data.setCell(4, 1, 'quickOrdertoCart')
+data.setCell(4, 2, 'com.eperium.jumpstart.JumpStartTestSuite')
+data.setCell(4, 3, 20);
+data.setCell(5, 0, 5)
+data.setCell(5, 1, 'shoppingCartToAddressPage')
+data.setCell(5, 2, 'com.eperium.jumpstart.JumpStartTestSuite')
+data.setCell(5, 3, 11);
+data.setCell(6, 0, 6)
+data.setCell(6, 1, 'enterAndSearchStringSTAR')
+data.setCell(6, 2, 'com.eperium.jumpstart.JumpStartTestSuite')
+data.setCell(6, 3, 10);
+data.setCell(7, 0, 7)
+data.setCell(7, 1, 'orderConfirmation')
+data.setCell(7, 2, 'com.eperium.jumpstart.JumpStartTestSuite')
+data.setCell(7, 3, 9);
+window.suiteTableData['BunzlMLNTest']= { tableData: data, tableDiv: 'times-div-BunzlMLNTest'}
+return data;
+}
+              </script>
+              <span class="suite-total-time">Total running time: 31 seconds</span>
+              <div id="times-div-BunzlMLNTest">
+              </div> <!-- times-div-BunzlMLNTest -->
+            </div> <!-- times-div -->
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="reporter-BunzlMLNTest" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">Reporter output for BunzlMLNTest</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="ignored-methods-BunzlMLNTest" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">283 ignored methods</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+            <div class="ignored-class-div">
+              <span class="ignored-class-name">com.eperium.jumpstart.JumpStartTestSuite</span>
+              <div class="ignored-methods-div">
+                <span class="ignored-method-name">changeChkoutAddress</span>
+                <br/>
+                <span class="ignored-method-name">updatePassword</span>
+                <br/>
+                <span class="ignored-method-name">saveOrderTemplateFromBundeledPDP</span>
+                <br/>
+                <span class="ignored-method-name">verifyPackagingInfoOnAddressPage</span>
+                <br/>
+                <span class="ignored-method-name">changeSpecificDeliveryAddress</span>
+                <br/>
+                <span class="ignored-method-name">editAddressDetailsAndDeleteCostCenter</span>
+                <br/>
+                <span class="ignored-method-name">enterAndSearchJitem</span>
+                <br/>
+                <span class="ignored-method-name">viewUpdatedNameAtHeader</span>
+                <br/>
+                <span class="ignored-method-name">gotoForgotPasswordPage</span>
+                <br/>
+                <span class="ignored-method-name">validateQtyInOrderTemplate</span>
+                <br/>
+                <span class="ignored-method-name">filter</span>
+                <br/>
+                <span class="ignored-method-name">gotoFifthPDP</span>
+                <br/>
+                <span class="ignored-method-name">openOrderTemplateAndAddProductToCartAndVerify</span>
+                <br/>
+                <span class="ignored-method-name">viewUserNameOnDashboard</span>
+                <br/>
+                <span class="ignored-method-name">validateItemPerPageDropDown</span>
+                <br/>
+                <span class="ignored-method-name">gridToListView</span>
+                <br/>
+                <span class="ignored-method-name">openNewWindow</span>
+                <br/>
+                <span class="ignored-method-name">resetUserName</span>
+                <br/>
+                <span class="ignored-method-name">addOrderTemplateFromMyAccount</span>
+                <br/>
+                <span class="ignored-method-name">paymentToConfirmOrderWithReference</span>
+                <br/>
+                <span class="ignored-method-name">shippmentPageValidateCartSummary</span>
+                <br/>
+                <span class="ignored-method-name">uploadFileInvalidQtyNonnumeric</span>
+                <br/>
+                <span class="ignored-method-name">getAndVerifyAddressDetailOnConfirmationPage</span>
+                <br/>
+                <span class="ignored-method-name">gotoSavedAddressPage</span>
+                <br/>
+                <span class="ignored-method-name">verifyRegistrationPageBlankFields</span>
+                <br/>
+                <span class="ignored-method-name">verifyUserRole1</span>
+                <br/>
+                <span class="ignored-method-name">goToSolrPriceQuery</span>
+                <br/>
+                <span class="ignored-method-name">orderConfirmationWithMerchantMessage</span>
+                <br/>
+                <span class="ignored-method-name">verifyUserRole2</span>
+                <br/>
+                <span class="ignored-method-name">editAddressDetailsAndAddCostCenter</span>
+                <br/>
+                <span class="ignored-method-name">passwordNotAlphanuneric</span>
+                <br/>
+                <span class="ignored-method-name">addProductToCartFromLister</span>
+                <br/>
+                <span class="ignored-method-name">goToChangePasswordPageAgain</span>
+                <br/>
+                <span class="ignored-method-name">goToChangePasswordPage</span>
+                <br/>
+                <span class="ignored-method-name">validate24ItemPerPage</span>
+                <br/>
+                <span class="ignored-method-name">closeQuickViewPopup</span>
+                <br/>
+                <span class="ignored-method-name">loginUsingPopIn</span>
+                <br/>
+                <span class="ignored-method-name">navigatetoMyAccount1</span>
+                <br/>
+                <span class="ignored-method-name">enterRefIdAndName</span>
+                <br/>
+                <span class="ignored-method-name">browseAssortimentCategory</span>
+                <br/>
+                <span class="ignored-method-name">enterAndSearchStringDoubleWordWithAnd</span>
+                <br/>
+                <span class="ignored-method-name">verifyMandatoryFieldsRefIdAndName</span>
+                <br/>
+                <span class="ignored-method-name">goToLoginPage2</span>
+                <br/>
+                <span class="ignored-method-name">addPDPToCompareListAndVerifyNavigation</span>
+                <br/>
+                <span class="ignored-method-name">goToLoginPage1</span>
+                <br/>
+                <span class="ignored-method-name">goToLoginPage4</span>
+                <br/>
+                <span class="ignored-method-name">goToLoginPage3</span>
+                <br/>
+                <span class="ignored-method-name">passwordMismatch</span>
+                <br/>
+                <span class="ignored-method-name">chkBlankSku</span>
+                <br/>
+                <span class="ignored-method-name">viewAddToCartBtnOrderTemplate</span>
+                <br/>
+                <span class="ignored-method-name">navigateToUserUpdateRolePage</span>
+                <br/>
+                <span class="ignored-method-name">paymentToShippingPage</span>
+                <br/>
+                <span class="ignored-method-name">enterAndSearchStringNoProductFound</span>
+                <br/>
+                <span class="ignored-method-name">getPackagingInfoFromPDP</span>
+                <br/>
+                <span class="ignored-method-name">verifyAlternateAddressOrderConfirmationPage</span>
+                <br/>
+                <span class="ignored-method-name">changeDeliveryAddress</span>
+                <br/>
+                <span class="ignored-method-name">select12ItemsPerPage</span>
+                <br/>
+                <span class="ignored-method-name">verifyInvalidPassword</span>
+                <br/>
+                <span class="ignored-method-name">redirectCustomerToDashboard</span>
+                <br/>
+                <span class="ignored-method-name">goToFaqPage</span>
+                <br/>
+                <span class="ignored-method-name">getAndVerifyAddressDetailOnAddressPage</span>
+                <br/>
+                <span class="ignored-method-name">chkAddAtHeader</span>
+                <br/>
+                <span class="ignored-method-name">printCartPage</span>
+                <br/>
+                <span class="ignored-method-name">verifyQuote</span>
+                <br/>
+                <span class="ignored-method-name">verifyCustomer</span>
+                <br/>
+                <span class="ignored-method-name">chkShowAll</span>
+                <br/>
+                <span class="ignored-method-name">navigatetoAllOrderTemplatePageAgain</span>
+                <br/>
+                <span class="ignored-method-name">clickLoginButton</span>
+                <br/>
+                <span class="ignored-method-name">selectAndEnterAlternateAddress</span>
+                <br/>
+                <span class="ignored-method-name">addProductToOrderTemplateFromPDP</span>
+                <br/>
+                <span class="ignored-method-name">getProductSkuAndQuotePopUp</span>
+                <br/>
+                <span class="ignored-method-name">VerifyPDPProspect</span>
+                <br/>
+                <span class="ignored-method-name">clickOnMyAccountLink</span>
+                <br/>
+                <span class="ignored-method-name">gotoAllOrderTemplatePage</span>
+                <br/>
+                <span class="ignored-method-name">PackagingInfoListerpage</span>
+                <br/>
+                <span class="ignored-method-name">verifyProspect</span>
+                <br/>
+                <span class="ignored-method-name">navigateOrderDetailPage</span>
+                <br/>
+                <span class="ignored-method-name">enterAndSearchStringSpecialCharacters</span>
+                <br/>
+                <span class="ignored-method-name">shippingToDeliveryAddressPage</span>
+                <br/>
+                <span class="ignored-method-name">getProductSkuAndOpenQuotePopUp</span>
+                <br/>
+                <span class="ignored-method-name">addFirstPDPToCompareList</span>
+                <br/>
+                <span class="ignored-method-name">verifyAlternateAddressPaymentConfirmationPage</span>
+                <br/>
+                <span class="ignored-method-name">getCustomerAddress</span>
+                <br/>
+                <span class="ignored-method-name">uploadValidCsvAtQuickOrder</span>
+                <br/>
+                <span class="ignored-method-name">sortAtoZ</span>
+                <br/>
+                <span class="ignored-method-name">addProductToCartFromComparePageAndVerify</span>
+                <br/>
+                <span class="ignored-method-name">navigatetoMyAccount</span>
+                <br/>
+                <span class="ignored-method-name">validateforgotPasswordConfirmationMesssage</span>
+                <br/>
+                <span class="ignored-method-name">rollBackCompanyDetails</span>
+                <br/>
+                <span class="ignored-method-name">getCartDetails1</span>
+                <br/>
+                <span class="ignored-method-name">saveOrderTemplate2</span>
+                <br/>
+                <span class="ignored-method-name">addProductToOrderTemplateFromPDPWithQTYFive</span>
+                <br/>
+                <span class="ignored-method-name">mandatoryFieldValidation</span>
+                <br/>
+                <span class="ignored-method-name">gotoAllOrderTemplatePage1</span>
+                <br/>
+                <span class="ignored-method-name">navigateToPDP1</span>
+                <br/>
+                <span class="ignored-method-name">addBlankOrderTemplateToBlankBasket</span>
+                <br/>
+                <span class="ignored-method-name">deleteAllOrderTemplate</span>
+                <br/>
+                <span class="ignored-method-name">passwordNotUppercaseLetter</span>
+                <br/>
+                <span class="ignored-method-name">addBlankOrderTemplate</span>
+                <br/>
+                <span class="ignored-method-name">chkBlankQty</span>
+                <br/>
+                <span class="ignored-method-name">sendQuoteDetails</span>
+                <br/>
+                <span class="ignored-method-name">addSecondPDPToCompareList</span>
+                <br/>
+                <span class="ignored-method-name">enterContactDetails</span>
+                <br/>
+                <span class="ignored-method-name">enterAndSearchStringSTAR3</span>
+                <br/>
+                <span class="ignored-method-name">validateEstimatedTotal</span>
+                <br/>
+                <span class="ignored-method-name">enterAndSearchStringSTAR1</span>
+                <br/>
+                <span class="ignored-method-name">loginCustomerAccountAdmin</span>
+                <br/>
+                <span class="ignored-method-name">CloseJitemOverlayFromPDP</span>
+                <br/>
+                <span class="ignored-method-name">moveToOrderTemplateDetailPage</span>
+                <br/>
+                <span class="ignored-method-name">registrationEnterValuesAndVerifyForExistingEmailID</span>
+                <br/>
+                <span class="ignored-method-name">addressPageValidateOrderSummary</span>
+                <br/>
+                <span class="ignored-method-name">addProductToOrderTemplateFromPDPWithQTYTen</span>
+                <br/>
+                <span class="ignored-method-name">enterAndSearchStringSTAR2</span>
+                <br/>
+                <span class="ignored-method-name">goToContactUsPage</span>
+                <br/>
+                <span class="ignored-method-name">paymentPageValidateCartSummary</span>
+                <br/>
+                <span class="ignored-method-name">chkCookieWarningAppear</span>
+                <br/>
+                <span class="ignored-method-name">getAndVerifyAddressDetailOnShippingPage</span>
+                <br/>
+                <span class="ignored-method-name">gotoFourthPDP</span>
+                <br/>
+                <span class="ignored-method-name">enterAndSearchStringSingleWord</span>
+                <br/>
+                <span class="ignored-method-name">viewUserNameAtHeader</span>
+                <br/>
+                <span class="ignored-method-name">goToCartFromQuickView</span>
+                <br/>
+                <span class="ignored-method-name">validate9ItemPerPage</span>
+                <br/>
+                <span class="ignored-method-name">navigateToOrderTempateDetailPage</span>
+                <br/>
+                <span class="ignored-method-name">validateCartSubTotal</span>
+                <br/>
+                <span class="ignored-method-name">checkSalesUnitOfUuid</span>
+                <br/>
+                <span class="ignored-method-name">chkbrowsedProductsInRecentView</span>
+                <br/>
+                <span class="ignored-method-name">navigateToPDP</span>
+                <br/>
+                <span class="ignored-method-name">VerifyPDPCustomer</span>
+                <br/>
+                <span class="ignored-method-name">loginCustomerApprover</span>
+                <br/>
+                <span class="ignored-method-name">passwordNotLowerCaseLetter</span>
+                <br/>
+                <span class="ignored-method-name">addProductToOrderTemplateFromListView</span>
+                <br/>
+                <span class="ignored-method-name">chkHideAll</span>
+                <br/>
+                <span class="ignored-method-name">saveOrderTemplateFromListView</span>
+                <br/>
+                <span class="ignored-method-name">saveUser</span>
+                <br/>
+                <span class="ignored-method-name">chkBlankSkuQty</span>
+                <br/>
+                <span class="ignored-method-name">getCartDetails</span>
+                <br/>
+                <span class="ignored-method-name">updateCompanyDetails</span>
+                <br/>
+                <span class="ignored-method-name">getAndVerifyACustomerDetailOnConfirmationPage</span>
+                <br/>
+                <span class="ignored-method-name">createQueryToChangePrice</span>
+                <br/>
+                <span class="ignored-method-name">browseProductsFromListView</span>
+                <br/>
+                <span class="ignored-method-name">getAndVerifyCustomerDetailOnAddressPage</span>
+                <br/>
+                <span class="ignored-method-name">getCustomerName</span>
+                <br/>
+                <span class="ignored-method-name">clickOnKingLogo</span>
+                <br/>
+                <span class="ignored-method-name">chkValidSkuInvalidQty</span>
+                <br/>
+                <span class="ignored-method-name">LimitCountryList</span>
+                <br/>
+                <span class="ignored-method-name">EnterUnregisteredEmailAddressAndClickOKButton</span>
+                <br/>
+                <span class="ignored-method-name">completeRegistration</span>
+                <br/>
+                <span class="ignored-method-name">verifyBlankOrderTemplateName</span>
+                <br/>
+                <span class="ignored-method-name">verifyLoginPageBlankFields</span>
+                <br/>
+                <span class="ignored-method-name">setPreferredIdToRevoke</span>
+                <br/>
+                <span class="ignored-method-name">loginAccountAdminInNewWindow</span>
+                <br/>
+                <span class="ignored-method-name">enterPDPSkuAndPrice</span>
+                <br/>
+                <span class="ignored-method-name">browseChkCookieWarningNotAppear</span>
+                <br/>
+                <span class="ignored-method-name">validateOrdertoDefaultOrderTemplate</span>
+                <br/>
+                <span class="ignored-method-name">browseProductsFromGridView</span>
+                <br/>
+                <span class="ignored-method-name">openSecondOrderTemplateAndVerifyProduct</span>
+                <br/>
+                <span class="ignored-method-name">GoToSecondPage</span>
+                <br/>
+                <span class="ignored-method-name">navigateChangeEmailPage</span>
+                <br/>
+                <span class="ignored-method-name">ValidateViaAddingDuplicateCostCenter</span>
+                <br/>
+                <span class="ignored-method-name">cancelChangeCompanyProfile</span>
+                <br/>
+                <span class="ignored-method-name">checkItemPerPageDropDownOptions</span>
+                <br/>
+                <span class="ignored-method-name">addProductToOrderTemplateFromCart</span>
+                <br/>
+                <span class="ignored-method-name">goToResistrationPage3</span>
+                <br/>
+                <span class="ignored-method-name">enterForSearchStringSTAR</span>
+                <br/>
+                <span class="ignored-method-name">guestViewMiniCart</span>
+                <br/>
+                <span class="ignored-method-name">select24ItemsPerPage</span>
+                <br/>
+                <span class="ignored-method-name">goToResistrationPage2</span>
+                <br/>
+                <span class="ignored-method-name">goToResistrationPage4</span>
+                <br/>
+                <span class="ignored-method-name">goToResistrationPage1</span>
+                <br/>
+                <span class="ignored-method-name">addProducttoCartFromPDP1</span>
+                <br/>
+                <span class="ignored-method-name">addtocartQuickView</span>
+                <br/>
+                <span class="ignored-method-name">listView</span>
+                <br/>
+                <span class="ignored-method-name">removeProductAndVerifyCart</span>
+                <br/>
+                <span class="ignored-method-name">changeCostCenter</span>
+                <br/>
+                <span class="ignored-method-name">SelectALLAddress</span>
+                <br/>
+                <span class="ignored-method-name">cancelChangeYourProfile</span>
+                <br/>
+                <span class="ignored-method-name">viewTopOnScrollDown</span>
+                <br/>
+                <span class="ignored-method-name">openFirstOrderTemplateIncreaseQTYAndMoveProduct</span>
+                <br/>
+                <span class="ignored-method-name">updateYourDetails</span>
+                <br/>
+                <span class="ignored-method-name">OrderTemplateDetailPage</span>
+                <br/>
+                <span class="ignored-method-name">assignCatalogk</span>
+                <br/>
+                <span class="ignored-method-name">uploadFileInvalidMissingSkuQty</span>
+                <br/>
+                <span class="ignored-method-name">addThirdPDPToCompareList</span>
+                <br/>
+                <span class="ignored-method-name">passwordLessThenSixCharacters</span>
+                <br/>
+                <span class="ignored-method-name">gotoSecondPDP</span>
+                <br/>
+                <span class="ignored-method-name">fillInChangeLocale</span>
+                <br/>
+                <span class="ignored-method-name">paymentToConfirmOrder</span>
+                <br/>
+                <span class="ignored-method-name">resetQuickOrderForm</span>
+                <br/>
+                <span class="ignored-method-name">assignAddressk</span>
+                <br/>
+                <span class="ignored-method-name">verifyPackagingInfoOnPaymentPage</span>
+                <br/>
+                <span class="ignored-method-name">addressPageValidateCartSummary</span>
+                <br/>
+                <span class="ignored-method-name">saveChanges</span>
+                <br/>
+                <span class="ignored-method-name">shippmentPageValidateOrderSummary</span>
+                <br/>
+                <span class="ignored-method-name">navigateToUpdateCompanyProfilePage</span>
+                <br/>
+                <span class="ignored-method-name">setUuidForPriceChangeInSolr</span>
+                <br/>
+                <span class="ignored-method-name">addOrderTemplateFromDetailPage</span>
+                <br/>
+                <span class="ignored-method-name">addProducttoCartFromQuickView</span>
+                <br/>
+                <span class="ignored-method-name">loginProspectUser</span>
+                <br/>
+                <span class="ignored-method-name">loginProspect</span>
+                <br/>
+                <span class="ignored-method-name">uncheckTermsCheckbox</span>
+                <br/>
+                <span class="ignored-method-name">select15ItemsPerPage</span>
+                <br/>
+                <span class="ignored-method-name">addUser</span>
+                <br/>
+                <span class="ignored-method-name">GoToFourthPage</span>
+                <br/>
+                <span class="ignored-method-name">GoTothirdPage</span>
+                <br/>
+                <span class="ignored-method-name">navigateToOrderTempateDetailPage2</span>
+                <br/>
+                <span class="ignored-method-name">saveOrderTemplateCart</span>
+                <br/>
+                <span class="ignored-method-name">navigateToBundledPDP</span>
+                <br/>
+                <span class="ignored-method-name">openFirstOrderTemplateDecreaseQTYAndMoveProduct</span>
+                <br/>
+                <span class="ignored-method-name">navEmailSignUp</span>
+                <br/>
+                <span class="ignored-method-name">verifyUserRole</span>
+                <br/>
+                <span class="ignored-method-name">verifyAlternateAddressShipmentPage</span>
+                <br/>
+                <span class="ignored-method-name">addProducttoCartAndVerifybutton</span>
+                <br/>
+                <span class="ignored-method-name">validate15ItemPerPage</span>
+                <br/>
+                <span class="ignored-method-name">logoutChkHeader</span>
+                <br/>
+                <span class="ignored-method-name">reLoginProspectWithChangedPassword</span>
+                <br/>
+                <span class="ignored-method-name">uploadFileInvalidFileExtn</span>
+                <br/>
+                <span class="ignored-method-name">verifyPackagingInfoOnOrderConfirmationPage</span>
+                <br/>
+                <span class="ignored-method-name">DeleteAllCostCenter</span>
+                <br/>
+                <span class="ignored-method-name">verifyPackagingInfoOnCartPage</span>
+                <br/>
+                <span class="ignored-method-name">openPDP</span>
+                <br/>
+                <span class="ignored-method-name">viewAddToCartBtnOrderTemplateItemLevel</span>
+                <br/>
+                <span class="ignored-method-name">loginForOrderTemplate</span>
+                <br/>
+                <span class="ignored-method-name">getAndVerifyCustomerDetailOnPaymentPage</span>
+                <br/>
+                <span class="ignored-method-name">SelectAddress</span>
+                <br/>
+                <span class="ignored-method-name">cancelChangeEmail</span>
+                <br/>
+                <span class="ignored-method-name">chkSingleQueAns</span>
+                <br/>
+                <span class="ignored-method-name">verifyPackagingInfoOnShipment</span>
+                <br/>
+                <span class="ignored-method-name">validate12ItemPerPage</span>
+                <br/>
+                <span class="ignored-method-name">addProducttoCartFromBundledPDP</span>
+                <br/>
+                <span class="ignored-method-name">closeNewWindow</span>
+                <br/>
+                <span class="ignored-method-name">openQuickOrderPage</span>
+                <br/>
+                <span class="ignored-method-name">uploadFileInvalidSku</span>
+                <br/>
+                <span class="ignored-method-name">getAndVerifyCustomerDetailOnShippingPage</span>
+                <br/>
+                <span class="ignored-method-name">changeDA</span>
+                <br/>
+                <span class="ignored-method-name">saveOrderTemplate</span>
+                <br/>
+                <span class="ignored-method-name">paymentPageValidateOrderSummary</span>
+                <br/>
+                <span class="ignored-method-name">enterAndSearchPitem</span>
+                <br/>
+                <span class="ignored-method-name">navigatetoAllOrderTemplatePage</span>
+                <br/>
+                <span class="ignored-method-name">saveOrderTemplateFromCart</span>
+                <br/>
+                <span class="ignored-method-name">deleteAllProductsFromComparePage</span>
+                <br/>
+                <span class="ignored-method-name">ValidateforgotPasswordMandatoryField</span>
+                <br/>
+                <span class="ignored-method-name">ClearALLAddress</span>
+                <br/>
+                <span class="ignored-method-name">BrowseSpecialsCategory</span>
+                <br/>
+                <span class="ignored-method-name">GoToUsers</span>
+                <br/>
+                <span class="ignored-method-name">restoreOriginalPassword</span>
+                <br/>
+                <span class="ignored-method-name">getAddressDetails</span>
+                <br/>
+                <span class="ignored-method-name">select9ItemsPerPage</span>
+                <br/>
+                <span class="ignored-method-name">navigateAddUserPage</span>
+                <br/>
+                <span class="ignored-method-name">addProducttoCartFromPDP</span>
+                <br/>
+                <span class="ignored-method-name">addCartToOrderTemplate</span>
+                <br/>
+                <span class="ignored-method-name">viewNoTopOnScrollDown</span>
+                <br/>
+                <span class="ignored-method-name">checkItemsInMinicart</span>
+                <br/>
+                <span class="ignored-method-name">navigateToUpdateYourProfilePage</span>
+                <br/>
+                <span class="ignored-method-name">enterAndSearchStringDoubleWord</span>
+                <br/>
+                <span class="ignored-method-name">goToResistrationPage</span>
+                <br/>
+                <span class="ignored-method-name">shipmentToPaymentPage</span>
+                <br/>
+                <span class="ignored-method-name">navCheckoutBtnMiniCart</span>
+                <br/>
+                <span class="ignored-method-name">reassignRevokedDaToUser</span>
+                <br/>
+                <span class="ignored-method-name">clickOnOCIOrderHistoryLink</span>
+                <br/>
+                <span class="ignored-method-name">browseMakenCategory</span>
+                <br/>
+                <span class="ignored-method-name">addProducttoCartFromPDPWithQtyGreaterThenOne</span>
+                <br/>
+                <span class="ignored-method-name">loginCustomer</span>
+                <br/>
+                <span class="ignored-method-name">openProductListerPage</span>
+                <br/>
+                <span class="ignored-method-name">enterContactDetailsMandatoryFields</span>
+                <br/>
+                <span class="ignored-method-name">revokePrefferedDaOfUser</span>
+                <br/>
+                <span class="ignored-method-name">gotoThirdPDP</span>
+                <br/>
+                <span class="ignored-method-name">addProductCartFromList</span>
+                <br/>
+                <span class="ignored-method-name">logoutViewUpdatedNameAtHeader</span>
+                <br/>
+                <span class="ignored-method-name">gotoFirstPDP</span>
+                <br/>
+                <span class="ignored-method-name">navigatetoAllOrderTemplatePageAgain1</span>
+                <br/>
+                <span class="ignored-method-name">cartToReview</span>
+                <br/>
+                <span class="ignored-method-name">viewUpdatedNameOnDashboard</span>
+                <br/>
+                <span class="ignored-method-name">addReference</span>
+                <br/>
+                <span class="ignored-method-name">VerifyPagination</span>
+                <br/>
+                <span class="ignored-method-name">logout1</span>
+                <br/>
+                <span class="ignored-method-name">confirmOrderToPaymentPage</span>
+                <br/>
+                <span class="ignored-method-name">logout</span>
+                <br/>
+                <span class="ignored-method-name">addProductToCartFromSearchList</span>
+                <br/>
+                <span class="ignored-method-name">UserDetails</span>
+                <br/>
+                <span class="ignored-method-name">browseFromAssortimentCategoryToListerPage</span>
+                <br/>
+                <span class="ignored-method-name">getAndVerifyAddressDetailOnReviewPage</span>
+                <br/>
+                <span class="ignored-method-name">addressToShipmentPage</span>
+                <br/>
+                <span class="ignored-method-name">loginWithNoDeliveryAddressAssiginedCustomer</span>
+                <br/>
+              </div> <!-- ignored-methods-div -->
+            </div> <!-- ignored-class-div -->
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="chronological-BunzlMLNTest" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">Methods in chronological order</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+            <div class="chronological-class">
+              <div class="chronological-class-name">com.eperium.jumpstart.JumpStartTestSuite</div> <!-- chronological-class-name -->
+              <div class="configuration-suite before">
+                <span class="method-name">setupBeforeSuite(org.testng.TestRunner@2a448449)</span>
+                <span class="method-start">0 ms</span>
+              </div> <!-- configuration-suite before -->
+              <div class="configuration-test before">
+                <span class="method-name">setUpBeforeclass</span>
+                <span class="method-start">665 ms</span>
+              </div> <!-- configuration-test before -->
+              <div class="test-method">
+                <span class="method-name">launchHomePage</span>
+                <span class="method-start">7494 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">goToLoginPage</span>
+                <span class="method-start">19797 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">loginCustomerBuyer</span>
+                <span class="method-start">23242 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">closeCookieWarning</span>
+                <span class="method-start">39803 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">enterAndSearchStringSTAR</span>
+                <span class="method-start">39864 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">quickOrdertoCart</span>
+                <span class="method-start">39907 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">shoppingCartToAddressPage</span>
+                <span class="method-start">39972 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">orderConfirmation</span>
+                <span class="method-start">40006 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-test after">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">setupAfterTest</span>
+                <span class="method-start">40054 ms</span>
+              </div> <!-- configuration-test after -->
+              <div class="configuration-suite after">
+                <span class="method-name">setupAfterSuite</span>
+                <span class="method-start">40540 ms</span>
+              </div> <!-- configuration-suite after -->
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+      </div> <!-- main-panel-root -->
+    </div> <!-- wrapper -->
+  </body>
+</html>

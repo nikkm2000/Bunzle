@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite verbose="10" name="Failed suite [BunzlMLNTest]">
+  <parameter name="PDFRequiredPerTestCase" value="True"/>
+  <parameter name="site" value="MLN"/>
+  <parameter name="selenium.host" value="localhost"/>
+  <parameter name="testcasename" value="ConsolidatedPDF"/>
+  <parameter name="channel" value="MLN-DK-Test"/>
+  <parameter name="locale" value="da-DK"/>
+  <parameter name="comchannel" value="COM-X-Test"/>
+  <parameter name="selenium.browser" value="chrome"/>
+  <parameter name="platform" value="Desktop"/>
+  <listeners>
+    <listener class-name="com.eperium.jumpstart.testframework.utils.SuiteReportUtils"/>
+    <listener class-name="com.eperium.jumpstart.testframework.utils.IListenEverything"/>
+    <listener class-name="com.eperium.jumpstart.testframework.utils.ReportUtil"/>
+    <listener class-name="com.eperium.jumpstart.testframework.utils.SetOverViewReport1"/>
+    <listener class-name="com.eperium.jumpstart.testframework.utils.SetOverViewReportData"/>
+    <listener class-name="com.eperium.jumpstart.testframework.utils.HtmlReport"/>
+  </listeners>
+  <test name="QuickOrdering(failed)">
+    <classes>
+      <class name="com.eperium.jumpstart.JumpStartTestSuite">
+        <methods>
+          <include name="quickOrdertoCart"/>
+          <include name="setUpBeforeclass"/>
+          <include name="orderConfirmation"/>
+          <include name="setupBeforeSuite"/>
+          <include name="setupAfterSuite"/>
+          <include name="closeCookieWarning"/>
+          <include name="enterAndSearchStringSTAR"/>
+          <include name="setupAfterTest"/>
+          <include name="shoppingCartToAddressPage"/>
+          <include name="loginCustomerBuyer"/>
+        </methods>
+      </class> <!-- com.eperium.jumpstart.JumpStartTestSuite -->
+    </classes>
+  </test> <!-- QuickOrdering(failed) -->
+</suite> <!-- Failed suite [BunzlMLNTest] -->

@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [BunzlDRDTest]">
+  <parameter name="PDFRequiredPerTestCase" value="True"/>
+  <parameter name="site" value="DRD"/>
+  <parameter name="OCITYPE" value="cXML"/>
+  <parameter name="selenium.host" value="localhost"/>
+  <parameter name="testcasename" value="ConsolidatedPDF"/>
+  <parameter name="channel" value="DRD-NL-Test"/>
+  <parameter name="locale" value="nl-NL"/>
+  <parameter name="comchannel" value="COM-X-Test"/>
+  <parameter name="selenium.browser" value="chrome"/>
+  <parameter name="platform" value="Desktop"/>
+  <listeners>
+    <listener class-name="com.eperium.jumpstart.testframework.utils.SuiteReportUtils"/>
+    <listener class-name="com.eperium.jumpstart.testframework.utils.IListenEverything"/>
+    <listener class-name="com.eperium.jumpstart.testframework.utils.ReportUtil"/>
+    <listener class-name="com.eperium.jumpstart.testframework.utils.SetOverViewReport1"/>
+    <listener class-name="com.eperium.jumpstart.testframework.utils.SetOverViewReportData"/>
+    <listener class-name="com.eperium.jumpstart.testframework.utils.HtmlReport"/>
+  </listeners>
+  <test name="launchcXML(failed)">
+    <classes>
+      <class name="com.eperium.jumpstart.JumpStartTestSuite">
+        <methods>
+          <include name="launchHomePage"/>
+          <include name="setUpBeforeclass"/>
+          <include name="addProducttoCartAndVerifybutton"/>
+          <include name="gotoFirstPDP"/>
+          <include name="setupBeforeSuite"/>
+          <include name="setupAfterSuite"/>
+          <include name="enterAndSearchStringSTAR"/>
+          <include name="setupAfterTest"/>
+        </methods>
+      </class> <!-- com.eperium.jumpstart.JumpStartTestSuite -->
+    </classes>
+  </test> <!-- launchcXML(failed) -->
+</suite> <!-- Failed suite [BunzlDRDTest] -->

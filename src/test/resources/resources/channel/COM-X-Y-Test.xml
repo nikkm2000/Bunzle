@@ -1,0 +1,2192 @@
+<channel>
+	<modules>
+
+		  <module name="homePageModule" id="homePageModule">
+				<method name="launchHomePage" id="launchHomePage">
+					<verifyText>
+						<visibleTextElement id="confirmationText1">//*[@class='logo']</visibleTextElement>
+						<!--  
+						<visibleTextElement id="confirmationText2">//*[@class='banner']</visibleTextElement>					
+					    -->
+					</verifyText> 			
+					<timeout id="timeout" name="timeout">5</timeout>
+				</method>
+		  </module>
+
+
+		  <module name="siteNavigationModule" id="siteNavigationModule">		
+			<method name="browseFromAssortimentCategoryToListerPage" id ="browseFromAssortimentCategoryToListerPage">
+				<elements>
+					<element id="GirdView" name="GirdView" value="//*[@class='rwd-desktop right']"/>
+					<element id="NavSubCategory" name="NavSubCategory" value="//*[@class='ish-categoryTile']//h2"/>
+				</elements>				
+<!-- 				<click> -->
+<!-- 					<button id="CategoryLink" name="CategoryLink" value="//*[@class='fa fa-chevron-down after']"> -->
+<!-- 				</button> -->
+<!-- 				</click>				 -->
+				<verifyText>
+					<visibleTextElement id="confirmationText1">//label[@class='left']</visibleTextElement>
+					<visibleTextElement id="confirmationText2">//label[@class='rwd-desktop rwd-tablet left']</visibleTextElement>
+				</verifyText> 				
+				<timeout id="timeout" name="timeout">5</timeout>
+			</method>			
+			
+			
+		  	<method name="verifyCustomer" id ="verifyCustomer">	
+				<elements>
+					<element id="GetValue" name="GetValue" value="//*[@id='preferredDelivery']"/>
+				</elements>						
+				<verifyText>
+					<visibleTextElement id="confirmationText2">//*[@class='breadcrumb rwd-tablet rwd-desktop']</visibleTextElement>
+					<visibleTextElement id="confirmationText2">//*[@class='grid-6']</visibleTextElement>
+				</verifyText>				
+				<timeout id="timeout" name="timeout">5</timeout>
+			</method>			
+			
+			
+			<method name="navigateAddUserPage" id="navigateAddUserPage">
+				<elements>
+					<element id="NavUserPage" name="NavUserPage" value="//*[@id='kor-infoBox-horizontalGroupRight']/div[2]/p/a"/>
+				</elements>				
+				<verifyText>
+					<visibleTextElement id="confirmationText1">//*[@id='CreateUserForm_FirstName']</visibleTextElement>
+					<visibleTextElement id="confirmationText2">//*[@id='CreateUserForm_Login']</visibleTextElement>
+					<visibleTextElement id="confirmationText2">//*[@id='CreateUserForm_Phone']</visibleTextElement>
+				</verifyText>				 
+				<timeout id="timeout" name="timeout">5</timeout>
+			</method>
+			
+			
+			<method name="verifyProspect" id ="verifyProspect">	
+				<verifyText>
+					<loopMsg id= "Text1">Dit adres bewerken</loopMsg>
+				</verifyText>				
+				<timeout id="timeout" name="timeout">5</timeout>
+			</method>
+			
+			
+			<method name="VerifyPagination" id ="VerifyPagination">
+				<elements>
+					<element id="SearchTextBox" name="SearchTextBox" value="//*[@id='searchTerm_Header']"/>
+					<element id="SearchButtonClick" name="SearchButtonClick" value="//*[@class='primary small searchClick']"/>
+					<element id="GridViewPage2" name="GridViewPage2" value="(.//*[@id='product-search-result']//*[text()='2'])[1]"/>
+					<element id="GridViewPage1" name="GridViewPage1" value="(.//*[@id='product-search-result']//*[text()='1'])[1]"/>
+				</elements>						   
+				<verifyText>
+					<visibleTextElement id="confirmationText1">//label[@class='left']</visibleTextElement>
+					<visibleTextElement id="confirmationText2">//*[@name='SortingAttribute']</visibleTextElement>
+				</verifyText>				 
+				<timeout id="timeout" name="timeout">5</timeout>
+			</method>	
+			
+			
+			<method name="GoToSecondPage" id ="GoToSecondPage">
+				<elements>
+					<element id="GridViewPage2" name="GridViewPage2" value="(.//*[@id='product-search-result']//*[text()='2'])[1]"/>
+				</elements>					
+				<timeout id="timeout" name="timeout">5</timeout>
+			</method>
+			
+			
+			<method name="GoTothirdPage" id ="GoTothirdPage">
+				<elements>
+					<element id="GridViewPage3" name="GridViewPage3" value="(.//*[@id='product-search-result']//*[text()='3'])[1]"/>
+				</elements>					
+				<timeout id="timeout" name="timeout">5</timeout>
+			</method>
+			
+			
+			<method name="GoToFourthPage" id ="GoToFourthPage">
+				<elements>
+					<element id="GridViewPage4" name="GridViewPage4" value="(.//*[@id='product-search-result']//*[text()='4'])[1]"/>
+				</elements>					
+				<timeout id="timeout" name="timeout">5</timeout>
+			</method>
+			
+
+			<method name="openPDP" id ="openPDP">
+				<verifyText>
+					<loopmsg id="CategoryText1">Beschrijving</loopmsg>						
+				</verifyText>				
+				<timeout id="timeout" name="timeout">5</timeout>
+			</method>
+
+
+			<method name="goToLoginPage" id ="goToLoginPage">
+				<click>
+					<button id="loginButton" name="loginButton" value="//*[@class='show-login button']">					
+						<timeout id="timeout" name="timeout">10</timeout>						
+						<verifyText>
+							<visibleTextElement id="confirmationText2">//*[@id='ShopLoginForm_Login']</visibleTextElement>
+						</verifyText>					
+					</button>
+				</click>				
+				<timeout id="timeout" name="timeout">5</timeout>
+			</method>
+
+
+			<method name="addProductToOrderTemplateFromPDP" id="addProductToOrderTemplateFromPDP">
+				<verifyText>
+<!-- 					<visibleTextElement id="confirmationText1">//*[@name='addToWishlistProduct']</visibleTextElement> -->
+				</verifyText>
+				<timeout id="timeout" name="timeout">30</timeout>
+			</method>
+
+
+			<method name="addCartToOrderTemplate" id="addCartToOrderTemplate">
+				<click>
+					<button id="AddToOrder" name="AddToOrder" value="//a[contains(text(),'Voeg toe aan bestellijst')]">
+					</button>
+				</click>
+				<timeout id="timeout" name="timeout">30</timeout>
+			</method>
+
+
+			<method name="saveOrderTemplateCart" id="saveOrderTemplateCart">	 
+				<verifyText>
+					<loopMsg id="courtesyNavigationText1">Uitloggen</loopMsg>		
+				</verifyText> 
+				<timeout id="timeout" name="timeout">30</timeout>
+			</method>
+
+
+			<method name="saveOrderTemplate" id="saveOrderTemplate">	 
+				<verifyText>
+					<visibleTextElement id="confirmationText2">//*[@name='addProduct']</visibleTextElement>
+				</verifyText>
+				<timeout id="timeout" name="timeout">30</timeout>
+			</method>
+
+
+			<method name="saveOrderTemplate2" id="saveOrderTemplate2">	 
+				<verifyText>
+					<visibleTextElement id="confirmationText2">//*[@name='addProduct']</visibleTextElement>
+				</verifyText>
+				<timeout id="timeout" name="timeout">30</timeout>
+			</method>
+
+
+			<method name="addBlankOrderTemplate" id="addBlankOrderTemplate">	 
+				<verifyText>
+					<visibleTextElement id="confirmationText2">//*[@id='main']/div[3]/div/div[2]/div[1]/a</visibleTextElement>
+				</verifyText>
+				<timeout id="timeout" name="timeout">30</timeout>
+			</method>
+
+
+			<method name="addBlankOrderTemplateToBlankBasket" id="addBlankOrderTemplateToBlankBasket">	 
+				<verifyText>
+					<visibleTextElement id="confirmationText2">//*[@class='ish-section ish-shiftContent']/span</visibleTextElement>
+				</verifyText>
+				<timeout id="timeout" name="timeout">30</timeout>
+			</method>
+
+
+			<method name="OrderTemplateDetailPage" id="OrderTemplateDetailPage">	 
+				<verifyText>
+					<visibleTextElement id="confirmationText2">//span[@class='ish-itemNumber']</visibleTextElement>
+				</verifyText>
+				<timeout id="timeout" name="timeout">30</timeout>
+			</method>
+
+
+			<method name="addProductToOrderTemplateFromPDPWithQTYTen" id="addProductToOrderTemplateFromPDPWithQTYTen">
+				<verifyText>
+					<visibleTextElement id="confirmationText1">//*[@name='addToWishlistProduct']</visibleTextElement>
+				</verifyText>
+				<timeout id="timeout" name="timeout">30</timeout>
+			</method>
+			
+			
+			<method name="addProductToOrderTemplateFromCart" id="addProductToOrderTemplateFromCart">
+				<click>
+					<button id="AddToOrder" name="AddToOrder" value="//*[@id='cart-to-wishlist']">
+						<verifyText>
+							<visibleTextElement id="confirmationText2">//*[@class='primary small']</visibleTextElement>
+						</verifyText>
+					</button>
+				</click>
+				<timeout id="timeout" name="timeout">30</timeout>
+			</method>
+
+
+			<method name="saveOrderTemplateFromCart" id="saveOrderTemplateFromCart">	 
+				<verifyText>
+					<visibleTextElement id="confirmationText2">//*[@id='cart-to-wishlist']</visibleTextElement>
+				</verifyText>
+				<timeout id="timeout" name="timeout">30</timeout>
+			</method>
+
+
+			<method name="saveOrderTemplateFromListView" id="saveOrderTemplateFromListView">	 
+				<verifyText>
+					<visibleTextElement id="confirmationText2">//*[@name='addProduct']</visibleTextElement>
+				</verifyText>
+				<timeout id="timeout" name="timeout">10</timeout>
+			</method>
+
+
+			<method name="addProductToOrderTemplateFromListView" id="addProductToOrderTemplateFromListView">
+				<click>
+					<button id="AddToOrder" name="AddToOrder" value="//button[@name='addToWishlistProduct']">
+					</button>
+				</click>
+				<timeout id="timeout" name="timeout">30</timeout>
+			</method>
+
+
+			<method name="saveOrderTemplate3" id="saveOrderTemplate3">	 
+				<verifyText>
+					<loopMsg id="courtesyNavigationText1">Uitloggen</loopMsg>		
+				</verifyText> 
+				<timeout id="timeout" name="timeout">30</timeout>
+			</method>
+
+
+			<method name="browseSpecialsCategory" id ="browseSpecialsCategory">
+				<click>
+					<button id="CategoryLink" name="CategoryLink" value="Specials">
+						<verifyText>
+							<loopMsg id="CategoryText1">Specials</loopMsg>
+						</verifyText> 
+					</button>
+				</click> 
+				<timeout id="timeout" name="timeout">5</timeout>
+			</method>
+
+
+			<method name="logout" id ="logout">
+				<click>
+					<button id="loginButton" name="loginButton" value="//*[@id='container']/header/div[2]/div/ul[3]/li[3]/a"/>
+					<button id="loginButton" name="loginButton" value="//*[@id='container']/header/div[2]/div/ul[3]/li[3]/a">
+						<verifyText>
+							<visibleTextElement id="confirmationText1">//*[@id='ShopLoginForm_Login']</visibleTextElement>
+							<visibleTextElement id="confirmationText1">//*[@id='ShopLoginForm_Password']</visibleTextElement>
+						</verifyText>
+					</button>
+				</click> 
+				<timeout id="timeout" name="timeout">5</timeout>
+			</method>
+
+
+			<method name="verifyLoginPageBlankFields" id ="verifyLoginPageBlankFields">
+				<click>
+					<button id="loginButton" name="loginButton" value="//*[@class='ish-field-buttonGroup']/button">
+						<verifyText>
+							<visibleTextElement id="confirmationText2">//*[@class='kor-field-error-message error']</visibleTextElement>
+						</verifyText>
+					</button>
+				</click>
+				<timeout id="timeout" name="timeout">5</timeout>
+			</method>
+
+
+			<method name="verifyInvalidPassword" id ="verifyInvalidPassword">
+				<textbox id="signInCredentials">
+					<text id="ShopLoginForm_Login" name="user">testok@ok.com</text>
+					<text id="ShopLoginForm_Password" name ="password">xxxxxxxxxx</text>
+				</textbox>
+				<click>
+					<button id="loginButton" name="loginButton" value="//*[@class='ish-field-buttonGroup']/button">
+						<verifyText>
+							<visibleTextElement id="confirmationText2">//*[@class='kor-form-error-message-contents']</visibleTextElement>
+						</verifyText>
+					</button>
+				</click>
+				<timeout id="timeout" name="timeout">5</timeout>
+			</method>
+
+
+			<method name="gotoSavedAddressPage" id ="gotoSavedAddressPage">	
+				<verifyText>
+					<visibleTextElement id="confirmationText2">//*[@class='kor-myAccount-addressBook']</visibleTextElement>
+				</verifyText>
+				<timeout id="timeout" name="timeout">5</timeout>
+			</method>
+
+
+			<method name="goToResistrationPage" id ="goToResistrationPage">
+				<click>
+					<button id="loginButton" name="loginButton" value="//*[@class='ish-button']">
+						<verifyText>
+							<visibleTextElement id="confirmationText2">//form[@name='RegisterUser']</visibleTextElement>
+							<visibleTextElement id="confirmationText2">//*[@class='ish-section']</visibleTextElement>
+							<visibleTextElement id="confirmationText2">//*[@name='CreateAccount']</visibleTextElement>
+							<visibleTextElement id="confirmationText2">//*[contains(@id,'CompanyInformationForm_ChamberOfCommerce')]</visibleTextElement>
+							<visibleTextElement id="confirmationText2">//*[contains(@id,'CompanyInformationForm_BTWNumber')]</visibleTextElement>
+							<visibleTextElement id="confirmationText2">//*[contains(@id,'CompanyInformationForm_Industry')]</visibleTextElement>
+						</verifyText>
+					</button>
+				</click>
+				
+				<timeout id="timeout" name="timeout">5</timeout>
+			</method>	
+
+
+			<method name="goToResistrationPage1" id ="goToResistrationPage1">
+				<click>					
+					<button id="loginButton" name="loginButton" value="//*[@class='ish-button']">
+						<verifyText>
+							<visibleTextElement id="confirmationText2">//form[@name='RegisterUser']</visibleTextElement>
+							<visibleTextElement id="confirmationText2">//*[@class='ish-section']</visibleTextElement>
+							<visibleTextElement id="confirmationText2">//*[@name='CreateAccount']</visibleTextElement>
+							<visibleTextElement id="confirmationText2">//*[contains(@id,'CompanyInformationForm_ChamberOfCommerce')]</visibleTextElement>
+							<visibleTextElement id="confirmationText2">//*[contains(@id,'CompanyInformationForm_BTWNumber')]</visibleTextElement>
+							<visibleTextElement id="confirmationText2">//*[contains(@id,'CompanyInformationForm_Industry')]</visibleTextElement>
+						</verifyText>
+					</button>
+				</click>
+				<timeout id="timeout" name="timeout">5</timeout>
+			</method>
+
+
+			<method name="goToResistrationPage2" id ="goToResistrationPage2">
+				<click>
+					<button id="loginButton" name="loginButton" value="//*[@class='ish-button']">
+						<verifyText>
+							<visibleTextElement id="confirmationText2">//form[@name='RegisterUser']</visibleTextElement>
+							<visibleTextElement id="confirmationText2">//*[@class='ish-section']</visibleTextElement>
+							<visibleTextElement id="confirmationText2">//*[@name='CreateAccount']</visibleTextElement>
+							<visibleTextElement id="confirmationText2">//*[contains(@id,'CompanyInformationForm_ChamberOfCommerce')]</visibleTextElement>
+							<visibleTextElement id="confirmationText2">//*[contains(@id,'CompanyInformationForm_BTWNumber')]</visibleTextElement>
+							<visibleTextElement id="confirmationText2">//*[contains(@id,'CompanyInformationForm_Industry')]</visibleTextElement>
+						</verifyText>
+					</button>
+				</click>
+				<timeout id="timeout" name="timeout">5</timeout>
+			</method>
+
+
+			<method name="goToResistrationPage3" id ="goToResistrationPage3">
+				<click>
+					<button id="loginButton" name="loginButton" value="//*[@class='ish-button']">
+						<verifyText>
+							<visibleTextElement id="confirmationText2">//form[@name='RegisterUser']</visibleTextElement>
+							<visibleTextElement id="confirmationText2">//*[@class='ish-section']</visibleTextElement>
+							<visibleTextElement id="confirmationText2">//*[@name='CreateAccount']</visibleTextElement>
+							<visibleTextElement id="confirmationText2">//*[contains(@id,'CompanyInformationForm_ChamberOfCommerce')]</visibleTextElement>
+							<visibleTextElement id="confirmationText2">//*[contains(@id,'CompanyInformationForm_BTWNumber')]</visibleTextElement>
+							<visibleTextElement id="confirmationText2">//*[contains(@id,'CompanyInformationForm_Industry')]</visibleTextElement>
+						</verifyText>
+					</button>
+				</click>
+				<timeout id="timeout" name="timeout">5</timeout>
+			</method>		
+
+
+			<method name="goToResistrationPage4" id ="goToResistrationPage4">
+				<click>
+					<button id="loginButton" name="loginButton" value="//*[@class='ish-button']">
+						<verifyText>
+							<visibleTextElement id="confirmationText2">//form[@name='RegisterUser']</visibleTextElement>
+							<visibleTextElement id="confirmationText2">//*[@class='ish-section']</visibleTextElement>
+							<visibleTextElement id="confirmationText2">//*[@name='CreateAccount']</visibleTextElement>
+							<visibleTextElement id="confirmationText2">//*[contains(@id,'CompanyInformationForm_ChamberOfCommerce')]</visibleTextElement>
+							<visibleTextElement id="confirmationText2">//*[contains(@id,'CompanyInformationForm_BTWNumber')]</visibleTextElement>
+							<visibleTextElement id="confirmationText2">//*[contains(@id,'CompanyInformationForm_Industry')]</visibleTextElement>
+						</verifyText>
+					</button>
+				</click>
+				<timeout id="timeout" name="timeout">5</timeout>
+			</method>	
+			
+					
+			<method name="verifyRegistrationPageBlankFields" id ="verifyRegistrationPageBlankFields">
+				<click>
+					<button id="loginButton" name="loginButton" value="//*[@name='CreateAccount']">
+						<verifyText>
+<!-- 							<visibleTextElement id="confirmationText2">//*[@class='kor-field-error-message error']</visibleTextElement> -->
+							<visibleTextElement id="confirmationText2">//*[@class='ish-error reCaptchaErrorRegistration']</visibleTextElement>
+						</verifyText>
+					</button>
+				</click>
+				<timeout id="timeout" name="timeout">5</timeout>
+			</method>
+
+
+			<method name="registrationEnterValuesAndVerifyForExistingEmailID" id="registrationEnterValuesAndVerifyForExistingEmailID">
+				<elements>
+					<element id="EmailId" name="EmailId" value="//*[@id='RegisterUserFullEmail_Login']"/>
+					<element id="Password1" name="Password1" value="//*[@id='RegisterUserFullEmail_Password']"/>
+					<element id="Password2" name="Password2" value="//*[@id='RegisterUserFullEmail_PasswordConfirmation']"/>					   
+					<element id="CompanyName" name="CompanyName" value="//*[contains(@id,'CompanyInformationForm_CompanyName')]"/>			   			   
+					<element id="Gender" name="Gender" value="//*[contains(@id,'CompanyInformationForm_Gender')]"/>
+					<element id="CompanyInformationForm_COC" name="CompanyInformationForm_COC" value="//*[contains(@id,'CompanyInformationForm_ChamberOfCommerce')]"/>
+					<element id="CompanyInformationForm_BTW" name="CompanyInformationForm_BTW" value="//*[contains(@id,'CompanyInformationForm_BTWNumber')]"/>
+					<element id="CompanyInformationForm_FirstName" name="CompanyInformationForm_FirstName" value="//*[contains(@id,'CompanyInformationForm_FirstName')]"/>	
+					<element id="CompanyInformationForm_LastName" name="CompanyInformationForm_LastName" value="//*[contains(@id,'CompanyInformationForm_LastName')]"/>
+					<element id="CompanyInformationForm_Function" name="CompanyInformationForm_Function" value="//*[contains(@id,'CompanyInformationForm_Function')]"/>
+					<element id="CompanyInformationForm_PhoneBusiness" name="CompanyInformationForm_PhoneBusiness" value="//*[contains(@id,'CompanyInformationForm_PhoneBusiness')]"/>
+					<element id="KingCompanyInformationForm_Industry" name="KingCompanyInformationForm_Industry" value="//*[contains(@id,'CompanyInformationForm_Industry')]"/>
+					<element id="AddressForm_CountryCode" name="AddressForm_CountryCode" value="//*[@id='AddressForm_CountryCode']"/>		   
+					<element id="AddressForm_Address1" name="AddressForm_Address1" value="//*[@id='AddressForm_Address1']"/>					   
+					<element id="AddressForm_PostalCode" name="AddressForm_PostalCode" value="//*[@id='AddressForm_PostalCode']"/>					   
+					<element id="AddressForm_City" name="AddressForm_City" value="//*[@id='AddressForm_City']"/>		
+					<element id="AddressForm_State" name="AddressForm_State" value="//*[@id='AddressForm_State']"/>					   		   
+				</elements>
+				<click>
+					<button id="CreateAccount" name="CreateAccount" value="//*[@name='CreateAccount']">
+						<verifyText>
+							<visibleTextElement id="confirmationText2">//*[@class='kor-form-error-message-contents']</visibleTextElement>
+							<visibleTextElement id="confirmationText2">//*[@class='ish-error']</visibleTextElement>
+						</verifyText> 
+					</button>
+				</click>
+				<timeout id="timeout" name="timeout">30</timeout>
+			</method>		
+
+
+			<method name="completeRegistration" id="completeRegistration">
+				<elements>
+					<element id="EmailId" name="EmailId" value="//*[@id='RegisterUserFullEmail_Login']"/>
+					<element id="Password1" name="Password1" value="//*[@id='RegisterUserFullEmail_Password']"/>
+					<element id="Password2" name="Password2" value="//*[@id='RegisterUserFullEmail_PasswordConfirmation']"/>					   
+					<element id="CompanyName" name="CompanyName" value="//*[contains(@id,'CompanyInformationForm_CompanyName')]"/>			   			   
+					<element id="Gender" name="Gender" value="//*[contains(@id,'CompanyInformationForm_Gender')]"/>
+					<element id="CompanyInformationForm_COC" name="CompanyInformationForm_COC" value="//*[contains(@id,'CompanyInformationForm_ChamberOfCommerce')]"/>
+					<element id="CompanyInformationForm_BTW" name="CompanyInformationForm_BTW" value="//*[contains(@id,'CompanyInformationForm_BTWNumber')]"/>
+					<element id="CompanyInformationForm_FirstName" name="CompanyInformationForm_FirstName" value="//*[contains(@id,'CompanyInformationForm_FirstName')]"/>	
+					<element id="CompanyInformationForm_LastName" name="CompanyInformationForm_LastName" value="//*[contains(@id,'CompanyInformationForm_LastName')]"/>
+					<element id="CompanyInformationForm_Function" name="CompanyInformationForm_Function" value="//*[contains(@id,'CompanyInformationForm_Function')]"/>
+					<element id="CompanyInformationForm_PhoneBusiness" name="CompanyInformationForm_PhoneBusiness" value="//*[contains(@id,'CompanyInformationForm_PhoneBusiness')]"/>
+					<element id="KingCompanyInformationForm_Industry" name="KingCompanyInformationForm_Industry" value="//*[contains(@id,'CompanyInformationForm_Industry')]"/>
+					<element id="AddressForm_CountryCode" name="AddressForm_CountryCode" value="//*[@id='AddressForm_CountryCode']"/>		   
+					<element id="AddressForm_Address1" name="AddressForm_Address1" value="//*[@id='AddressForm_Address1']"/>					   
+					<element id="AddressForm_PostalCode" name="AddressForm_PostalCode" value="//*[@id='AddressForm_PostalCode']"/>					   
+					<element id="AddressForm_City" name="AddressForm_City" value="//*[@id='AddressForm_City']"/>		
+					<element id="AddressForm_State" name="AddressForm_State" value="//*[@id='AddressForm_State']"/>					   		   
+				</elements>
+				<click>
+					<button id="CreateAccount" name="CreateAccount" value="//*[@name='CreateAccount']">
+						<verifyText>
+							<visibleTextElement id="confirmationText2">//*[@class='breadcrumb rwd-tablet rwd-desktop']</visibleTextElement>
+						</verifyText> 
+					</button>
+				</click>
+				<timeout id="timeout" name="timeout">30</timeout>
+			</method>
+
+
+			<method name="mandatoryFieldValidation" id="mandatoryFieldValidation">
+				<textbox id="registrationCredentials">
+					<text id="RegisterUserFullEmail_Password" name ="password">Eperium123</text>
+					<text id="RegisterUserFullEmail_PasswordConfirmation" name ="password">Eperium123</text>
+					<text id="CompanyInformationForm_CompanyName" name ="CompanyInformationForm_CompanyName">Eperium</text>					
+					<text id="CompanyInformationForm_FirstName" name ="CompanyInformationForm_FirstName">Eperium</text>					
+					<text id="CompanyInformationForm_LastName" name ="CompanyInformationForm_LastName">India</text>						
+					<text id="CompanyInformationForm_FirstName" name ="CompanyInformationForm_FirstName">Eperium</text>	
+					<text id="CompanyInformationForm_PhoneBusiness" name ="CompanyInformationForm_PhoneBusiness">9999999999</text>		
+					<text id="AddressForm_Address1" name ="AddressForm_Address1">Test Line 1</text>
+					<text id="AddressForm_Address2" name ="AddressForm_Address2">Test Line 2</text>	
+					<text id="AddressForm_PostalCode" name ="AddressForm_PostalCode">123456</text>		
+					<text id="AddressForm_City" name ="AddressForm_City">Test</text>		
+					<text id="AddressForm_Address2" name ="AddressForm_Address2">Test Line 2</text>	
+				</textbox>
+				<dropdown>
+					<selected id="//select[@id='CompanyInformationForm_Gender']" name="CompanyInformationForm_Gender" index="Vrouw"/> 
+					<selected id="//select[@id='CompanyInformationForm_Title']" name="CompanyInformationForm_Title" index="Mr."/> 
+					<selected id="//select[@id='CompanyInformationForm_Gender']" name="CompanyInformationForm_Gender" index="Vrouw"/> 				
+					<selected id="//select[@id='CompanyInformationForm_Birthday_Day']" name="CompanyInformationForm_Birthday_Day" index="17"/>
+					<selected id="//select[@id='CompanyInformationForm_Birthday_Month']" name="CompanyInformationForm_Birthday_Month" index="10"/>
+					<selected id="//select[@id='CompanyInformationForm_Birthday_Year']" name="CompanyInformationForm_Birthday_Year" index="9"/>
+					<selected id="//select[@id='CompanyInformationForm_Function']" name="CompanyInformationForm_Function" index="Hoofd Inkoop"/>
+					<selected id="//select[@id='AddressForm_CountryCode']" name="AddressForm_CountryCode" index="Netherlands"/>
+					<selected id="//select[@id='AddressForm_State']" name="AddressForm_State" index="Limburg"/>
+				</dropdown>
+				<click>
+					<button id="CreateAccount" name="CreateAccount" value="//*[@name='CreateAccount']">
+						<verifyText>
+							<loopMsg id="accountText">Gelieve uw e-mailadres in te geven</loopMsg>
+						</verifyText> 
+					</button>
+				</click>
+				<timeout id="timeout" name="timeout">30</timeout>
+			</method>
+
+
+			<method name="passwordLessThenSixCharacters" id="passwordLessThenSixCharacters">
+				<elements>
+					<element id="EmailId" name="EmailId" value="//*[@id='RegisterUserFullEmail_Login']"/>
+					<element id="Password1" name="Password1" value="//*[@id='RegisterUserFullEmail_Password']"/>
+					<element id="Password2" name="Password2" value="//*[@id='RegisterUserFullEmail_PasswordConfirmation']"/>	
+				</elements>
+				<click>
+					<button id="CreateAccount" name="CreateAccount" value="//*[@name='CreateAccount']">
+						<verifyText>
+							<visibleTextElement id="confirmationText2">//*[@data-name='RegisterUserFullEmail_PasswordError']</visibleTextElement>
+						</verifyText> 
+					</button>
+				</click>
+				<timeout id="timeout" name="timeout">30</timeout>
+			</method>
+
+
+			<method name="passwordNotAlphanuneric" id="passwordNotAlphanuneric">
+				<elements>
+					<element id="EmailId" name="EmailId" value="//*[@id='RegisterUserFullEmail_Login']"/>
+					<element id="Password1" name="Password1" value="//*[@id='RegisterUserFullEmail_Password']"/>
+					<element id="Password2" name="Password2" value="//*[@id='RegisterUserFullEmail_PasswordConfirmation']"/>	
+				</elements>
+				<click>
+					<button id="CreateAccount" name="CreateAccount" value="//*[@name='CreateAccount']">
+						<verifyText>
+							<visibleTextElement id="confirmationText2">//*[@data-name='RegisterUserFullEmail_PasswordError']</visibleTextElement>
+						</verifyText> 
+					</button>
+				</click>
+				<timeout id="timeout" name="timeout">30</timeout>
+			</method>
+
+
+			<method name="passwordNotUppercaseLetter" id="passwordNotUppercaseLetter">
+				<elements>
+					<element id="EmailId" name="EmailId" value="//*[@id='RegisterUserFullEmail_Login']"/>
+					<element id="Password1" name="Password1" value="//*[@id='RegisterUserFullEmail_Password']"/>
+					<element id="Password2" name="Password2" value="//*[@id='RegisterUserFullEmail_PasswordConfirmation']"/>	
+				</elements>
+				<click>
+					<button id="CreateAccount" name="CreateAccount" value="//*[@name='CreateAccount']">
+						<verifyText>
+							<visibleTextElement id="confirmationText2">//*[@data-name='RegisterUserFullEmail_PasswordError']</visibleTextElement>
+						</verifyText> 
+					</button>
+				</click>
+				<timeout id="timeout" name="timeout">30</timeout>
+			</method>
+
+
+			<method name="passwordNotLowerCaseLetter" id="passwordNotLowerCaseLetter">
+				<elements>
+					<element id="EmailId" name="EmailId" value="//*[@id='RegisterUserFullEmail_Login']"/>
+					<element id="Password1" name="Password1" value="//*[@id='RegisterUserFullEmail_Password']"/>
+					<element id="Password2" name="Password2" value="//*[@id='RegisterUserFullEmail_PasswordConfirmation']"/>	
+				</elements>
+				<click>
+					<button id="CreateAccount" name="CreateAccount" value="//*[@name='CreateAccount']">
+						<verifyText>
+							<visibleTextElement id="confirmationText2">//*[@data-name='RegisterUserFullEmail_PasswordError']</visibleTextElement>
+						</verifyText> 
+					</button>
+				</click>
+				<timeout id="timeout" name="timeout">30</timeout>
+			</method>
+
+
+			<method name="passwordMismatch" id="passwordMismatch">
+				<elements>
+					<element id="EmailId" name="EmailId" value="//*[@id='RegisterUserFullEmail_Login']"/>
+					<element id="Password1" name="Password1" value="//*[@id='RegisterUserFullEmail_Password']"/>
+					<element id="Password2" name="Password2" value="//*[@id='RegisterUserFullEmail_PasswordConfirmation']"/>	
+				</elements>
+				<click>
+					<button id="CreateAccount" name="CreateAccount" value="//*[@name='CreateAccount']">
+						<verifyText>
+							<visibleTextElement id="confirmationText2">//*[@data-name='RegisterUserFullEmail_PasswordError']</visibleTextElement>
+						</verifyText> 
+					</button>
+				</click>
+				<timeout id="timeout" name="timeout">30</timeout>
+			</method>
+			
+
+			<method name="navigateToPDP" id ="navigateToPDP">
+				<verifyText>
+					<loopmsg id="CategoryText1">Beschrijving</loopmsg>						
+					<loopmsg id="CategoryText2">Details</loopmsg>	
+					<loopmsg id="CategoryText3">Retouren</loopmsg>							
+					<loopmsg id="CategoryText4">Verzending</loopmsg>	
+					<loopmsg id="CategoryText5">Print pagina</loopmsg>
+					<loopmsg id="CategoryText6">Voeg toe aan offerte</loopmsg>						
+					<loopmsg id="CategoryText7">Voeg toe aan bestellijst</loopmsg>						
+					<loopmsg id="CategoryText8">Vergelijk</loopmsg>										
+				</verifyText> 
+				<timeout id="timeout" name="timeout">5</timeout>
+			</method>
+
+
+			<method name="navigateToPDP1" id ="navigateToPDP1">
+				<verifyText>
+					<loopmsg id="CategoryText1">Beschrijving</loopmsg>						
+					<loopmsg id="CategoryText2">Details</loopmsg>	
+					<loopmsg id="CategoryText3">Retouren</loopmsg>							
+					<loopmsg id="CategoryText4">Verzending</loopmsg>	
+					<loopmsg id="CategoryText5">Print pagina</loopmsg>
+					<loopmsg id="CategoryText6">Voeg toe aan offerte</loopmsg>						
+					<loopmsg id="CategoryText7">Voeg toe aan bestellijst</loopmsg>						
+					<loopmsg id="CategoryText8">Vergelijk</loopmsg>										
+				</verifyText> 
+				<timeout id="timeout" name="timeout">5</timeout>
+			</method>			
+
+
+			<method name="VerifyPDPProspect" id ="VerifyPDPProspect">
+				<elements>
+					<element id="ClickPDP" name="ClickPDP" value="//*[@class='row no-margin rwd-tablet rwd-desktop lister-tile']"/> 
+					<element id="ClickPDPMAJ" name="ClickPDPMAJ" value="//*[@id='product-search-result']/div/div[6]/ul[*]/li/div[2]/div/div[2]/a/div"/> 				
+				</elements>
+				<verifyText>
+					<visibleTextElement id="confirmationText2">//*[@id='variation_pdp_productName']</visibleTextElement>
+					<visibleTextElement id="confirmationText2">//*[@class='tooltip-icon']</visibleTextElement>
+				</verifyText>
+				<timeout id="timeout" name="timeout">5</timeout>
+			</method>
+
+
+			<method name="VerifyPDPCustomer" id ="VerifyPDPCustomer">
+				<elements>				    
+					<element id="ClickPDP" name="ClickPDP" value="(//*[@class='row no-margin rwd-tablet rwd-desktop lister-tile'])[1]"/>
+					<element id="ClickPDP1" name="ClickPDP1" value="(//*[@id='ish-productTile-size'])[1]"/>
+					<element id="ClickPDPMAJ" name="ClickPDPMAJ" value="//*[@id='product-search-result']/div/div[6]/ul[*]/li/div[2]/div/div[2]/a/div"/> 				
+					<element id="PricePDP" name="PricePDP" value="//*[@id='variation_pdp_price_info']"/>
+					<element id="CartButtonPDP" name="CartButtonPDP" value="//*[@name='addProduct']"/>	
+				</elements>	
+				<verifyText>				
+					<visibleTextElement id="confirmationText1">//*[@name='addProduct']</visibleTextElement>
+					<visibleTextElement id="confirmationText1">//*[@class='ish-productQuantity-input kor-product-qty']</visibleTextElement>
+					<visibleTextElement id="confirmationText1">//*[@id='variation_pdp_price_info']</visibleTextElement>
+<!-- 					<visibleTextElement id="confirmationText1">//*[@name='addToWishlistProduct']</visibleTextElement> -->
+					<visibleTextElement id="confirmationText1">//*[@class='pdp-addCart-link']</visibleTextElement>
+				</verifyText>
+				<timeout id="timeout" name="timeout">15</timeout>
+			</method>
+
+
+			<method name="addProducttoCartFromPDP" id ="addProducttoCartFromPDP">
+				<verifyText>
+<!-- 					<visibleTextElement id="confirmationText1">//*[@class='ish-bar-actionButton']</visibleTextElement> -->
+				</verifyText>
+				<timeout id="timeout" name="timeout">60</timeout>
+			</method>
+			
+			
+<!-- 			BE-2490	Disable' add to basket button when clicked once -->			
+		     <method name="addProducttoCartAndVerifybutton" id ="addProducttoCartAndVerifybutton">
+				<verifyText>
+<!-- 					<visibleTextElement id="confirmationText1">//*[@name='addToCartBehavior']</visibleTextElement> -->
+				</verifyText>
+				<timeout id="timeout" name="timeout">60</timeout>
+			</method>
+
+
+			<method name="addProducttoCartFromPDP1" id ="addProducttoCartFromPDP1">
+				<verifyText>
+					<visibleTextElement id="confirmationText1">//*[@class='ish-bar-actionButton']</visibleTextElement>
+				</verifyText>
+				<timeout id="timeout" name="timeout">15</timeout>
+			</method>
+
+
+			<method name="addProducttoCartFromQuickView" id ="addProducttoCartFromQuickView">
+				<verifyText>
+					<loopMsg id= "loginText">Artikel</loopMsg>
+				</verifyText>
+				<timeout id="timeout" name="timeout">5</timeout>
+			</method>
+
+			
+			<method name="enterAndSearchStringSTAR" id ="enterAndSearchStringSTAR">
+				<elements>
+					<element id="SearchTextBox" name="SearchTextBox" value="//*[@id='searchTerm_Header']"/>
+					<element id="SearchButtonClick" name="SearchButtonClick" value="//*[@class='primary small searchClick']"/>
+				</elements>
+				<verifyText>
+					<visibleTextElement id="confirmationText2">//label[@class='left']</visibleTextElement>
+				</verifyText>
+				<timeout id="timeout" name="timeout">10</timeout>
+			</method>
+
+
+			<method name="openProductListerPage" id ="openProductListerPage">
+				<verifyText>
+					<visibleTextElement id="confirmationText2">//label[@class='left']</visibleTextElement>
+				</verifyText>
+				<timeout id="timeout" name="timeout">20</timeout>
+			</method>
+
+
+			<method name="sortAtoZ" id ="sortAtoZ">
+				<elements>
+					<element id="SortDropDown" name="SortDropDown" value="SortingAttribute"/>
+				</elements>			
+				<verifyText>
+					<visibleTextElement id="confirmationText2">//label[@class='left']</visibleTextElement>
+				</verifyText>
+				<timeout id="timeout" name="timeout">15</timeout>
+			</method>
+			
+			<method name="validatesortAtoZ" id ="validatesortAtoZ">
+				<elements>
+					<element id="SortDropDown" name="SortDropDown" value="SortingAttribute"/>
+				</elements>			
+				<verifyText>
+					<visibleTextElement id="confirmationText2">//*[@class='rwd-desktop right']</visibleTextElement>
+				</verifyText>
+				<elements>
+					<element id="GridViewPage2" name="GridViewPage2" value="//*[@title='to page 2']"/>
+				</elements>
+				<timeout id="timeout" name="timeout">15</timeout>
+			</method>
+
+
+			<method name="filter" id ="filter">
+				<elements>
+					<element id="Filter" name="Filter" value="//*[@id='product-search-result']/aside/nav[1]/div[2]/ul[1]/li[1]/a"/>
+				</elements>	
+				<verifyText>
+					<visibleTextElement id="confirmationText2">//*[@class='rwd-desktop right']</visibleTextElement>
+				</verifyText>
+				<timeout id="timeout" name="timeout">20</timeout>
+			</method>
+
+
+			<method name="shoppingCartToAddressPage" id ="shoppingCartToAddressPage">
+				<elements>
+					<element id="ClickCheckOut" name="ClickCheckOut" value="//*[@name='checkout']"/>
+				</elements>	
+				<verifyText>
+					<visibleTextElement id="confirmationText1">//*[@class='kor-submit place-order-btn']</visibleTextElement>
+				</verifyText>
+				<timeout id="timeout" name="timeout">15</timeout>
+			</method>
+
+
+			<method name="getPackagingInfoFromPDP" id ="getPackagingInfoFromPDP">
+				<verifyText>
+					<visibleTextElement id="confirmationText1">//*[@id='variation_pdp_packaging_info']</visibleTextElement>
+				</verifyText>
+				<timeout id="timeout" name="timeout">15</timeout>
+			</method>
+
+
+			<method name="verifyPackagingInfoOnCartPage" id ="verifyPackagingInfoOnCartPage">
+				<verifyText>
+					<visibleTextElement id="confirmationText1">//*[@class='product-title large']</visibleTextElement>
+				</verifyText>
+				<timeout id="timeout" name="timeout">15</timeout>
+			</method>
+
+
+			<method name="verifyPackagingInfoOnAddressPage" id ="verifyPackagingInfoOnAddressPage">
+				<verifyText>
+					<visibleTextElement id="confirmationText1">//*[@class='grid-2 right no-line']</visibleTextElement>
+				</verifyText>
+				<timeout id="timeout" name="timeout">15</timeout>
+			</method>
+
+
+			<method name="verifyPackagingInfoOnShipment" id ="verifyPackagingInfoOnShipment">
+				<verifyText>
+					<visibleTextElement id="confirmationText1">//*[@class='grid-2 right no-line']</visibleTextElement>
+				</verifyText>
+				<timeout id="timeout" name="timeout">15</timeout>
+			</method>
+
+
+			<method name="verifyPackagingInfoOnPaymentPage" id ="verifyPackagingInfoOnPaymentPage">
+				<verifyText>
+					<visibleTextElement id="confirmationText1">//*[@class='grid-2 right no-line']</visibleTextElement>
+				</verifyText>
+				<timeout id="timeout" name="timeout">15</timeout>
+			</method>
+
+
+			<method name="verifyPackagingInfoOnOrderConfirmationPage" id ="verifyPackagingInfoOnOrderConfirmationPage">
+				<verifyText>
+					<visibleTextElement id="confirmationText1">//*[@class='grid-2 right no-line']</visibleTextElement>
+				</verifyText>
+				<timeout id="timeout" name="timeout">15</timeout>
+			</method>
+
+
+			<method name="addressToShipmentPage" id ="addressToShipmentPage">
+				<verifyText>
+					<visibleTextElement id="confirmationText1">//*[@class='ish-button ish-bar-actionButton kor-submit button-right']</visibleTextElement>
+				</verifyText>
+				<timeout id="timeout" name="timeout">15</timeout>
+			</method>
+
+
+			<method name="shipmentToPaymentPage" id ="shipmentToPaymentPage">
+				<verifyText>
+					<visibleTextElement id="confirmationText1">//*[@id='placeorderbuttonid']</visibleTextElement>
+				</verifyText>
+				<timeout id="timeout" name="timeout">15</timeout>
+			</method>
+
+			<method name="paymentToConfirmOrder" id ="paymentToConfirmOrder">
+				<verifyText>
+				    <!--
+					<visibleTextElement id="confirmationText2">//*[@class='kor-noLabelErrorColor']</visibleTextElement>
+					-->
+					<visibleTextElement id="confirmationText2">//*[@name='sendOrder']</visibleTextElement>
+				</verifyText>
+				<timeout id="timeout" name="timeout">15</timeout>
+			</method>
+			
+			<method name="enterRefIdAndName" id ="enterRefIdAndName">
+				<verifyText>
+					<visibleTextElement id="confirmationText1">//*[@class='kor-submit place-order-btn']</visibleTextElement>
+				</verifyText>
+				<timeout id="timeout" name="timeout">15</timeout>
+			</method>
+
+
+			<method name="addReference" id ="addReference">
+				<verifyText>
+					<visibleTextElement id="confirmationText1">//*[@class='kor-submit place-order-btn']</visibleTextElement>
+				</verifyText>
+				<timeout id="timeout" name="timeout">15</timeout>
+			</method>
+
+
+			<method name="paymentToConfirmOrderWithReference" id ="paymentToConfirmOrderWithReference">
+				<verifyText>
+				    <!--  
+					<visibleTextElement id="confirmationText2">//*[@class='kor-noLabelErrorColor']</visibleTextElement>
+					-->
+					<visibleTextElement id="confirmationText2">//*[@class='primary small']</visibleTextElement>
+					<loopMsg id= "loginText">TestReference</loopMsg>					
+				</verifyText>
+				<timeout id="timeout" name="timeout">7</timeout>
+			</method>
+
+
+			<method name="orderConfirmationWithMerchantMessage" id ="orderConfirmationWithMerchantMessage">
+				<verifyText>
+					<visibleTextElement id="confirmationText2">//*[@class='ish-bigBar-mainLabel']</visibleTextElement>
+					<!-- 
+					<loopMsg id= "loginText">TestReference</loopMsg>
+					-->	
+				</verifyText>
+				<elements>
+					<element id="hookUrl" name="hookUrl" value="https://punchoutcommerce.com/tools/oci-roundtrip-return"/>
+				</elements>
+				
+				<timeout id="timeout" name="timeout">15</timeout>
+			</method>
+
+
+			<method name="listView" id ="listView">
+				<elements>
+					<element id="ClickList" name="ClickList" value="//*[@id='main']/div[3]/div/div[2]/div/a[1]"/>
+				</elements>			
+				<verifyText>
+					<visibleTextElement id="confirmationText2">//*[@class='button right icon fa fa-th']</visibleTextElement>
+				</verifyText>
+				<timeout id="timeout" name="timeout">20</timeout>
+			</method>
+
+
+			<method name="gridToListView" id ="gridToListView">
+				<verifyText>
+					<visibleTextElement id="confirmationText2">//*[@class='rwd-desktop right']</visibleTextElement>
+				</verifyText>
+				<timeout id="timeout" name="timeout">20</timeout>
+			</method>
+
+
+			<method name="addProductToCartFromSearchList" id ="addProductToCartFromSearchList">
+				<verifyText>
+					<visibleTextElement id="confirmationText1">//*[@class='ish-bar-actionButton']</visibleTextElement>
+				</verifyText>
+				<timeout id="timeout" name="timeout">15</timeout>
+			</method>
+
+
+			<method name="addProductCartFromList" id ="addProductCartFromList">
+				<verifyText>
+					<visibleTextElement id="confirmationText1">//*[@class='ish-bar-actionButton']</visibleTextElement>
+				</verifyText>
+				<timeout id="timeout" name="timeout">15</timeout>
+			</method>
+
+
+			<method name="enterAndSearchStringSTAR1" id ="enterAndSearchStringSTAR1">
+				<verifyText>
+					<visibleTextElement id="confirmationText2">//label[@class='left']</visibleTextElement>
+				</verifyText>
+				<timeout id="timeout" name="timeout">10</timeout>
+			</method>	
+
+
+			<method name="enterAndSearchStringSTAR2" id ="enterAndSearchStringSTAR2">
+				<verifyText>
+					<visibleTextElement id="confirmationText2">//label[@class='left']</visibleTextElement>
+				</verifyText>
+				<timeout id="timeout" name="timeout">10</timeout>
+			</method>
+
+
+			<method name="enterAndSearchStringSTAR3" id ="enterAndSearchStringSTAR3">
+				<verifyText>
+					<visibleTextElement id="confirmationText2">//label[@class='left']</visibleTextElement>
+				</verifyText>
+				<timeout id="timeout" name="timeout">10</timeout>
+			</method>
+
+
+			<method name="orderConfirmation" id ="orderConfirmation">
+				<verifyText>
+					<visibleTextElement id="confirmationText2">//*[@class='ish-bigBar-mainLabel']</visibleTextElement>
+				</verifyText>
+				<timeout id="timeout" name="timeout">15</timeout>
+			</method>
+			
+			
+			<method name="addOrderTemplateFromMyAccount" id ="addOrderTemplateFromMyAccount">
+				<verifyText>
+				     <!--  
+					<visibleTextElement id="confirmationText2">//*[@class='primary quick']</visibleTextElement>
+					-->
+				</verifyText>
+				<timeout id="timeout" name="timeout">30</timeout>
+			</method>
+
+
+			<method name="navigatetoMyAccount" id ="navigatetoMyAccount">
+				<click>
+					<button id="loginButton" name="loginButton" value="//*[@class='fa fa-user']">
+						<verifyText>
+						<visibleTextElement id="confirmationText1">//*[@id='kor-infoBox-horizontalGroupRight']//button</visibleTextElement>
+							<visibleTextElement id="confirmationText2">//*[@id='kor-infoBox-horizontalGroupRight']//button</visibleTextElement>
+						</verifyText>
+					</button>
+				</click>
+				<timeout id="timeout" name="timeout">30</timeout>
+			</method>
+
+
+			<method name="navigatetoMyAccount1" id ="navigatetoMyAccount1">
+				<click>
+					<button id="loginButton" name="loginButton" value="//*[@class='fa fa-user']">
+						<verifyText>
+							<visibleTextElement id="confirmationText2">//*[@id='kor-infoBox-horizontalGroupRight']//button</visibleTextElement>
+						</verifyText>
+					</button>
+				</click>
+				<timeout id="timeout" name="timeout">30</timeout>
+			</method>
+
+
+			<method name="navigateToOrderTempateDetailPage" id ="navigateToOrderTempateDetailPage">
+				<verifyText>
+				    <!--  
+					<visibleTextElement id="confirmationText2">//*[@class='ish-button ish-bar-actionButton kor-open-as-dialog-check-login']</visibleTextElement>
+					-->
+				</verifyText>
+				<timeout id="timeout" name="timeout">30</timeout>
+			</method>
+
+
+			<method name="navigateOrderDetailPage" id ="navigateOrderDetailPage">
+				<verifyText>
+					<visibleTextElement id="confirmationText2">//*[@class='ish-shiftContent']</visibleTextElement>
+				</verifyText>
+				<timeout id="timeout" name="timeout">30</timeout>
+			</method>
+			
+
+			<method name="navigateToOrderTempateDetailPage2" id ="navigateToOrderTempateDetailPage2">
+				<verifyText>
+				    <!--  
+					<visibleTextElement id="confirmationText2">//*[@class='ish-button ish-bar-actionButton kor-open-as-dialog-check-login']</visibleTextElement>
+				    -->
+				</verifyText>
+				<timeout id="timeout" name="timeout">30</timeout>
+			</method>
+
+
+			<method name="addOrderTemplateFromDetailPage" id ="addOrderTemplateFromDetailPage">
+				<verifyText>
+					<visibleTextElement id="confirmationText2">//*[@id='kor-directorder']/div[2]/button</visibleTextElement>
+				</verifyText>
+				<timeout id="timeout" name="timeout">30</timeout>
+			</method>
+
+
+			<method name="changeDeliveryAddress" id="changeDeliveryAddress">
+				<dropdown>
+					<selected id="//select[@id='ShippingAddressID']" name="ShippingAddressID" index="1"/> 
+				</dropdown>
+				<timeout id="timeout" name="timeout">10</timeout>
+			</method>
+
+
+			<method name="addProductToCartFromLister" id ="addProductToCartFromLister">
+				<verifyText>
+					<visibleTextElement id="confirmationText1">//*[@class='ish-bar-actionButton']</visibleTextElement>
+				</verifyText>
+				<timeout id="timeout" name="timeout">15</timeout>
+			</method>
+
+
+			<method name="addProducttoCartFromPDP2" id ="addProducttoCartFromPDP2">
+				<verifyText>
+					<visibleTextElement id="confirmationText1">//*[@class='ish-bar-actionButton']</visibleTextElement>
+				</verifyText>
+				<timeout id="timeout" name="timeout">15</timeout>
+			</method>
+			
+			
+			<method name="openQuickOrderPage" id="openQuickOrderPage">
+				<verifyText>
+					<loopMsg id="text1">Upload CSV</loopMsg>
+					<Mandatory id="text2">Artikelnummer</Mandatory>
+					<Mandatory id="text3">Aantal</Mandatory>
+				</verifyText>
+				<timeout id="timeout" name="timeout">5</timeout>
+			</method>
+
+
+			<method name="enterPDPSkuAndPrice" id="enterPDPSkuAndPrice">
+				<verifyText>
+					<loopMsg id="cartpage">Bestellen</loopMsg>
+					<loopMsg id="quantity">10050</loopMsg>
+				</verifyText> 
+				<timeout id="timeout" name="timeout">30</timeout>
+			</method>
+
+
+			<method name="gotoFirstPDP" id ="gotoFirstPDP">
+				<elements>
+					<element id="ClickPDP" name="ClickPDP" value="(//*[@class='row no-margin rwd-tablet rwd-desktop lister-tile'])[1]"/>
+					<element id="ClickPDP1" name="ClickPDP1" value="(//*[@id='ish-productTile-size'])[2]"/>
+					<element id="ClickPDP2" name="ClickPDP2" value="//*[@class='row no-margin rwd-tablet rwd-desktop lister-tile']"/>
+					<element id="ClickPDPMAJ" name="ClickPDPMAJ" value="//*[@id='product-search-result']/div/div[6]/ul[*]/li/div[2]/div/div[2]/a/div"/>
+				    <element id="GetPDPSkuOL" name="GetPDPSkuOL" value="//*[@id='change-variation-sku-pdp']"/>
+				</elements>
+				<verifyText>
+ <!-- 					<visibleTextElement id="confirmationText1">//*[@name='addProduct']</visibleTextElement>  -->
+	                <visibleTextElement id="confirmationText1">(//*[@class='pdp-addCart-link'])</visibleTextElement>
+				</verifyText>
+				<timeout id="timeout" name="timeout">15</timeout>
+			</method>
+
+
+			<method name="gotoSecondPDP" id ="gotoSecondPDP">
+				<elements>
+					<element id="ClickPDP" name="ClickPDP" value="(//*[@class='row no-margin rwd-tablet rwd-desktop lister-tile'])[2]"/>
+					<element id="ClickPDP1" name="ClickPDP1" value="(//*[@id='ish-productTile-size'])[2]"/>
+					<element id="GetPDPSkuOL1" name="GetPDPSkuOL1" value="//*[@id='change-variation-sku-pdp']"/>
+					<element id="ClickPDPMAJ" name="ClickPDPMAJ" value="//*[@id='product-search-result']/div/div[6]/ul[*]/li/div[2]/div/div[2]/a/div"/>
+				</elements>
+				<verifyText>
+<!--  					<visibleTextElement id="confirmationText1">//*[@name='addProduct']</visibleTextElement> -->
+	                <visibleTextElement id="confirmationText1">//*[@class='pdp-addCart-link']</visibleTextElement>
+				</verifyText>
+				<timeout id="timeout" name="timeout">15</timeout>
+			</method>
+
+
+			<method name="gotoThirdPDP" id ="gotoThirdPDP">
+				<elements>
+					<element id="ClickPDP" name="ClickPDP" value="(//*[@class='row no-margin rwd-tablet rwd-desktop lister-tile'])[1]"/>
+					<element id="ClickPDPMAJ" name="ClickPDPMAJ" value="//*[@id='product-search-result']/div/div[6]/ul[*]/li/div[2]/div/div[2]/a/div"/>
+ 				</elements>	
+				<verifyText>
+					<visibleTextElement id="confirmationText1">//*[@class='pdp-addCart-link']</visibleTextElement>
+				</verifyText>
+				<timeout id="timeout" name="timeout">15</timeout>
+			</method>
+
+
+			<method name="gotoFourthPDP" id ="gotoFourthPDP">
+				<elements>
+					<element id="ClickPDP" name="ClickPDP" value="(//*[@class='row no-margin rwd-tablet rwd-desktop lister-tile'])[1]"/>
+					<element id="ClickPDPMAJ" name="ClickPDPMAJ" value="//*[@id='product-search-result']/div/div[6]/ul[*]/li/div[2]/div/div[2]/a/div"/>
+				</elements>		
+				<verifyText>
+				   <visibleTextElement id="confirmationText1">//*[@class='pdp-addCart-link']</visibleTextElement>
+				</verifyText>
+				<timeout id="timeout" name="timeout">15</timeout>
+			</method>
+
+
+			<method name="gotoFifthPDP" id ="gotoFifthPDP">
+				<elements>
+					<element id="ClickPDP" name="ClickPDP" value="(//*[@class='row no-margin rwd-tablet rwd-desktop lister-tile'])[5]"/>
+					<element id="ClickPDPMAJ" name="ClickPDPMAJ" value="//*[@id='product-search-result']/div/div[6]/ul[*]/li/div[2]/div/div[2]/a/div"/>
+				</elements>		
+				<verifyText>
+					<visibleTextElement id="confirmationText1">//*[@class='pdp-addCart-link']</visibleTextElement>
+				</verifyText>
+				<timeout id="timeout" name="timeout">15</timeout>
+			</method>
+			
+			
+			<method name="addFirstPDPToCompareList" id="addFirstPDPToCompareList">
+				<elements>
+					<element id="GetPDPSku" name="GetPDPSku" value="//*[@id='change-variation-sku-pdp']"/>
+					<element id="GetPDPSkuOL" name="GetPDPSkuOL" value="//*[@id='change-variation-sku-pdp']"/>
+					<element id="GetPDPSkuOLMAJ" name="GetPDPSkuOLMAJ" value="//*[@class='ish-productNumber']"/>
+					
+					<element id="Click3dots" name="ClickComapreLink" value="//*[@class='fa fa-ellipsis-v']"/>
+					<element id="GetCompareSku" name="GetCompareSku" value="//*[@id='main']/div/table/tbody/tr[3]/td"/>
+				</elements>
+				<verifyText>
+					<visibleTextElement id="confirmationText1">//span[@class='ish-header-extended']</visibleTextElement>
+				</verifyText>
+				<timeout id="timeout" name="timeout">30</timeout>
+			</method>
+
+
+			<method name="addSecondPDPToCompareList" id="addSecondPDPToCompareList">
+				<elements>
+					<element id="GetPDPSku" name="GetPDPSku" value="//*[@class='ish-productNumber-value']"/>
+					<element id="GetPDPSkuOL" name="GetPDPSkuOL" value="html/body/div[5]/div[2]/div/div/div/div[1]/div[2]/div/div[2]/span[2]"/>
+					
+					<element id="Click3dots" name="ClickComapreLink" value="//*[@class='fa fa-ellipsis-v']"/>
+					<element id="GetCompareSku1" name="GetCompareSku1" value="//*[@id='main']/div/table/tbody/tr[3]/td[1]"/>
+					<element id="GetCompareSku2" name="GetCompareSku2" value="//*[@id='main']/div/table/tbody/tr[3]/td[2]"/>
+				</elements>
+				<verifyText>
+					<visibleTextElement id="confirmationText1">//span[@class='ish-header-extended']</visibleTextElement>
+				</verifyText>
+				<timeout id="timeout" name="timeout">30</timeout>
+			</method>
+
+
+			<method name="addThirdPDPToCompareList" id="addThirdPDPToCompareList">
+				<elements>
+					<element id="GetPDPSku" name="GetPDPSku" value="//*[@class='ish-productNumber-value']"/>
+					<element id="GetPDPSkuOL" name="GetPDPSkuOL" value="html/body/div[5]/div[2]/div/div/div/div[1]/div[2]/div/div[2]/span[2]"/>
+					
+					<element id="Click3dots" name="ClickComapreLink" value="//*[@class='fa fa-ellipsis-v']"/>
+					<element id="GetCompareSku1" name="GetCompareSku1" value="//*[@id='main']/div/table/tbody/tr[3]/td[1]"/>
+					<element id="GetCompareSku2" name="GetCompareSku2" value="//*[@id='main']/div/table/tbody/tr[3]/td[2]"/>
+					<element id="GetCompareSku3" name="GetCompareSku3" value="//*[@id='main']/div/table/tbody/tr[3]/td[3]"/>
+				</elements>
+				<verifyText>
+					<visibleTextElement id="confirmationText1">//span[@class='ish-header-extended']</visibleTextElement>
+				</verifyText>
+				<timeout id="timeout" name="timeout">30</timeout>
+			</method>
+
+
+			<method name="addPDPToCompareListAndVerifyNavigation" id="addPDPToCompareListAndVerifyNavigation">
+				<elements>
+					<element id="GetPDPSku" name="GetPDPSku" value="//*[@class='ish-productNumber-value']"/>
+					<element id="GetPDPSkuOL" name="GetPDPSkuOL" value="html/body/div[5]/div[2]/div/div/div/div[1]/div[2]/div/div[2]/span[2]"/>
+					
+					<element id="Click3dots" name="ClickComapreLink" value="//*[@class='fa fa-ellipsis-v']"/>
+					<element id="GetCompareSku1" name="GetCompareSku1" value="//*[@class='fa fa-chevron-right kor-control kor-control-next']"/>
+					<element id="GetCompareSku2" name="GetCompareSku2" value="//*[@class='ish-compareProducts']//tbody/tr[3]/td"/>
+				</elements>
+				<verifyText>
+					<visibleTextElement id="confirmationText1">//span[@class='ish-header-extended']</visibleTextElement>
+				</verifyText>
+				<timeout id="timeout" name="timeout">30</timeout>
+			</method>
+
+
+			<method name="addProductToCartFromComparePageAndVerify" id ="addProductToCartFromComparePageAndVerify">
+				<elements>
+					<element id="GetCompareSku1" name="GetCompareSku1" value=".//*[@id='main']/div[2]/table/tbody/tr[3]/td[1]"/>
+					<element id="GetCompareSku2" name="GetCompareSku2" value=".//*[@id='main']/div[2]/table/tbody/tr[3]/td[2]"/>
+					<element id="GetCompareSku3" name="GetCompareSku3" value=".//*[@id='main']/div[2]/table/tbody/tr[3]/td[1]"/>
+					<element id="GetCompareSku4" name="GetCompareSku4" value=".//*[@id='main']/div[2]/table/tbody/tr[3]/td[2]"/>
+					<element id="ClickAddToCartButtonTop" name="ClickAddToCartButtonTop" value="//*[@id='main']/div/table/thead/tr/td[1]/form/button"/>
+					<element id="ClickAddToCartButtonBottom" name="ClickAddToCartButtonBottom" value="//*[@id='main']/div/table/tfoot/tr/td[2]/form/button"/>
+					<element id="ClickPDP" name="ClickPDP" value="//*[contains(@class, 'ish-productTile')]"/>
+					<element id="CartButtonPDP" name="CartButtonPDP" value="//*[@name='addProduct']"/>
+					<element id="GetProductSku1" name="GetProductSku1" value="//*[@id='main']/div/div/div[1]/form/div/div/table/tbody/tr[2]/td/div/div[3]/span"/>
+					<element id="GetProductSku2" name="GetProductSku2" value="//*[@id='main']/div/div/div[1]/form/div/div/table/tbody/tr[3]/td/div/div[3]/span"/>
+				</elements>
+				<verifyText>
+<!-- 					<visibleTextElement id="confirmationText1">//*[@id='cart-page']/button</visibleTextElement> -->
+				</verifyText>
+				<timeout id="timeout" name="timeout">30</timeout>
+			</method>
+
+
+			<method name="deleteAllProductsFromComparePage" id ="deleteAllProductsFromComparePage">
+				<elements>
+					<element id="PDPCount" name="PDPCount" value="//*[@class='delete']"/>
+				</elements>
+				<verifyText>
+					<visibleTextElement id="confirmationText1">//*[@class='grid-24']</visibleTextElement>
+				</verifyText>
+				<timeout id="timeout" name="timeout">15</timeout>
+			</method>
+
+
+			<method name="gotoForgotPasswordPage" id ="gotoForgotPasswordPage">
+				<click>
+					<button id="loginButton" name="loginButton" value="//*[@class='ish-link ish-link-forgot']">
+						<verifyText>
+							<visibleTextElement id="confirmationText2">//*[@id='ForgotPasswordStep1Email_Login']</visibleTextElement>
+						</verifyText>
+					</button>
+				</click>
+				<timeout id="timeout" name="timeout">5</timeout>
+			</method>
+
+
+			<method name="ValidateforgotPasswordMandatoryField" id ="ValidateforgotPasswordMandatoryField">
+				<elements>
+					<element id="OkButton" name="OkButton" value="//*[@name='Step2']"/>
+				</elements>
+				<verifyText>
+					<visibleTextElement id="confirmationText2">//*[@class='kor-field-error-message error']</visibleTextElement>
+				</verifyText>
+				<timeout id="timeout" name="timeout">15</timeout>
+			</method>
+		
+
+			<method name="validateforgotPasswordConfirmationMesssage" id ="validateforgotPasswordConfirmationMesssage">
+				<verifyText>
+					<visibleTextElement id="confirmationText2">//*[@class='gd-grid-24']</visibleTextElement>
+				</verifyText>
+				<timeout id="timeout" name="timeout">15</timeout>
+			</method>
+
+
+			<method name="verifyBlankOrderTemplateName" id="verifyBlankOrderTemplateName">
+				<verifyText>
+					<visibleTextElement id="confirmationText2">//*[@class='kor-form-error-message-contents ish-error']</visibleTextElement>
+				</verifyText>
+				<timeout id="timeout" name="timeout">30</timeout>
+			</method>
+
+
+			<method name="changeDeliveryAddress" id="changeDeliveryAddress">
+				<dropdown>
+					<selected id="//select[@id='ShippingAddressID']" name="ShippingAddressID" index="0"/> 
+				</dropdown>
+				<timeout id="timeout" name="timeout">10</timeout>
+			</method>
+
+
+			<method name="confirmOrderToPaymentPage" id ="confirmOrderToPaymentPage">
+				<verifyText>
+					<visibleTextElement id="confirmationText2">//*[@class='ish-button ish-bar-actionButton kor-submit button-right']</visibleTextElement>
+				</verifyText>
+				<timeout id="timeout" name="timeout">5</timeout>
+			</method>
+
+
+			<method name="paymentToShippingPage" id ="paymentToShippingPage">
+				<verifyText>
+					<loopMsg id="Text1">Artikel omschrijving</loopMsg>
+					<Mandatory id="Text2">Referentie</Mandatory>
+					<Mandatory id="Text2">Aantal</Mandatory>
+					<Mandatory id="Text2">Artikel omschrijving</Mandatory>
+				</verifyText>
+				<timeout id="timeout" name="timeout">5</timeout>
+			</method>
+
+
+			<method name="shippingToDeliveryAddressPage" id ="shippingToDeliveryAddressPage">
+				<verifyText>
+					<visibleTextElement id="confirmationText2">//*[@id='delivery-Address-Checkout']</visibleTextElement>
+				</verifyText>
+				<timeout id="timeout" name="timeout">5</timeout>
+			</method>
+
+
+			<method name="loginWithNoDeliveryAddressAssiginedCustomer" id ="loginWithNoDeliveryAddressAssiginedCustomer">
+				<textbox id="signInCredentials">
+					<text id="ShopLoginForm_Login" name="user">ashwini.kumar@eperiumindia.com</text>
+					<text id="ShopLoginForm_Password" name ="password">Eperium123</text>
+				</textbox>
+				<click>
+					<button id="loginButton" name="loginButton" value="//*[@class='ish-field-buttonGroup']/button">
+						<verifyText>
+							<loopMsg id= "loginText">Uitloggen</loopMsg>
+						</verifyText>
+					</button>
+				</click>
+				<timeout id="timeout" name="timeout">5</timeout>
+			</method>
+
+
+			<method name="browseAssortimentCategory" id ="browseAssortimentCategory">
+				<verifyText>
+					<loopmsg id="Op het moment staat er geen afleveradres geregistreerd onder uw naam, of de aan u toegewezen adressen zijn vervallen verklaard. Neem contact op met uw beheerder om een (nieuw) afleveradres toegewezen te krijgen">Beschrijving</loopmsg>															
+				</verifyText> 
+				<timeout id="timeout" name="timeout">5</timeout>
+			</method>
+
+
+			<method name="enterForSearchStringSTAR" id ="enterForSearchStringSTAR">
+				<verifyText>
+					<loopmsg id="Op het moment staat er geen afleveradres geregistreerd onder uw naam, of de aan u toegewezen adressen zijn vervallen verklaard. Neem contact op met uw beheerder om een (nieuw) afleveradres toegewezen te krijgen">Beschrijving</loopmsg>															
+				</verifyText>
+				<timeout id="timeout" name="timeout">10</timeout>
+			</method>
+
+
+			<method name="gotoAllOrderTemplatePage" id ="gotoAllOrderTemplatePage">
+				<verifyText>
+					<visibleTextElement id="confirmationText1">//*[@id='ish-button ish-bar-actionButton kor-open-as-dialog-check-login']</visibleTextElement>
+				</verifyText>
+				<timeout id="timeout" name="timeout">5</timeout>
+			</method>	
+			
+			
+			<method name="gotoAllOrderTemplatePage1" id ="gotoAllOrderTemplatePage1">
+				<verifyText>
+					<visibleTextElement id="confirmationText1">//*[@id='ish-button ish-bar-actionButton kor-open-as-dialog-check-login']</visibleTextElement>
+				</verifyText>
+				<timeout id="timeout" name="timeout">5</timeout>
+			</method>
+			
+				
+			<method name="deleteAllOrderTemplate" id ="deleteAllOrderTemplate">
+				<verifyText>
+					<loopMsg id="Text1">U heeft (nog) geen bestellijsten</loopMsg>
+				</verifyText>
+				<timeout id="timeout" name="timeout">5</timeout>
+			</method>
+
+
+			<method name="navigatetoAllOrderTemplatePageAgain" id ="navigatetoAllOrderTemplatePageAgain">
+				<verifyText>
+					<visibleTextElement id="confirmationText2">//*[@class='ish-button ish-bar-actionButton kor-open-as-dialog-check-login']</visibleTextElement>
+				</verifyText>
+				<timeout id="timeout" name="timeout">30</timeout>
+			</method>
+
+
+			<method name="navigatetoAllOrderTemplatePageAgain1" id ="navigatetoAllOrderTemplatePageAgain1">
+				<verifyText>
+					<loopMsg id="Text1">Bestellijsten</loopMsg>
+					<Mandatory id="Text2">Verder winkelen</Mandatory>
+				</verifyText>
+				<timeout id="timeout" name="timeout">5</timeout>
+			</method>
+
+
+			<method name="navigatetoAllOrderTemplatePage" id ="navigatetoAllOrderTemplatePage">
+				<verifyText>
+					<loopMsg id="Text1">Bestellijsten</loopMsg>
+					<Mandatory id="Text2">Verder winkelen</Mandatory>
+				</verifyText>
+				<timeout id="timeout" name="timeout">5</timeout>
+			</method>
+
+
+			<method name="openSecondOrderTemplateAndVerifyProduct" id ="openSecondOrderTemplateAndVerifyProduct">
+				<verifyText>
+				    <!--  
+					<visibleTextElement id="confirmationText1">//*[@class='kor-wishlistForm']</visibleTextElement>
+				    -->
+				</verifyText>
+				<timeout id="timeout" name="timeout">5</timeout>
+			</method>
+
+
+			<method name="openOrderTemplateAndAddProductToCartAndVerify" id ="openOrderTemplateAndAddProductToCartAndVerify">
+				<verifyText>
+					<visibleTextElement id="confirmationText1">//span[@class='ish-itemNumber']</visibleTextElement>
+				</verifyText>
+				<timeout id="timeout" name="timeout">5</timeout>
+			</method>
+
+
+			<method name="openFirstOrderTemplateIncreaseQTYAndMoveProduct" id ="openFirstOrderTemplateIncreaseQTYAndMoveProduct">
+				<verifyText>
+				    <!--  
+					<visibleTextElement id="confirmationText1">//*[@class='kor-wishlistForm orderTemplateForm']</visibleTextElement>
+					-->
+				</verifyText>
+				<timeout id="timeout" name="timeout">5</timeout>
+			</method>
+
+
+			<method name="addProductToOrderTemplateFromPDPWithQTYFive" id="addProductToOrderTemplateFromPDPWithQTYFive">
+				<verifyText>
+					<visibleTextElement id="confirmationText1">//*[@name='addToWishlistProduct']</visibleTextElement>
+				</verifyText>
+				<timeout id="timeout" name="timeout">30</timeout>
+			</method>
+
+
+			<method name="openFirstOrderTemplateDecreaseQTYAndMoveProduct" id ="openFirstOrderTemplateDecreaseQTYAndMoveProduct">
+				<verifyText>
+					<Mandatory id="Text2">Artikelen</Mandatory>
+				</verifyText>
+				<timeout id="timeout" name="timeout">5</timeout>
+			</method>
+
+
+			<method name="goToContactUsPage" id ="goToContactUsPage">			
+				<click>
+					<button id="ContactUsButton" name="ContactUsButton" value="//*[@id='container']/header/div[4]/div[2]/ul/li[5]/a">
+						<verifyText>
+							<visibleTextElement id="confirmationText2">//*[@id='ContactUsForm_CustomerName']</visibleTextElement>
+							<visibleTextElement id="confirmationText2">//*[@id='ContactUsForm_Order']</visibleTextElement>
+							<visibleTextElement id="confirmationText2">//*[@id='ContactUsForm_Email']</visibleTextElement>
+							<visibleTextElement id="confirmationText2">//*[@id='ContactUsForm_Name']</visibleTextElement>
+						</verifyText>
+					</button>
+				</click>
+				<timeout id="timeout" name="timeout">5</timeout>
+			</method>
+
+
+			<method name="enterContactDetails" id="enterContactDetails">
+				<textbox id="ContactDetails">
+					<text id="ContactUsForm_CustomerName" name ="//*[@id='BunzlContactUsForm_Name']">Satya</text>					
+					<text id="ContactUsForm_Order" name ="//*[@id='BunzlContactUsForm_Order']">1234</text>					
+					<text id="ContactUsForm_Name" name ="//*[@id='BunzlContactUsForm_Name']">Test</text>						
+					<text id="ContactUsForm_Phone" name ="//*[@id='BunzlContactUsForm_Phone']">9898989898</text>	
+					<text id="ContactUsForm_Email" name ="//*[@id='BunzlContactUsForm_Email']">sprakash@salmon.com</text>						
+					<text id="ContactUsForm_Comments" name ="//*[@id='BunzlContactUsForm_Comments']">Test 1234</text>
+				</textbox>
+				<elements>
+					<element id="subject" name="subject" value="//*[@id='BunzlContactUsForm_Subject']"/>
+				</elements>
+				<click>
+					<button id="CreateAccount" name="CreateAccount" value="//*[@name='send']">
+						<verifyText>
+							<visibleTextElement id="confirmationText2">//*[@class='ish-shiftContent']</visibleTextElement>
+						</verifyText>
+					</button>
+				</click>
+				<timeout id="timeout" name="timeout">10</timeout>
+			</method>
+
+
+			<method name="EnterUnregisteredEmailAddressAndClickOKButton" id ="EnterUnregisteredEmailAddressAndClickOKButton">
+				<verifyText>
+					<loopMsg id= "Text">Uw e-mailadres/naam combinatie is onjuist. Gelieve opnieuw te proberen.</loopMsg>
+				</verifyText>
+				<timeout id="timeout" name="timeout">15</timeout>
+			</method>
+
+
+			<method name="clickOnKingLogo" id ="clickOnKingLogo">
+				<verifyText>
+					<visibleTextElement id="confirmationText1">//*[@class='logo']</visibleTextElement>
+				</verifyText>
+				<timeout id="timeout" name="timeout">15</timeout>
+			</method>
+			
+			<method name="clickLoginButton" id ="clickLoginButton">
+				<verifyText>
+					<visibleTextElement id="confirmationText1">//button[@name='login1']</visibleTextElement>
+				</verifyText>
+				<timeout id="timeout" name="timeout">15</timeout>
+			</method>
+
+			<method name="viewOrderHistory" id ="viewOrderHistory">
+				<timeout id="timeout" name="timeout">15</timeout>
+			</method>
+			
+			<method name="checkInvoiceAdressBox" id ="checkInvoiceAdressBox">
+				<timeout id="timeout" name="timeout">15</timeout>
+			</method>
+			
+
+
+			<method name="clickOnMyAccountLink" id ="clickOnMyAccountLink">	
+				<click>
+					<button id="loginButton" name="loginButton" value="//*[@id='container']/header//li//a[contains(@href,'account')]">
+						<verifyText>
+							<visibleTextElement id="confirmationText1">//*[@id='preferredDelivery']</visibleTextElement>
+							<visibleTextElement id="offlineOrderHistoryLink">//aside/nav[1]/div//ul/li/a[contains(@href, 'IsOfflineOrder')]</visibleTextElement>	
+						    <visibleTextElement id="offlineOrderHistoryLink">//aside/nav[1]/div//ul/li/a[contains(@href, 'ViewOrderTemplate')]</visibleTextElement>
+						</verifyText>
+					</button>
+				</click>
+				<timeout id="timeout" name="timeout">5</timeout>
+			</method>			
+			
+			
+			<method name="clickOnofflineOrderHistoryLink" id ="clickOnofflineOrderHistoryLink">	
+				<click>
+					<button id="OrderHistory" name="OrderHistory" value="//aside/nav[1]/div//ul/li/a[contains(@href, 'IsOfflineOrder')]">
+						<verifyText>
+							<visibleTextElement id="confirmationText1">//*[@id='main']/div[3]/div/h1</visibleTextElement>
+							<visibleTextElement id="confirmationText1">//*[@id='main']/div[3]/div/p</visibleTextElement>
+						</verifyText>
+					</button>
+				</click>
+				<timeout id="timeout" name="timeout">5</timeout>
+			</method>
+			
+						
+			<method name="enterContactDetailsMandatoryFields" id="enterContactDetailsMandatoryFields">
+				<textbox id="ContactDetails">
+					<text id="ContactUsForm_CustomerName" name ="ContactUsForm_CustomerName">Moksh</text>										
+					<text id="ContactUsForm_Name" name ="ContactUsForm_Name">Test</text>						
+					<text id="ContactUsForm_Phone" name ="ContactUsForm_Phone">9898989898</text>	
+					<text id="ContactUsForm_Email" name ="ContactUsForm_Email">sudhanshu.jain@eperiumindia.com</text>						
+					<text id="ContactUsForm_Comments" name ="ContactUsForm_Comments">Test 1234</text>
+				</textbox>
+				<dropdown>
+					<selected id="//select[@id='ContactUsForm_Subject']" name="ContactUsForm_Subject" index="Vraag catalogus aan"/> 
+				</dropdown>
+				<click>
+					<button id="CreateAccount" name="CreateAccount" value="//*[@name='send']">
+						<verifyText>
+							<loopMsg id="accountText">Dank u voor uw bericht</loopMsg>
+							<Mandatory id="accountText">U krijgt binnen twee werkdagen een antwoord</Mandatory>
+							<Mandatory id="accountText">Uiteraard zijn wij tijdens kantoortijden ook altijd telefonisch bereikbaar</Mandatory>														
+							<Mandatory id="accountText">(vestiging Den Helder)</Mandatory>							
+						</verifyText> 
+					</button>
+				</click>
+				<timeout id="timeout" name="timeout">10</timeout>
+			</method>
+
+
+			<method name="goToLoginPage1" id ="goToLoginPage1">
+				<click>
+					<button id="loginButton" name="loginButton" value="//*[@class='show-login button']">					
+						<timeout id="timeout" name="timeout">10</timeout>
+						<verifyText>
+							<visibleTextElement id="confirmationText2">//*[@id='ShopLoginForm_Login']</visibleTextElement>
+						</verifyText>
+					</button>
+				</click>
+				<timeout id="timeout" name="timeout">5</timeout>
+			</method>
+
+
+			<method name="goToLoginPage2" id ="goToLoginPage2">
+				<click>
+					<button id="loginButton" name="loginButton" value="//*[@class='show-login button']">					
+						<timeout id="timeout" name="timeout">10</timeout>
+						<verifyText>
+							<visibleTextElement id="confirmationText2">//*[@id='ShopLoginForm_Login']</visibleTextElement>
+						</verifyText>
+					</button>
+				</click>
+				<timeout id="timeout" name="timeout">5</timeout>
+			</method>
+
+			<method name="goToLoginPage3" id ="goToLoginPage3">
+				<click>
+					<button id="loginButton" name="loginButton" value="//*[@class='show-login button']">					
+						<timeout id="timeout" name="timeout">10</timeout>						
+						<verifyText>
+							<visibleTextElement id="confirmationText2">//*[@id='ShopLoginForm_Login']</visibleTextElement>
+						</verifyText>					
+					</button>
+				</click>				
+				<timeout id="timeout" name="timeout">5</timeout>
+			</method>
+			
+			
+			<method name="goToLoginPage4" id ="goToLoginPage4">
+				<click>
+					<button id="loginButton" name="loginButton" value="//*[@class='show-login button']">					
+						<timeout id="timeout" name="timeout">10</timeout>						
+						<verifyText>
+							<visibleTextElement id="confirmationText2">//*[@id='ShopLoginForm_Login']</visibleTextElement>
+						</verifyText>					
+					</button>
+				</click>				
+				<timeout id="timeout" name="timeout">5</timeout>
+			</method>
+			
+
+			<method name="verifyUserRole" id ="verifyUserRole">
+				<verifyText>
+					<visibleTextElement id="confirmationText2">//*[@class='paragraph']</visibleTextElement>
+<!-- 					<loopMsg id="AdminRoleUser">Beheerder</loopMsg> -->
+				</verifyText>
+				<timeout id="timeout" name="timeout">5</timeout>
+			</method>
+
+
+			<method name="verifyUserRole1" id ="verifyUserRole1">
+				<verifyText>
+					<visibleTextElement id="confirmationText2">//*[@class='paragraph']</visibleTextElement>					 
+<!--  					<loopMsg id="BuyerRoleUser">Besteller</loopMsg>					  -->
+				</verifyText>
+				<timeout id="timeout" name="timeout">5</timeout>
+			</method>
+
+
+			<method name="verifyUserRole2" id ="verifyUserRole2">
+				<verifyText>
+					<visibleTextElement id="confirmationText2">//*[@class='paragraph']</visibleTextElement>					
+<!-- 					<loopMsg id="ApprovalRoleUser">Budgethouder</loopMsg>					 -->
+				</verifyText>
+				<timeout id="timeout" name="timeout">5</timeout>
+			</method>
+
+
+			<method name="logout1" id ="logout1">
+				<click>
+					<button id="loginButton" name="loginButton" value="//*[@class='line']/a"/>
+					<button id="loginButton" name="loginButton" value="//*[@class='line']/a">
+						<verifyText>
+							<visibleTextElement id="confirmationText1">//*[@id='ShopLoginForm_Login']</visibleTextElement>
+							<visibleTextElement id="confirmationText1">//*[@id='ShopLoginForm_Password']</visibleTextElement>
+						</verifyText>
+					</button>
+				</click> 
+				<timeout id="timeout" name="timeout">5</timeout>
+			</method>
+
+
+			<method name="removeProductAndVerifyCart" id ="removeProductAndVerifyCart">
+				<verifyText>
+					<visibleTextElement id="confirmationText1">(//*[@class='ish-error'])</visibleTextElement>
+				</verifyText>
+				<timeout id="timeout" name="timeout">50</timeout>
+			</method>
+
+
+			<method name="addProducttoCartFromPDPWithQtyGreaterThenOne" id ="addProducttoCartFromPDPWithQtyGreaterThenOne">
+				<verifyText>
+<!-- 					<visibleTextElement id="confirmationText1">//*[@class='ish-bar-actionButton']</visibleTextElement> -->
+				</verifyText>
+				<timeout id="timeout" name="timeout">15</timeout>
+			</method>
+
+
+			<method name="getAddressDetails" id ="getAddressDetails">
+				<verifyText>
+					<visibleTextElement id="confirmationText1">//*[@id='addressList']</visibleTextElement>
+				</verifyText>
+				<timeout id="timeout" name="timeout">15</timeout>
+			</method>
+
+
+			<method name="getAndVerifyAddressDetailOnAddressPage" id ="getAndVerifyAddressDetailOnAddressPage">
+				<verifyText>
+					<visibleTextElement id="confirmationText1">//*[@id='delivery-Address-Checkout']</visibleTextElement>
+				</verifyText>
+				<timeout id="timeout" name="timeout">15</timeout>
+			</method>
+
+
+			<method name="getAndVerifyAddressDetailOnShippingPage" id ="getAndVerifyAddressDetailOnShippingPage">
+				<verifyText>
+					<visibleTextElement id="confirmationText1">//*[@class='ish-button ish-bar-actionButton kor-submit button-right']</visibleTextElement>
+				</verifyText>
+				<timeout id="timeout" name="timeout">15</timeout>
+			</method>
+
+
+			<method name="getAndVerifyAddressDetailOnReviewPage" id ="getAndVerifyAddressDetailOnReviewPage">
+				<verifyText>
+					<loopMsg id= "Text1">Betaling</loopMsg>
+				</verifyText>
+				<timeout id="timeout" name="timeout">15</timeout>
+			</method>
+
+
+			<method name="getAndVerifyAddressDetailOnConfirmationPage" id ="getAndVerifyAddressDetailOnConfirmationPage">
+				<verifyText>
+					<visibleTextElement id="confirmationText2">//*[@class='ish-bigBar']</visibleTextElement>
+					<visibleTextElement id="confirmationText2">//*[@class='ish-bigBar-mainLabelValue']</visibleTextElement>
+				</verifyText>
+				<timeout id="timeout" name="timeout">15</timeout>
+			</method>
+
+
+			<method name="getProductSkuAndOpenQuotePopUp" id ="getProductSkuAndOpenQuotePopUp">
+				<verifyText>
+					<visibleTextElement id="confirmationText2">//*[@class='ish-bar']</visibleTextElement>
+				</verifyText>
+				<timeout id="timeout" name="timeout">15</timeout>
+			</method>
+			
+			<method name="getProductSkuAndQuotePopUp" id ="getProductSkuAndQuotePopUp">
+				<verifyText>
+					<visibleTextElement id="confirmationText2">//*[@class='rwd-tablet rwd-desktop']/ul/li[3]</visibleTextElement>
+				</verifyText>
+				<timeout id="timeout" name="timeout">15</timeout>
+			</method>
+
+
+			<method name="verifyQuote" id ="verifyQuote">
+				<verifyText>
+					<visibleTextElement id="confirmationText2">//*[@class='ish-bar']</visibleTextElement>
+				</verifyText>
+				<timeout id="timeout" name="timeout">15</timeout>
+			</method>
+
+
+			<method name="sendQuoteDetails" id ="sendQuoteDetails">
+				<verifyText>
+					<visibleTextElement id="confirmationText1">//*[@class='ish-bigBar-mainLabel']</visibleTextElement>
+				</verifyText>
+				<timeout id="timeout" name="timeout">15</timeout>
+			</method>
+
+
+			<method name="getCustomerAddress" id ="getCustomerAddress">
+				<verifyText>
+					<visibleTextElement id="confirmationText1">//*[@id='preferredDelivery']</visibleTextElement>
+				</verifyText>
+				<timeout id="timeout" name="timeout">15</timeout>
+			</method>      
+                            
+			<method name="getCustomerName" id ="getCustomerName">
+				<verifyText>
+					<visibleTextElement id="confirmationText1">//*[@id='preferredDelivery']</visibleTextElement>
+				</verifyText>
+				<timeout id="timeout" name="timeout">15</timeout>
+			</method>
+
+
+			<method name="getAndVerifyCustomerDetailOnAddressPage" id ="getAndVerifyCustomerDetailOnAddressPage">
+				<verifyText>
+					<visibleTextElement id="confirmationText1">//*[@id='defaultAddress']</visibleTextElement>
+				</verifyText>
+				<timeout id="timeout" name="timeout">15</timeout>
+			</method>
+
+
+			<method name="getAndVerifyCustomerDetailOnShippingPage" id ="getAndVerifyCustomerDetailOnShippingPage">
+				<verifyText>
+					<visibleTextElement id="confirmationText1">//*[@class='ish-button ish-bar-actionButton kor-submit button-right']</visibleTextElement>
+				</verifyText>
+				<timeout id="timeout" name="timeout">15</timeout>
+			</method>
+
+
+			<method name="getAndVerifyCustomerDetailOnPaymentPage" id ="getAndVerifyCustomerDetailOnPaymentPage">
+				<verifyText>
+<!-- 					<loopMsg id= "Text1">Betaling</loopMsg> -->
+				</verifyText>
+				<timeout id="timeout" name="timeout">15</timeout>
+			</method>
+
+
+			<method name="getAndVerifyACustomerDetailOnConfirmationPage" id ="getAndVerifyACustomerDetailOnConfirmationPage">
+				<verifyText>
+					<visibleTextElement id="confirmationText2">//*[@class='kor-noLabelErrorColor']</visibleTextElement>
+					<visibleTextElement id="confirmationText2">//*[@name='sendOrder']</visibleTextElement>
+				</verifyText>
+				<timeout id="timeout" name="timeout">15</timeout>
+			</method>
+
+
+			<method name="uncheckTermsCheckbox" id ="uncheckTermsCheckbox">
+				<verifyText>
+					<visibleTextElement id="confirmationText2">//*[@class='kor-field-error-message error']</visibleTextElement>
+				</verifyText>
+				<timeout id="timeout" name="timeout">15</timeout>
+			</method>
+
+
+			<method name="navEmailSignUp" id="navEmailSignUp">
+				<timeout id="timeout" name="timeout">10</timeout>
+			</method>
+
+
+			<method name="checkItemPerPageDropDownOptions" id="checkItemPerPageDropDownOptions">
+				<elements>
+					<element id="CheckPageSize" name="CheckPageSize" value="//select[@name='PageSize']"/>
+				</elements>
+				<timeout id="timeout" name="timeout">10</timeout>
+			</method>
+
+
+			<method name="validateItemPerPageDropDown" id="validateItemPerPageDropDown">
+				<timeout id="timeout" name="timeout">10</timeout>
+			</method>
+
+
+			<method name="select9ItemsPerPage" id="select9ItemsPerPage">
+				<elements>
+					<element id="CheckPageSize" name="CheckPageSize" value="//select[@name='PageSize']"/>
+				</elements>
+				<timeout id="timeout" name="timeout">10</timeout>
+			</method>
+
+
+			<method name="validate9ItemPerPage" id="validate9ItemPerPage">
+				<elements>
+					<element id="CheckNoOfItemOnPage" name="CheckNoOfItemOnPage" value="//*[@data-bus='generic-product-list']"/>
+				</elements>             
+				<timeout id="timeout" name="timeout">10</timeout>
+			</method>
+
+
+			<method name="select12ItemsPerPage" id="select12ItemsPerPage">
+				<elements>
+					<element id="CheckPageSize" name="CheckPageSize" value="//select[@name='PageSize']"/>
+				</elements>
+				<timeout id="timeout" name="timeout">10</timeout>
+			</method>
+
+
+			<method name="validate12ItemPerPage" id="validate12ItemPerPage">
+				<elements>
+					<element id="CheckNoOfItemOnPage" name="CheckNoOfItemOnPage" value="//*[@data-bus='generic-product-list']"/>
+				</elements>
+				<timeout id="timeout" name="timeout">10</timeout>
+			</method>
+
+
+			<method name="select15ItemsPerPage" id="select15ItemsPerPage">
+				<elements>
+					<element id="CheckPageSize" name="CheckPageSize" value="//select[@name='PageSize']"/>
+				</elements>            
+				<timeout id="timeout" name="timeout">10</timeout>
+			</method>
+
+
+			<method name="validate15ItemPerPage" id="validate15ItemPerPage">
+				<elements>
+					<element id="CheckNoOfItemOnPage" name="CheckNoOfItemOnPage" value="//*[@data-bus='generic-product-list']"/>
+				</elements>
+				<timeout id="timeout" name="timeout">10</timeout>
+			</method>
+
+
+			<method name="select24ItemsPerPage" id="select24ItemsPerPage">
+				<elements>
+					<element id="CheckPageSize" name="CheckPageSize" value="//select[@name='PageSize']"/>
+				</elements>             
+				<timeout id="timeout" name="timeout">10</timeout>
+			</method>
+
+
+			<method name="validate24ItemPerPage" id="validate24ItemPerPage">
+				<elements>
+					<element id="CheckNoOfItemOnPage" name="CheckNoOfItemOnPage" value="//*[@data-bus='generic-product-list']"/>
+				</elements>             
+				<timeout id="timeout" name="timeout">10</timeout>
+			</method>
+			
+		    <method name="validateBacktotopbutton" id="validateBacktotopbutton">
+				<verifyText>
+					<visibleTextElement id="confirmationText2">//*[@class='primary small searchClick']</visibleTextElement>
+					<visibleTextElement id="confirmationText2">//*[@class='breadcrumb rwd-tablet rwd-desktop']</visibleTextElement>				
+				</verifyText>           
+				<timeout id="timeout" name="timeout">10</timeout>
+			</method>
+			
+			
+		</module>
+
+
+		<module name="orderTemplate" id="orderTemplate">		
+			<method name="navLoginPage" id="navLoginPage">
+				<verifyText>
+					<loopMsg id= "h">Bestaande gebruikers</loopMsg>
+				</verifyText>
+				<timeout id="timeout" name="timeout">5</timeout>
+			</method>	
+
+
+			<method name="validlogin" id="validlogin">
+				<textbox id="loginForm">
+					<text id="//*[@id='ShopLoginForm_Login']"  name="username">sprakash@salmon.com</text>
+					<text id="//*[@id='ShopLoginForm_Password']" name="password">Eperium123</text>         
+				</textbox>
+				<click>
+					<button id="login" name="login" value="//*[@id='login-user-form']/div/button">
+						<verifyText>
+							<loopMsg id= "logoutText">Uitloggen</loopMsg>
+						</verifyText> 
+					</button>
+				</click>	
+				<timeout id="timeout" name="timeout">5</timeout>
+			</method>		
+
+
+			<method name="validateOrdertoDefaultOrderTemplate" id="validateOrdertoDefaultOrderTemplate">	         			 
+				<timeout id="timeout" name="timeout">5</timeout>
+			</method>		
+
+
+			<method name="validateQtyInOrderTemplate" id="validateQtyInOrderTemplate">		         		 
+				<timeout id="timeout" name="timeout">5</timeout>
+			</method>
+		</module>
+
+
+		<module name="quickorder" id="quickorder">
+			<method name="uploadValidCsvAtQuickOrder" id="uploadValidCsvAtQuickOrder">		         		 
+				<timeout id="timeout" name="timeout">5</timeout>
+			</method>
+
+
+			<method name="validateblank" id="validateblank">
+				<click>
+					<button id="addtoCart" name="addtoCart" value="//*[@name='addToCart']">
+						<verifyText>
+							<loopMsg id= "logoutText">Gelieve tenminste één artikelnummer en een hoeveelheid aan te geven.</loopMsg>
+						</verifyText> 
+					</button>
+				</click>			         		 
+				<timeout id="timeout" name="timeout">5</timeout>
+			</method>
+
+
+			<method name="uploadFileInvalidSku" id="uploadFileInvalidSku">
+				<verifyText>
+				    <visibleTextElement id="warnMessage">//*[@class='sku-error']</visibleTextElement>
+<!-- 				    <visibleTextElement id="warnMessage">//*[@role='alert']/div</visibleTextElement> -->
+<!-- 					<loopMsg id="warnMessage">De volgende artikelen zijn niet gevonden</loopMsg> -->
+<!-- 					<loopMsg id="warnMessage2">De artikelen zijn uit uw winkelwagen verwijderd</loopMsg>		         -->
+					<timeout id="timeout" name="timeout">5</timeout>
+				</verifyText>
+				<timeout id="timeout" name="timeout">5</timeout>
+			</method>	
+
+
+			<method name="uploadFileInvalidFileExtn" id="uploadFileInvalidFileExtn">
+				<verifyText>
+					<visibleTextElement id="invalidExtnWarning">//*[@class='kor-field-error-message WrongFileExtension']</visibleTextElement>
+<!-- 					<loopMsg id="invalidExtnWarning">Voeg een geldig CSV bestand toe.</loopMsg> -->
+				</verifyText>
+				<timeout id="timeout" name="timeout">5</timeout>
+			</method>		
+
+
+			<method name="uploadFileInvalidMissingSkuQty" id="uploadFileInvalidMissingSkuQty">
+				<verifyText>
+					<visibleTextElement id="invalidExtnWarning">//*[@class='sku-error']</visibleTextElement>
+<!-- 					<loopMsg id="invalidExtnWarning">Voeg een geldig CSV bestand toe.</loopMsg> -->
+				</verifyText>
+				<timeout id="timeout" name="timeout">5</timeout>
+			</method>
+
+
+			<method name="uploadFileInvalidQtyNonnumeric" id="uploadFileInvalidQtyNonnumeric">
+				<verifyText>
+					<visibleTextElement id="invalidExtnWarning">//*[@class='sku_error_Space']</visibleTextElement>
+<!-- 					<loopMsg id="invalidExtnWarning">Voeg een geldig CSV bestand toe.</loopMsg> -->
+				</verifyText>
+				<timeout id="timeout" name="timeout">5</timeout>
+			</method>	
+		</module>
+		
+		
+		<module name="quickorderform" id="quickorderform">	
+			<method name="chkBlankSkuQty" id="chkBlankSkuQty">
+				<verifyText>
+<!-- 					<visibleTextElement id="confirmationText2">//*[@class='sku_error_Space']</visibleTextElement> -->
+				</verifyText>
+				<timeout id="timeout" name="timeout">5</timeout>
+			</method>
+			
+			
+			<method name="chkBlankSku" id="chkBlankSku">
+				<textbox id="quickorderForm">
+					<text id="//*[@name='Quantity_1']"  name="Quantity_1">12</text>
+					<text id="//*[@name='Quantity_2']" name="Quantity_1">42</text>
+					<text id="//*[@name='Quantity_5']" name="Quantity_1">1</text>       
+				</textbox>
+				<verifyText>
+					<visibleTextElement id="confirmationText2">.//*[@class='sku_error_Space']</visibleTextElement>
+				</verifyText> 
+				<timeout id="timeout" name="timeout">5</timeout>
+			</method>
+			
+			
+			<method name="chkBlankQty" id="chkBlankQty">
+				<textbox id="quickorderForm">
+					<text id="//*[@name='SKU_1']"  name="SKU_3">11093</text>
+					<text id="//*[@name='SKU_2']" name="SKU_6">11093</text>
+					<text id="//*[@name='SKU_3']" name="SKU_8">11093</text>       
+				</textbox>
+				<verifyText>
+					<visibleTextElement id="confirmationText2">.//*[@class='sku_error_Space']</visibleTextElement>
+				</verifyText> 
+				<timeout id="timeout" name="timeout">5</timeout>
+			</method>
+			
+			
+			<method name="resetQuickOrderForm" id="resetQuickOrderForm">
+				<click>
+					<button id="reset" name="reset" value="//*[@id='quickorder-reset']">
+						<verifyText>
+							<never id= "errormsg">Voer een aantal in.</never>
+							<never id= "errormsg">Gelieve een artikelnummer aan te geven.</never>
+							<never id= "errormsg">Gelieve tenminste één artikelnummer en een hoeveelheid aan te geven.</never>
+						</verifyText> 
+					</button>
+				</click>
+				<timeout id="timeout" name="timeout">5</timeout>
+			</method>
+			
+
+			<method name="chkValidSkuInvalidQty" id="chkValidSkuInvalidQty">
+				<textbox id="quickorderForm">
+					<text id="//*[@name='SKU_1']"  name="SKU_1">11093</text>
+					<text id="//*[@name='SKU_2']" name="SKU_2">11093</text>
+					<text id="//*[@name='SKU_3']" name="SKU_3">11093</text>  
+					<text id="//*[@name='Quantity_1']"  name="Quantity_1">1sa2</text>
+					<text id="//*[@name='Quantity_2']" name="Quantity_2">abc</text>
+					<text id="//*[@name='Quantity_3']" name="Quantity_3"/>         
+				</textbox>
+				<verifyText>
+					<visibleTextElement id="confirmationText2">.//*[@class='sku_error_Space']</visibleTextElement>
+				</verifyText>
+			</method>
+
+
+			<method name="quickOrdertoCart" id="quickOrdertoCart">			         		 
+				<timeout id="timeout" name="timeout">5</timeout>
+			</method> 
+		</module>
+		
+		
+		<module name="quickview" id="quickview">
+			<method name="addtocartQuickView" id="addtocartQuickView">	
+				<click>
+					<button id="addtocart" name="addtocart" value="//form/div[3]/button">
+						<verifyText>
+							<loopMsg id="nextpopup">Toegevoegd aan uw winkelwagen</loopMsg>
+							<mandatory id="GotoCart">Bekijk winkelwagen</mandatory>
+							<mandatory id="continueshopping">Verder winkelen</mandatory>
+						</verifyText> 
+					</button>
+				</click>
+				<timeout id="timeout" name="timeout">5</timeout>
+			</method>
+
+
+			<method name="goToCartFromQuickView" id="goToCartFromQuickView">
+				<click>
+					<button id="gotocart" name="gotocart" value="//*[contains(text(),'Bekijk winkelwagen')]">
+						<verifyText>
+							<mandatory id="checkout">Bestellen</mandatory>
+						</verifyText> 
+					</button>
+				</click>
+			</method>
+		</module>
+
+
+	    <module name="browseProducts" id="browseProducts">		
+			<method name="browseProductsFromGridView" id="browseProductsFromGridView">         
+				<timeout id="timeout" name="timeout">5</timeout>
+			</method>
+
+			<method name="chkbrowsedProductsInRecentView" id="chkbrowsedProductsInRecentView"> 
+			    <elements>
+			     <element id="GetPDPSkuOLr" name="GetPDPSkuOLr" value="//*[@class='ish-productNmuber-value']"/>        
+				</elements>
+				<timeout id="timeout" name="timeout">50</timeout>
+			</method>
+
+			<method name="openNewWindow" id="openNewWindow">
+				<timeout id="timeout" name="timeout">5</timeout>
+			</method>			
+		</module>
+
+
+		<module name="cookieWarning" id="cookieWarning">
+			<method name="chkCookieWarningAppear" id="chkCookieWarningAppear">
+				<elements>
+					<element id="CookieBanner" name="CookieBanner" value="cookie-banner"/>
+				</elements>
+				<verifyText>
+					<visibleTextElement id="confirmationText2">//*[@class='row rwd-float']</visibleTextElement>
+				</verifyText>       
+				<timeout id="timeout" name="timeout">5</timeout>
+			</method>
+
+
+			<method name="closeCookieWarning" id="closeCookieWarning"> 
+				<elements>
+					<element id="CookieBanner" name="CookieBanner" value="cookie-banner"/>
+					<element id="SetCookie" name="SetCookie" value="//*[@id='SetCookie']/i"/>					   
+				</elements>
+				<verifyText>
+					<never id="cookieCloseTxt">Verberg deze melding</never>
+				</verifyText>           
+				<timeout id="timeout" name="timeout">5</timeout>
+			</method>
+
+
+			<method name="browseChkCookieWarningNotAppear" id="browseChkCookieWarningNotAppear">
+				<elements>
+					<element id="logo" name="logo" value="logo"/>
+					<element id="Login" name="Login" value="//*[@class='line']/a"/>
+					<element id="CookieBanner" name="CookieBanner" value="cookie-banner"/>			   
+				</elements>
+				<timeout id="timeout" name="timeout">5</timeout>
+			</method>
+		</module>
+
+
+		<module name="validateCheckOut" id="validateCheckOut">
+			<method name="getCartDetails" id="getCartDetails">	                 
+				<timeout id="timeout" name="timeout">5</timeout>
+			</method>
+			
+			
+			<method name="getCartDetails1" id="getCartDetails1">	                 
+				<timeout id="timeout" name="timeout">5</timeout>
+			</method>	
+			   
+
+			<method name="addressPageValidateCartSummary" id="addressPageValidateCartSummary">	                 
+				<timeout id="timeout" name="timeout">5</timeout>
+			</method>
+			
+
+			<method name="shippmentPageValidateCartSummary" id="shippmentPageValidateCartSummary">	                 
+				<timeout id="timeout" name="timeout">5</timeout>
+			</method>
+
+
+			<method name="validateCartSubTotal" id="validateCartSubTotal">	                 
+				<timeout id="timeout" name="timeout">5</timeout>
+			</method>
+
+
+			<method name="validateEstimatedTotal" id="validateEstimatedTotal">	                 
+				<timeout id="timeout" name="timeout">5</timeout>
+			</method>
+
+
+			<method name="addressPageValidateOrderSummary" id="addressPageValidateOrderSummary">
+				<timeout id="timeout" name="timeout">5</timeout>
+			</method>
+
+
+			<method name="shippmentPageValidateOrderSummary" id="shippmentPageValidateOrderSummary">	                 
+				<timeout id="timeout" name="timeout">5</timeout>
+			</method>
+
+
+			<method name="paymentPageValidateCartSummary" id="paymentPageValidateCartSummary">	                 
+				<timeout id="timeout" name="timeout">5</timeout>
+			</method>
+
+
+			<method name="paymentPageValidateOrderSummary" id="paymentPageValidateOrderSummary">	                 
+				<timeout id="timeout" name="timeout">5</timeout>
+			</method>
+		</module>
+
+
+		<module name="ordertemplatelazyload" id="ordertemplatelazyload">
+			<method name="viewTopOnScrollDown" id="viewTopOnScrollDown">
+				<elements>
+					<element id="scroll-button" name="scroll-button" value="scroll-button"/>
+				</elements>
+				<timeout id="timeout" name="timeout">5</timeout>
+			</method>	
+
+
+			<method name="viewNoTopOnScrollDown" id="viewNoTopOnScrollDown">
+				<elements>
+					<element id="scroll-button" name="scroll-button" value="scroll-button"/>
+				</elements>
+				<timeout id="timeout" name="timeout">5</timeout>
+			</method>	
+			
+
+			<method name="moveToOrderTemplateDetailPage" id="moveToOrderTemplateDetailPage">	 
+				<timeout id="timeout" name="timeout">5</timeout>
+			</method>
+			
+
+			<method name="viewAddToCartBtnOrderTemplate" id="viewAddToCartBtnOrderTemplate">	 
+				<timeout id="timeout" name="timeout">5</timeout>
+			</method>
+			
+			<method name="viewAddToCartBtnOrderTemplateItemLevel" id="viewAddToCartBtnOrderTemplateItemLevel">	 
+				<timeout id="timeout" name="timeout">5</timeout>
+			</method>
+			
+		</module>
+	</modules>
+</channel>

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite verbose="10" name="Failed suite [BunzlBVPTest]">
+  <parameter name="PDFRequiredPerTestCase" value="True"/>
+  <parameter name="site" value="BVP"/>
+  <parameter name="selenium.host" value="localhost"/>
+  <parameter name="testcasename" value="ConsolidatedPDF"/>
+  <parameter name="channel" value="BVP-DE-Test"/>
+  <parameter name="selenium.browser.version" value="36"/>
+  <parameter name="locale" value="de-DE"/>
+  <parameter name="comchannel" value="COM-X-Test"/>
+  <parameter name="selenium.browser" value="firefox"/>
+  <parameter name="platform" value="Desktop"/>
+  <test name="DeleteAllOrderTemplates(failed)">
+    <classes>
+      <class name="com.eperium.jumpstart.JumpStartTestSuite">
+        <methods>
+          <include name="setUpBeforeclass"/>
+          <include name="setupBeforeSuite"/>
+          <include name="setupAfterSuite"/>
+          <include name="closeCookieWarning"/>
+          <include name="setupAfterTest"/>
+        </methods>
+      </class> <!-- com.eperium.jumpstart.JumpStartTestSuite -->
+    </classes>
+  </test> <!-- DeleteAllOrderTemplates(failed) -->
+</suite> <!-- Failed suite [BunzlBVPTest] -->

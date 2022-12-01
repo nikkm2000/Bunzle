@@ -1,0 +1,14 @@
+[0117/141903.603:ERROR:file_io.cc(89)] ReadExactly: expected 36, observed 0
+[0117/145332.175:ERROR:file_io.cc(89)] ReadExactly: expected 36, observed 0
+[0131/121809.684:ERROR:prune_crash_reports.cc(35)] PruneCrashReportDatabase: Failed to get pending reports
+[0131/121851.727:ERROR:prune_crash_reports.cc(35)] PruneCrashReportDatabase: Failed to get pending reports
+[0131/121931.801:ERROR:prune_crash_reports.cc(35)] PruneCrashReportDatabase: Failed to get pending reports
+[0131/122003.122:ERROR:prune_crash_reports.cc(35)] PruneCrashReportDatabase: Failed to get pending reports
+[0527/132600.423:ERROR:file_io.cc(89)] ReadExactly: expected 36, observed 0
+[1014/145109.623:ERROR:process_info.cc(329)] VirtualQueryEx: Access is denied. (0x5)
+[1014/145109.644:ERROR:process_info.cc(556)] ReadMemoryInfo failed
+[1014/145109.644:ERROR:process_memory_win.cc(39)] Failed to initialize ProcessInfo.
+[1014/145109.644:ERROR:scoped_process_suspend.cc(40)] NtResumeProcess: An attempt was made to access an exiting process. (0xc000010a)
+[1204/141802.276:ERROR:file_io.cc(90)] ReadExactly: expected 36, observed 0
+[1210/171734.944:ERROR:directory_reader_win.cc(43)] FindFirstFile: The system cannot find the path specified. (0x3)
+[1211/110907.988:ERROR:directory_reader_win.cc(43)] FindFirstFile: The system cannot find the path specified. (0x3)

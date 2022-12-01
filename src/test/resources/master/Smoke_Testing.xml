@@ -1,0 +1,20 @@
+<suite name="suites" verbose="1" >
+    <suite-files>   
+ 	<!-- SMOKE TESTING SUITES --> 
+         <suite-file path="ACC_CI/BDD_CI.xml"/>
+         <suite-file path="ACC_CI/MAJ_CI.xml"/>
+         <suite-file path="ACC_CI/KBE_CI.xml"/>  
+         <suite-file path="ACC_CI/King_CI.xml"/> 
+ 		 <suite-file path="ACC_CI/BVP_CI.xml"/>
+ 		 <suite-file path="ACC_CI/BRS_CI.xml"/>
+ 		 <suite-file path="ACC_CI/BFS_CI.xml"/>
+ 		 <suite-file path="ACC_CI/GLO_CI.xml"/>
+ 		 <suite-file path="ACC_CI/MLN_CI.xml"/> 
+ 		 <suite-file path="ACC_CI/CLC_CI.xml"/> 		
+		 <suite-file path="ACC_CI/KingOCI_CI.xml"/>
+		 <suite-file path="ACC_CI/D-Care_CI.xml"/>
+		 <suite-file path="ACC_CI/BVPOCI_CI.xml"/> 
+		 <suite-file path="ACC_CI/DRD.xml"/> 
+		 <suite-file path="ACC_CI/BDDOCI.xml"/> 
+    </suite-files>
+</suite>

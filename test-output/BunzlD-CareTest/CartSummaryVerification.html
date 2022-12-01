@@ -1,0 +1,622 @@
+<html>
+<head>
+<title>TestNG:  CartSummaryVerification</title>
+<link href="../testng.css" rel="stylesheet" type="text/css" />
+<link href="../my-testng.css" rel="stylesheet" type="text/css" />
+
+<style type="text/css">
+.log { display: none;} 
+.stack-trace { display: none;} 
+</style>
+<script type="text/javascript">
+<!--
+function flip(e) {
+  current = e.style.display;
+  if (current == 'block') {
+    e.style.display = 'none';
+    return 0;
+  }
+  else {
+    e.style.display = 'block';
+    return 1;
+  }
+}
+
+function toggleBox(szDivId, elem, msg1, msg2)
+{
+  var res = -1;  if (document.getElementById) {
+    res = flip(document.getElementById(szDivId));
+  }
+  else if (document.all) {
+    // this is the way old msie versions work
+    res = flip(document.all[szDivId]);
+  }
+  if(elem) {
+    if(res == 0) elem.innerHTML = msg1; else elem.innerHTML = msg2;
+  }
+
+}
+
+function toggleAllBoxes() {
+  if (document.getElementsByTagName) {
+    d = document.getElementsByTagName('div');
+    for (i = 0; i < d.length; i++) {
+      if (d[i].className == 'log') {
+        flip(d[i]);
+      }
+    }
+  }
+}
+
+// -->
+</script>
+
+</head>
+<body>
+<h2 align='center'>CartSummaryVerification</h2><table border='1' align="center">
+<tr>
+<td>Tests passed/Failed/Skipped:</td><td>1/7/0</td>
+</tr><tr>
+<td>Started on:</td><td>Fri Jan 05 14:01:04 IST 2018</td>
+</tr>
+<tr><td>Total time:</td><td>65 seconds (65800 ms)</td>
+</tr><tr>
+<td>Included groups:</td><td></td>
+</tr><tr>
+<td>Excluded groups:</td><td></td>
+</tr>
+</table><p/>
+<small><i>(Hover the method name to see the test class name)</i></small><p/>
+<table width='100%' border='1' class='invocation-failed'>
+<tr><td colspan='4' align='center'><b>FAILED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='com.eperium.jumpstart.JumpStartTestSuite.cartToReview()'><b>cartToReview</b><br>Test class: com.eperium.jumpstart.JumpStartTestSuite<br>Test method: Cart To Confirm Order Page</td>
+<td><div><pre>org.openqa.selenium.NoSuchElementException: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//*[@id=&apos;cart-page&apos;]/button&quot;}
+Command duration or timeout: 90 milliseconds
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;2.53.0&apos;, revision: &apos;35ae25b1534ae328c771e0856c93e187490ca824&apos;, time: &apos;2016-03-15 10:43:46&apos;
+System info: host: &apos;EBSI-HP4540-07&apos;, ip: &apos;192.168.5.69&apos;, os.name: &apos;Windows 7&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;6.1&apos;, java.version: &apos;1.8.0_121&apos;
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Capabilities [{applicationCacheEnabled=true, rotatable=false, handlesAlerts=true, databaseEnabled=true, version=36.0.4, platform=WINDOWS, nativeEvents=false, acceptSslCerts=true, webStorageEnabled=true, locationContextEnabled=true, browserName=firefox, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true}]
+Session ID: ba58722e-be3b-4ad7-bfed-6accc48d9c3d
+*** Element info: {Using=xpath, value=//*[@id=&apos;cart-page&apos;]/button}
+	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:206)
+	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:158)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:678)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:363)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:500)
+	at org.openqa.selenium.By$ByXPath.findElement(By.java:361)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:355)
+	at com.eperium.jumpstart.JumpStartTestSuite.cartToReview(JumpStartTestSuite.java:1424)
+Caused by: org.openqa.selenium.NoSuchElementException: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//*[@id=&apos;cart-page&apos;]/button&quot;}
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;2.53.0&apos;, revision: &apos;35ae25b1534ae328c771e0856c93e187490ca824&apos;, time: &apos;2016-03-15 10:43:46&apos;
+System info: host: &apos;EBSI-HP4540-07&apos;, ip: &apos;192.168.5.69&apos;, os.name: &apos;Windows 7&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;6.1&apos;, java.version: &apos;1.8.0_121&apos;
+Driver info: driver.version: unknown
+	at &lt;anonymous class&gt;.FirefoxDriver.prototype.findElementInternal_(file:///C:/Users/prakashs/AppData/Local/Temp/anonymous8510135338227479925webdriver-profile/extensions/fxdriver@googlecode.com/components/driver-component.js:10770)
+	at &lt;anonymous class&gt;.FirefoxDriver.prototype.findElement(file:///C:/Users/prakashs/AppData/Local/Temp/anonymous8510135338227479925webdriver-profile/extensions/fxdriver@googlecode.com/components/driver-component.js:10779)
+	at &lt;anonymous class&gt;.DelayedCommand.prototype.executeInternal_/h(file:///C:/Users/prakashs/AppData/Local/Temp/anonymous8510135338227479925webdriver-profile/extensions/fxdriver@googlecode.com/components/command-processor.js:12661)
+	at &lt;anonymous class&gt;.DelayedCommand.prototype.executeInternal_(file:///C:/Users/prakashs/AppData/Local/Temp/anonymous8510135338227479925webdriver-profile/extensions/fxdriver@googlecode.com/components/command-processor.js:12666)
+	at &lt;anonymous class&gt;.DelayedCommand.prototype.execute/&lt;(file:///C:/Users/prakashs/AppData/Local/Temp/anonymous8510135338227479925webdriver-profile/extensions/fxdriver@googlecode.com/components/command-processor.js:12608)
+... Removed 29 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1517677623", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1517677623'><pre>org.openqa.selenium.NoSuchElementException: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//*[@id=&apos;cart-page&apos;]/button&quot;}
+Command duration or timeout: 90 milliseconds
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;2.53.0&apos;, revision: &apos;35ae25b1534ae328c771e0856c93e187490ca824&apos;, time: &apos;2016-03-15 10:43:46&apos;
+System info: host: &apos;EBSI-HP4540-07&apos;, ip: &apos;192.168.5.69&apos;, os.name: &apos;Windows 7&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;6.1&apos;, java.version: &apos;1.8.0_121&apos;
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Capabilities [{applicationCacheEnabled=true, rotatable=false, handlesAlerts=true, databaseEnabled=true, version=36.0.4, platform=WINDOWS, nativeEvents=false, acceptSslCerts=true, webStorageEnabled=true, locationContextEnabled=true, browserName=firefox, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true}]
+Session ID: ba58722e-be3b-4ad7-bfed-6accc48d9c3d
+*** Element info: {Using=xpath, value=//*[@id=&apos;cart-page&apos;]/button}
+	at sun.reflect.GeneratedConstructorAccessor51.newInstance(Unknown Source)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
+	at java.lang.reflect.Constructor.newInstance(Unknown Source)
+	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:206)
+	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:158)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:678)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:363)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:500)
+	at org.openqa.selenium.By$ByXPath.findElement(By.java:361)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:355)
+	at com.eperium.jumpstart.JumpStartTestSuite.cartToReview(JumpStartTestSuite.java:1424)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:108)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:661)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:869)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1193)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:126)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at org.testng.TestRunner.privateRun(TestRunner.java:744)
+	at org.testng.TestRunner.run(TestRunner.java:602)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:380)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:375)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:340)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:289)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1301)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1297)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1226)
+	at org.testng.TestNG.runSuites(TestNG.java:1144)
+	at org.testng.TestNG.run(TestNG.java:1115)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:132)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:230)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:76)
+Caused by: org.openqa.selenium.NoSuchElementException: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//*[@id=&apos;cart-page&apos;]/button&quot;}
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;2.53.0&apos;, revision: &apos;35ae25b1534ae328c771e0856c93e187490ca824&apos;, time: &apos;2016-03-15 10:43:46&apos;
+System info: host: &apos;EBSI-HP4540-07&apos;, ip: &apos;192.168.5.69&apos;, os.name: &apos;Windows 7&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;6.1&apos;, java.version: &apos;1.8.0_121&apos;
+Driver info: driver.version: unknown
+	at &lt;anonymous class&gt;.FirefoxDriver.prototype.findElementInternal_(file:///C:/Users/prakashs/AppData/Local/Temp/anonymous8510135338227479925webdriver-profile/extensions/fxdriver@googlecode.com/components/driver-component.js:10770)
+	at &lt;anonymous class&gt;.FirefoxDriver.prototype.findElement(file:///C:/Users/prakashs/AppData/Local/Temp/anonymous8510135338227479925webdriver-profile/extensions/fxdriver@googlecode.com/components/driver-component.js:10779)
+	at &lt;anonymous class&gt;.DelayedCommand.prototype.executeInternal_/h(file:///C:/Users/prakashs/AppData/Local/Temp/anonymous8510135338227479925webdriver-profile/extensions/fxdriver@googlecode.com/components/command-processor.js:12661)
+	at &lt;anonymous class&gt;.DelayedCommand.prototype.executeInternal_(file:///C:/Users/prakashs/AppData/Local/Temp/anonymous8510135338227479925webdriver-profile/extensions/fxdriver@googlecode.com/components/command-processor.js:12666)
+	at &lt;anonymous class&gt;.DelayedCommand.prototype.execute/&lt;(file:///C:/Users/prakashs/AppData/Local/Temp/anonymous8510135338227479925webdriver-profile/extensions/fxdriver@googlecode.com/components/command-processor.js:12608)
+</pre></div></td>
+<td>0</td>
+<td>com.eperium.jumpstart.JumpStartTestSuite@47db50c5</td></tr>
+<tr>
+<td title='com.eperium.jumpstart.JumpStartTestSuite.getCartDetails1()'><b>getCartDetails1</b><br>Test class: com.eperium.jumpstart.JumpStartTestSuite<br>Test method: get all cart details qty,name,price </td>
+<td><div><pre>java.lang.AssertionError: expected [true] but found [false]
+	at com.eperium.jumpstart.JumpStartTestSuite.getCartDetails1(JumpStartTestSuite.java:6248)
+... Removed 30 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace840400805", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace840400805'><pre>java.lang.AssertionError: expected [true] but found [false]
+	at org.testng.Assert.fail(Assert.java:93)
+	at org.testng.Assert.failNotEquals(Assert.java:512)
+	at org.testng.Assert.assertTrue(Assert.java:41)
+	at org.testng.Assert.assertTrue(Assert.java:51)
+	at com.eperium.jumpstart.JumpStartTestSuite.getCartDetails1(JumpStartTestSuite.java:6248)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:108)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:661)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:869)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1193)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:126)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at org.testng.TestRunner.privateRun(TestRunner.java:744)
+	at org.testng.TestRunner.run(TestRunner.java:602)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:380)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:375)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:340)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:289)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1301)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1297)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1226)
+	at org.testng.TestNG.runSuites(TestNG.java:1144)
+	at org.testng.TestNG.run(TestNG.java:1115)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:132)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:230)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:76)
+</pre></div></td>
+<td>8</td>
+<td>com.eperium.jumpstart.JumpStartTestSuite@47db50c5</td></tr>
+<tr>
+<td title='com.eperium.jumpstart.JumpStartTestSuite.launchHomePage()'><b>launchHomePage</b><br>Test class: com.eperium.jumpstart.JumpStartTestSuite<br>Test method: Launch Home Page<br/>
+<a href="#Output-140702728" onClick='toggleBox("Output-140702728", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-140702728" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-140702728">
+Locator for the cssSelector is invalid- Please check<br/>
+</div>
+</td>
+<td><div><pre>java.lang.NullPointerException
+	at com.eperium.jumpstart.testframework.xml.VisibleTextElement$1.apply(VisibleTextElement.java:36)
+	at com.eperium.jumpstart.testframework.xml.VisibleTextElement$1.apply(VisibleTextElement.java:1)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:238)
+	at com.eperium.jumpstart.testframework.xml.VisibleTextElement._validate(VisibleTextElement.java:34)
+	at com.eperium.jumpstart.testframework.xml.VisibleTextElement.validate(VisibleTextElement.java:17)
+	at com.eperium.jumpstart.testframework.utils.TestCaseUtil.checkAllTextMsgs(TestCaseUtil.java:61)
+	at com.eperium.jumpstart.JumpStartTestSuite.launchHomePage(JumpStartTestSuite.java:141)
+... Removed 25 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace140702728", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace140702728'><pre>java.lang.NullPointerException
+	at com.eperium.jumpstart.testframework.xml.VisibleTextElement$1.apply(VisibleTextElement.java:36)
+	at com.eperium.jumpstart.testframework.xml.VisibleTextElement$1.apply(VisibleTextElement.java:1)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:238)
+	at com.eperium.jumpstart.testframework.xml.VisibleTextElement._validate(VisibleTextElement.java:34)
+	at com.eperium.jumpstart.testframework.xml.VisibleTextElement.validate(VisibleTextElement.java:17)
+	at com.eperium.jumpstart.testframework.utils.TestCaseUtil.checkAllTextMsgs(TestCaseUtil.java:61)
+	at com.eperium.jumpstart.JumpStartTestSuite.launchHomePage(JumpStartTestSuite.java:141)
+	at sun.reflect.GeneratedMethodAccessor9.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:108)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:661)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:869)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1193)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:126)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at org.testng.TestRunner.privateRun(TestRunner.java:744)
+	at org.testng.TestRunner.run(TestRunner.java:602)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:380)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:375)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:340)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:289)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1301)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1297)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1226)
+	at org.testng.TestNG.runSuites(TestNG.java:1144)
+	at org.testng.TestNG.run(TestNG.java:1115)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:132)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:230)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:76)
+</pre></div></td>
+<td>6</td>
+<td>com.eperium.jumpstart.JumpStartTestSuite@47db50c5</td></tr>
+<tr>
+<td title='com.eperium.jumpstart.JumpStartTestSuite.orderConfirmation()'><b>orderConfirmation</b><br>Test class: com.eperium.jumpstart.JumpStartTestSuite<br>Test method: Order Confirmation</td>
+<td><div><pre>org.openqa.selenium.NoSuchElementException: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//*[@name=&apos;sendOrder&apos;]&quot;}
+Command duration or timeout: 60 milliseconds
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;2.53.0&apos;, revision: &apos;35ae25b1534ae328c771e0856c93e187490ca824&apos;, time: &apos;2016-03-15 10:43:46&apos;
+System info: host: &apos;EBSI-HP4540-07&apos;, ip: &apos;192.168.5.69&apos;, os.name: &apos;Windows 7&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;6.1&apos;, java.version: &apos;1.8.0_121&apos;
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Capabilities [{applicationCacheEnabled=true, rotatable=false, handlesAlerts=true, databaseEnabled=true, version=36.0.4, platform=WINDOWS, nativeEvents=false, acceptSslCerts=true, webStorageEnabled=true, locationContextEnabled=true, browserName=firefox, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true}]
+Session ID: ba58722e-be3b-4ad7-bfed-6accc48d9c3d
+*** Element info: {Using=xpath, value=//*[@name=&apos;sendOrder&apos;]}
+	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:206)
+	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:158)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:678)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:363)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:500)
+	at org.openqa.selenium.By$ByXPath.findElement(By.java:361)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:355)
+	at com.eperium.jumpstart.JumpStartTestSuite.orderConfirmation(JumpStartTestSuite.java:1456)
+Caused by: org.openqa.selenium.NoSuchElementException: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//*[@name=&apos;sendOrder&apos;]&quot;}
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;2.53.0&apos;, revision: &apos;35ae25b1534ae328c771e0856c93e187490ca824&apos;, time: &apos;2016-03-15 10:43:46&apos;
+System info: host: &apos;EBSI-HP4540-07&apos;, ip: &apos;192.168.5.69&apos;, os.name: &apos;Windows 7&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;6.1&apos;, java.version: &apos;1.8.0_121&apos;
+Driver info: driver.version: unknown
+	at &lt;anonymous class&gt;.FirefoxDriver.prototype.findElementInternal_(file:///C:/Users/prakashs/AppData/Local/Temp/anonymous8510135338227479925webdriver-profile/extensions/fxdriver@googlecode.com/components/driver-component.js:10770)
+	at &lt;anonymous class&gt;.FirefoxDriver.prototype.findElement(file:///C:/Users/prakashs/AppData/Local/Temp/anonymous8510135338227479925webdriver-profile/extensions/fxdriver@googlecode.com/components/driver-component.js:10779)
+	at &lt;anonymous class&gt;.DelayedCommand.prototype.executeInternal_/h(file:///C:/Users/prakashs/AppData/Local/Temp/anonymous8510135338227479925webdriver-profile/extensions/fxdriver@googlecode.com/components/command-processor.js:12661)
+	at &lt;anonymous class&gt;.DelayedCommand.prototype.executeInternal_(file:///C:/Users/prakashs/AppData/Local/Temp/anonymous8510135338227479925webdriver-profile/extensions/fxdriver@googlecode.com/components/command-processor.js:12666)
+	at &lt;anonymous class&gt;.DelayedCommand.prototype.execute/&lt;(file:///C:/Users/prakashs/AppData/Local/Temp/anonymous8510135338227479925webdriver-profile/extensions/fxdriver@googlecode.com/components/command-processor.js:12608)
+... Removed 29 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1423639915", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1423639915'><pre>org.openqa.selenium.NoSuchElementException: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//*[@name=&apos;sendOrder&apos;]&quot;}
+Command duration or timeout: 60 milliseconds
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;2.53.0&apos;, revision: &apos;35ae25b1534ae328c771e0856c93e187490ca824&apos;, time: &apos;2016-03-15 10:43:46&apos;
+System info: host: &apos;EBSI-HP4540-07&apos;, ip: &apos;192.168.5.69&apos;, os.name: &apos;Windows 7&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;6.1&apos;, java.version: &apos;1.8.0_121&apos;
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Capabilities [{applicationCacheEnabled=true, rotatable=false, handlesAlerts=true, databaseEnabled=true, version=36.0.4, platform=WINDOWS, nativeEvents=false, acceptSslCerts=true, webStorageEnabled=true, locationContextEnabled=true, browserName=firefox, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true}]
+Session ID: ba58722e-be3b-4ad7-bfed-6accc48d9c3d
+*** Element info: {Using=xpath, value=//*[@name=&apos;sendOrder&apos;]}
+	at sun.reflect.GeneratedConstructorAccessor51.newInstance(Unknown Source)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
+	at java.lang.reflect.Constructor.newInstance(Unknown Source)
+	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:206)
+	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:158)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:678)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:363)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:500)
+	at org.openqa.selenium.By$ByXPath.findElement(By.java:361)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:355)
+	at com.eperium.jumpstart.JumpStartTestSuite.orderConfirmation(JumpStartTestSuite.java:1456)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:108)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:661)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:869)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1193)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:126)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at org.testng.TestRunner.privateRun(TestRunner.java:744)
+	at org.testng.TestRunner.run(TestRunner.java:602)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:380)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:375)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:340)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:289)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1301)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1297)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1226)
+	at org.testng.TestNG.runSuites(TestNG.java:1144)
+	at org.testng.TestNG.run(TestNG.java:1115)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:132)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:230)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:76)
+Caused by: org.openqa.selenium.NoSuchElementException: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//*[@name=&apos;sendOrder&apos;]&quot;}
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;2.53.0&apos;, revision: &apos;35ae25b1534ae328c771e0856c93e187490ca824&apos;, time: &apos;2016-03-15 10:43:46&apos;
+System info: host: &apos;EBSI-HP4540-07&apos;, ip: &apos;192.168.5.69&apos;, os.name: &apos;Windows 7&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;6.1&apos;, java.version: &apos;1.8.0_121&apos;
+Driver info: driver.version: unknown
+	at &lt;anonymous class&gt;.FirefoxDriver.prototype.findElementInternal_(file:///C:/Users/prakashs/AppData/Local/Temp/anonymous8510135338227479925webdriver-profile/extensions/fxdriver@googlecode.com/components/driver-component.js:10770)
+	at &lt;anonymous class&gt;.FirefoxDriver.prototype.findElement(file:///C:/Users/prakashs/AppData/Local/Temp/anonymous8510135338227479925webdriver-profile/extensions/fxdriver@googlecode.com/components/driver-component.js:10779)
+	at &lt;anonymous class&gt;.DelayedCommand.prototype.executeInternal_/h(file:///C:/Users/prakashs/AppData/Local/Temp/anonymous8510135338227479925webdriver-profile/extensions/fxdriver@googlecode.com/components/command-processor.js:12661)
+	at &lt;anonymous class&gt;.DelayedCommand.prototype.executeInternal_(file:///C:/Users/prakashs/AppData/Local/Temp/anonymous8510135338227479925webdriver-profile/extensions/fxdriver@googlecode.com/components/command-processor.js:12666)
+	at &lt;anonymous class&gt;.DelayedCommand.prototype.execute/&lt;(file:///C:/Users/prakashs/AppData/Local/Temp/anonymous8510135338227479925webdriver-profile/extensions/fxdriver@googlecode.com/components/command-processor.js:12608)
+</pre></div></td>
+<td>10</td>
+<td>com.eperium.jumpstart.JumpStartTestSuite@47db50c5</td></tr>
+<tr>
+<td title='com.eperium.jumpstart.JumpStartTestSuite.quickOrdertoCart()'><b>quickOrdertoCart</b><br>Test class: com.eperium.jumpstart.JumpStartTestSuite<br>Test method: fetch all sku from list view & input sku in quick order from and add to cart</td>
+<td><div><pre>org.openqa.selenium.ElementNotVisibleException: Element is not currently visible and so may not be interacted with
+Command duration or timeout: 42 milliseconds
+Build info: version: &apos;2.53.0&apos;, revision: &apos;35ae25b1534ae328c771e0856c93e187490ca824&apos;, time: &apos;2016-03-15 10:43:46&apos;
+System info: host: &apos;EBSI-HP4540-07&apos;, ip: &apos;192.168.5.69&apos;, os.name: &apos;Windows 7&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;6.1&apos;, java.version: &apos;1.8.0_121&apos;
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Capabilities [{applicationCacheEnabled=true, rotatable=false, handlesAlerts=true, databaseEnabled=true, version=36.0.4, platform=WINDOWS, nativeEvents=false, acceptSslCerts=true, webStorageEnabled=true, locationContextEnabled=true, browserName=firefox, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true}]
+Session ID: ba58722e-be3b-4ad7-bfed-6accc48d9c3d
+	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:206)
+	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:158)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:678)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:327)
+	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:85)
+	at com.eperium.jumpstart.JumpStartTestSuite.quickOrdertoCart(JumpStartTestSuite.java:4503)
+Caused by: org.openqa.selenium.ElementNotVisibleException: Element is not currently visible and so may not be interacted with
+Build info: version: &apos;2.53.0&apos;, revision: &apos;35ae25b1534ae328c771e0856c93e187490ca824&apos;, time: &apos;2016-03-15 10:43:46&apos;
+System info: host: &apos;EBSI-HP4540-07&apos;, ip: &apos;192.168.5.69&apos;, os.name: &apos;Windows 7&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;6.1&apos;, java.version: &apos;1.8.0_121&apos;
+Driver info: driver.version: unknown
+	at &lt;anonymous class&gt;.fxdriver.preconditions.visible(file:///C:/Users/prakashs/AppData/Local/Temp/anonymous8510135338227479925webdriver-profile/extensions/fxdriver@googlecode.com/components/command-processor.js:10092)
+	at &lt;anonymous class&gt;.DelayedCommand.prototype.checkPreconditions_(file:///C:/Users/prakashs/AppData/Local/Temp/anonymous8510135338227479925webdriver-profile/extensions/fxdriver@googlecode.com/components/command-processor.js:12644)
+	at &lt;anonymous class&gt;.DelayedCommand.prototype.executeInternal_/h(file:///C:/Users/prakashs/AppData/Local/Temp/anonymous8510135338227479925webdriver-profile/extensions/fxdriver@googlecode.com/components/command-processor.js:12661)
+	at &lt;anonymous class&gt;.DelayedCommand.prototype.executeInternal_(file:///C:/Users/prakashs/AppData/Local/Temp/anonymous8510135338227479925webdriver-profile/extensions/fxdriver@googlecode.com/components/command-processor.js:12666)
+	at &lt;anonymous class&gt;.DelayedCommand.prototype.execute/&lt;(file:///C:/Users/prakashs/AppData/Local/Temp/anonymous8510135338227479925webdriver-profile/extensions/fxdriver@googlecode.com/components/command-processor.js:12608)
+... Removed 30 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace157783888", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace157783888'><pre>org.openqa.selenium.ElementNotVisibleException: Element is not currently visible and so may not be interacted with
+Command duration or timeout: 42 milliseconds
+Build info: version: &apos;2.53.0&apos;, revision: &apos;35ae25b1534ae328c771e0856c93e187490ca824&apos;, time: &apos;2016-03-15 10:43:46&apos;
+System info: host: &apos;EBSI-HP4540-07&apos;, ip: &apos;192.168.5.69&apos;, os.name: &apos;Windows 7&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;6.1&apos;, java.version: &apos;1.8.0_121&apos;
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Capabilities [{applicationCacheEnabled=true, rotatable=false, handlesAlerts=true, databaseEnabled=true, version=36.0.4, platform=WINDOWS, nativeEvents=false, acceptSslCerts=true, webStorageEnabled=true, locationContextEnabled=true, browserName=firefox, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true}]
+Session ID: ba58722e-be3b-4ad7-bfed-6accc48d9c3d
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
+	at java.lang.reflect.Constructor.newInstance(Unknown Source)
+	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:206)
+	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:158)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:678)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:327)
+	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:85)
+	at com.eperium.jumpstart.JumpStartTestSuite.quickOrdertoCart(JumpStartTestSuite.java:4503)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:108)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:661)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:869)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1193)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:126)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at org.testng.TestRunner.privateRun(TestRunner.java:744)
+	at org.testng.TestRunner.run(TestRunner.java:602)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:380)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:375)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:340)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:289)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1301)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1297)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1226)
+	at org.testng.TestNG.runSuites(TestNG.java:1144)
+	at org.testng.TestNG.run(TestNG.java:1115)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:132)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:230)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:76)
+Caused by: org.openqa.selenium.ElementNotVisibleException: Element is not currently visible and so may not be interacted with
+Build info: version: &apos;2.53.0&apos;, revision: &apos;35ae25b1534ae328c771e0856c93e187490ca824&apos;, time: &apos;2016-03-15 10:43:46&apos;
+System info: host: &apos;EBSI-HP4540-07&apos;, ip: &apos;192.168.5.69&apos;, os.name: &apos;Windows 7&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;6.1&apos;, java.version: &apos;1.8.0_121&apos;
+Driver info: driver.version: unknown
+	at &lt;anonymous class&gt;.fxdriver.preconditions.visible(file:///C:/Users/prakashs/AppData/Local/Temp/anonymous8510135338227479925webdriver-profile/extensions/fxdriver@googlecode.com/components/command-processor.js:10092)
+	at &lt;anonymous class&gt;.DelayedCommand.prototype.checkPreconditions_(file:///C:/Users/prakashs/AppData/Local/Temp/anonymous8510135338227479925webdriver-profile/extensions/fxdriver@googlecode.com/components/command-processor.js:12644)
+	at &lt;anonymous class&gt;.DelayedCommand.prototype.executeInternal_/h(file:///C:/Users/prakashs/AppData/Local/Temp/anonymous8510135338227479925webdriver-profile/extensions/fxdriver@googlecode.com/components/command-processor.js:12661)
+	at &lt;anonymous class&gt;.DelayedCommand.prototype.executeInternal_(file:///C:/Users/prakashs/AppData/Local/Temp/anonymous8510135338227479925webdriver-profile/extensions/fxdriver@googlecode.com/components/command-processor.js:12666)
+	at &lt;anonymous class&gt;.DelayedCommand.prototype.execute/&lt;(file:///C:/Users/prakashs/AppData/Local/Temp/anonymous8510135338227479925webdriver-profile/extensions/fxdriver@googlecode.com/components/command-processor.js:12608)
+</pre></div></td>
+<td>5</td>
+<td>com.eperium.jumpstart.JumpStartTestSuite@47db50c5</td></tr>
+<tr>
+<td title='com.eperium.jumpstart.JumpStartTestSuite.validateCartSubTotal()'><b>validateCartSubTotal</b><br>Test class: com.eperium.jumpstart.JumpStartTestSuite<br>Test method: validate subtotal of all items in cart</td>
+<td><div><pre>org.openqa.selenium.NoSuchElementException: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//*[@class=&apos;ish-costSummary-item&apos;][1]/span[2]&quot;}
+Command duration or timeout: 60 milliseconds
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;2.53.0&apos;, revision: &apos;35ae25b1534ae328c771e0856c93e187490ca824&apos;, time: &apos;2016-03-15 10:43:46&apos;
+System info: host: &apos;EBSI-HP4540-07&apos;, ip: &apos;192.168.5.69&apos;, os.name: &apos;Windows 7&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;6.1&apos;, java.version: &apos;1.8.0_121&apos;
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Capabilities [{applicationCacheEnabled=true, rotatable=false, handlesAlerts=true, databaseEnabled=true, version=36.0.4, platform=WINDOWS, nativeEvents=false, acceptSslCerts=true, webStorageEnabled=true, locationContextEnabled=true, browserName=firefox, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true}]
+Session ID: ba58722e-be3b-4ad7-bfed-6accc48d9c3d
+*** Element info: {Using=xpath, value=//*[@class=&apos;ish-costSummary-item&apos;][1]/span[2]}
+	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:206)
+	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:158)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:678)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:363)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:500)
+	at org.openqa.selenium.By$ByXPath.findElement(By.java:361)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:355)
+	at com.eperium.jumpstart.JumpStartTestSuite.validateCartSubTotal(JumpStartTestSuite.java:6393)
+Caused by: org.openqa.selenium.NoSuchElementException: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//*[@class=&apos;ish-costSummary-item&apos;][1]/span[2]&quot;}
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;2.53.0&apos;, revision: &apos;35ae25b1534ae328c771e0856c93e187490ca824&apos;, time: &apos;2016-03-15 10:43:46&apos;
+System info: host: &apos;EBSI-HP4540-07&apos;, ip: &apos;192.168.5.69&apos;, os.name: &apos;Windows 7&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;6.1&apos;, java.version: &apos;1.8.0_121&apos;
+Driver info: driver.version: unknown
+	at &lt;anonymous class&gt;.FirefoxDriver.prototype.findElementInternal_(file:///C:/Users/prakashs/AppData/Local/Temp/anonymous8510135338227479925webdriver-profile/extensions/fxdriver@googlecode.com/components/driver-component.js:10770)
+	at &lt;anonymous class&gt;.FirefoxDriver.prototype.findElement(file:///C:/Users/prakashs/AppData/Local/Temp/anonymous8510135338227479925webdriver-profile/extensions/fxdriver@googlecode.com/components/driver-component.js:10779)
+	at &lt;anonymous class&gt;.DelayedCommand.prototype.executeInternal_/h(file:///C:/Users/prakashs/AppData/Local/Temp/anonymous8510135338227479925webdriver-profile/extensions/fxdriver@googlecode.com/components/command-processor.js:12661)
+	at &lt;anonymous class&gt;.DelayedCommand.prototype.executeInternal_(file:///C:/Users/prakashs/AppData/Local/Temp/anonymous8510135338227479925webdriver-profile/extensions/fxdriver@googlecode.com/components/command-processor.js:12666)
+	at &lt;anonymous class&gt;.DelayedCommand.prototype.execute/&lt;(file:///C:/Users/prakashs/AppData/Local/Temp/anonymous8510135338227479925webdriver-profile/extensions/fxdriver@googlecode.com/components/command-processor.js:12608)
+... Removed 29 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1472950462", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1472950462'><pre>org.openqa.selenium.NoSuchElementException: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//*[@class=&apos;ish-costSummary-item&apos;][1]/span[2]&quot;}
+Command duration or timeout: 60 milliseconds
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;2.53.0&apos;, revision: &apos;35ae25b1534ae328c771e0856c93e187490ca824&apos;, time: &apos;2016-03-15 10:43:46&apos;
+System info: host: &apos;EBSI-HP4540-07&apos;, ip: &apos;192.168.5.69&apos;, os.name: &apos;Windows 7&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;6.1&apos;, java.version: &apos;1.8.0_121&apos;
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Capabilities [{applicationCacheEnabled=true, rotatable=false, handlesAlerts=true, databaseEnabled=true, version=36.0.4, platform=WINDOWS, nativeEvents=false, acceptSslCerts=true, webStorageEnabled=true, locationContextEnabled=true, browserName=firefox, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true}]
+Session ID: ba58722e-be3b-4ad7-bfed-6accc48d9c3d
+*** Element info: {Using=xpath, value=//*[@class=&apos;ish-costSummary-item&apos;][1]/span[2]}
+	at sun.reflect.GeneratedConstructorAccessor51.newInstance(Unknown Source)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
+	at java.lang.reflect.Constructor.newInstance(Unknown Source)
+	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:206)
+	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:158)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:678)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:363)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:500)
+	at org.openqa.selenium.By$ByXPath.findElement(By.java:361)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:355)
+	at com.eperium.jumpstart.JumpStartTestSuite.validateCartSubTotal(JumpStartTestSuite.java:6393)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:108)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:661)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:869)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1193)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:126)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at org.testng.TestRunner.privateRun(TestRunner.java:744)
+	at org.testng.TestRunner.run(TestRunner.java:602)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:380)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:375)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:340)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:289)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1301)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1297)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1226)
+	at org.testng.TestNG.runSuites(TestNG.java:1144)
+	at org.testng.TestNG.run(TestNG.java:1115)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:132)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:230)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:76)
+Caused by: org.openqa.selenium.NoSuchElementException: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//*[@class=&apos;ish-costSummary-item&apos;][1]/span[2]&quot;}
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;2.53.0&apos;, revision: &apos;35ae25b1534ae328c771e0856c93e187490ca824&apos;, time: &apos;2016-03-15 10:43:46&apos;
+System info: host: &apos;EBSI-HP4540-07&apos;, ip: &apos;192.168.5.69&apos;, os.name: &apos;Windows 7&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;6.1&apos;, java.version: &apos;1.8.0_121&apos;
+Driver info: driver.version: unknown
+	at &lt;anonymous class&gt;.FirefoxDriver.prototype.findElementInternal_(file:///C:/Users/prakashs/AppData/Local/Temp/anonymous8510135338227479925webdriver-profile/extensions/fxdriver@googlecode.com/components/driver-component.js:10770)
+	at &lt;anonymous class&gt;.FirefoxDriver.prototype.findElement(file:///C:/Users/prakashs/AppData/Local/Temp/anonymous8510135338227479925webdriver-profile/extensions/fxdriver@googlecode.com/components/driver-component.js:10779)
+	at &lt;anonymous class&gt;.DelayedCommand.prototype.executeInternal_/h(file:///C:/Users/prakashs/AppData/Local/Temp/anonymous8510135338227479925webdriver-profile/extensions/fxdriver@googlecode.com/components/command-processor.js:12661)
+	at &lt;anonymous class&gt;.DelayedCommand.prototype.executeInternal_(file:///C:/Users/prakashs/AppData/Local/Temp/anonymous8510135338227479925webdriver-profile/extensions/fxdriver@googlecode.com/components/command-processor.js:12666)
+	at &lt;anonymous class&gt;.DelayedCommand.prototype.execute/&lt;(file:///C:/Users/prakashs/AppData/Local/Temp/anonymous8510135338227479925webdriver-profile/extensions/fxdriver@googlecode.com/components/command-processor.js:12608)
+</pre></div></td>
+<td>0</td>
+<td>com.eperium.jumpstart.JumpStartTestSuite@47db50c5</td></tr>
+<tr>
+<td title='com.eperium.jumpstart.JumpStartTestSuite.validateEstimatedTotal()'><b>validateEstimatedTotal</b><br>Test class: com.eperium.jumpstart.JumpStartTestSuite<br>Test method: check estimated total price</td>
+<td><div><pre>org.openqa.selenium.NoSuchElementException: Unable to locate element: {&quot;method&quot;:&quot;css selector&quot;,&quot;selector&quot;:&quot;.ish-costSummary-totalItem&gt;span:nth-of-type(2)&quot;}
+Command duration or timeout: 60 milliseconds
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;2.53.0&apos;, revision: &apos;35ae25b1534ae328c771e0856c93e187490ca824&apos;, time: &apos;2016-03-15 10:43:46&apos;
+System info: host: &apos;EBSI-HP4540-07&apos;, ip: &apos;192.168.5.69&apos;, os.name: &apos;Windows 7&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;6.1&apos;, java.version: &apos;1.8.0_121&apos;
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Capabilities [{applicationCacheEnabled=true, rotatable=false, handlesAlerts=true, databaseEnabled=true, version=36.0.4, platform=WINDOWS, nativeEvents=false, acceptSslCerts=true, webStorageEnabled=true, locationContextEnabled=true, browserName=firefox, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true}]
+Session ID: ba58722e-be3b-4ad7-bfed-6accc48d9c3d
+*** Element info: {Using=css selector, value=.ish-costSummary-totalItem&gt;span:nth-of-type(2)}
+	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:206)
+	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:158)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:678)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:363)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByCssSelector(RemoteWebDriver.java:492)
+	at org.openqa.selenium.By$ByCssSelector.findElement(By.java:430)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:355)
+	at com.eperium.jumpstart.JumpStartTestSuite.validateEstimatedTotal(JumpStartTestSuite.java:6444)
+Caused by: org.openqa.selenium.NoSuchElementException: Unable to locate element: {&quot;method&quot;:&quot;css selector&quot;,&quot;selector&quot;:&quot;.ish-costSummary-totalItem&gt;span:nth-of-type(2)&quot;}
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;2.53.0&apos;, revision: &apos;35ae25b1534ae328c771e0856c93e187490ca824&apos;, time: &apos;2016-03-15 10:43:46&apos;
+System info: host: &apos;EBSI-HP4540-07&apos;, ip: &apos;192.168.5.69&apos;, os.name: &apos;Windows 7&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;6.1&apos;, java.version: &apos;1.8.0_121&apos;
+Driver info: driver.version: unknown
+	at &lt;anonymous class&gt;.FirefoxDriver.prototype.findElementInternal_(file:///C:/Users/prakashs/AppData/Local/Temp/anonymous8510135338227479925webdriver-profile/extensions/fxdriver@googlecode.com/components/driver-component.js:10770)
+	at &lt;anonymous class&gt;.FirefoxDriver.prototype.findElement(file:///C:/Users/prakashs/AppData/Local/Temp/anonymous8510135338227479925webdriver-profile/extensions/fxdriver@googlecode.com/components/driver-component.js:10779)
+	at &lt;anonymous class&gt;.DelayedCommand.prototype.executeInternal_/h(file:///C:/Users/prakashs/AppData/Local/Temp/anonymous8510135338227479925webdriver-profile/extensions/fxdriver@googlecode.com/components/command-processor.js:12661)
+	at &lt;anonymous class&gt;.DelayedCommand.prototype.executeInternal_(file:///C:/Users/prakashs/AppData/Local/Temp/anonymous8510135338227479925webdriver-profile/extensions/fxdriver@googlecode.com/components/command-processor.js:12666)
+	at &lt;anonymous class&gt;.DelayedCommand.prototype.execute/&lt;(file:///C:/Users/prakashs/AppData/Local/Temp/anonymous8510135338227479925webdriver-profile/extensions/fxdriver@googlecode.com/components/command-processor.js:12608)
+... Removed 29 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1115099772", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1115099772'><pre>org.openqa.selenium.NoSuchElementException: Unable to locate element: {&quot;method&quot;:&quot;css selector&quot;,&quot;selector&quot;:&quot;.ish-costSummary-totalItem&gt;span:nth-of-type(2)&quot;}
+Command duration or timeout: 60 milliseconds
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;2.53.0&apos;, revision: &apos;35ae25b1534ae328c771e0856c93e187490ca824&apos;, time: &apos;2016-03-15 10:43:46&apos;
+System info: host: &apos;EBSI-HP4540-07&apos;, ip: &apos;192.168.5.69&apos;, os.name: &apos;Windows 7&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;6.1&apos;, java.version: &apos;1.8.0_121&apos;
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Capabilities [{applicationCacheEnabled=true, rotatable=false, handlesAlerts=true, databaseEnabled=true, version=36.0.4, platform=WINDOWS, nativeEvents=false, acceptSslCerts=true, webStorageEnabled=true, locationContextEnabled=true, browserName=firefox, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true}]
+Session ID: ba58722e-be3b-4ad7-bfed-6accc48d9c3d
+*** Element info: {Using=css selector, value=.ish-costSummary-totalItem&gt;span:nth-of-type(2)}
+	at sun.reflect.GeneratedConstructorAccessor51.newInstance(Unknown Source)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
+	at java.lang.reflect.Constructor.newInstance(Unknown Source)
+	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:206)
+	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:158)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:678)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:363)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByCssSelector(RemoteWebDriver.java:492)
+	at org.openqa.selenium.By$ByCssSelector.findElement(By.java:430)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:355)
+	at com.eperium.jumpstart.JumpStartTestSuite.validateEstimatedTotal(JumpStartTestSuite.java:6444)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:108)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:661)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:869)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1193)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:126)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at org.testng.TestRunner.privateRun(TestRunner.java:744)
+	at org.testng.TestRunner.run(TestRunner.java:602)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:380)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:375)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:340)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:289)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1301)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1297)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1226)
+	at org.testng.TestNG.runSuites(TestNG.java:1144)
+	at org.testng.TestNG.run(TestNG.java:1115)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:132)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:230)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:76)
+Caused by: org.openqa.selenium.NoSuchElementException: Unable to locate element: {&quot;method&quot;:&quot;css selector&quot;,&quot;selector&quot;:&quot;.ish-costSummary-totalItem&gt;span:nth-of-type(2)&quot;}
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;2.53.0&apos;, revision: &apos;35ae25b1534ae328c771e0856c93e187490ca824&apos;, time: &apos;2016-03-15 10:43:46&apos;
+System info: host: &apos;EBSI-HP4540-07&apos;, ip: &apos;192.168.5.69&apos;, os.name: &apos;Windows 7&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;6.1&apos;, java.version: &apos;1.8.0_121&apos;
+Driver info: driver.version: unknown
+	at &lt;anonymous class&gt;.FirefoxDriver.prototype.findElementInternal_(file:///C:/Users/prakashs/AppData/Local/Temp/anonymous8510135338227479925webdriver-profile/extensions/fxdriver@googlecode.com/components/driver-component.js:10770)
+	at &lt;anonymous class&gt;.FirefoxDriver.prototype.findElement(file:///C:/Users/prakashs/AppData/Local/Temp/anonymous8510135338227479925webdriver-profile/extensions/fxdriver@googlecode.com/components/driver-component.js:10779)
+	at &lt;anonymous class&gt;.DelayedCommand.prototype.executeInternal_/h(file:///C:/Users/prakashs/AppData/Local/Temp/anonymous8510135338227479925webdriver-profile/extensions/fxdriver@googlecode.com/components/command-processor.js:12661)
+	at &lt;anonymous class&gt;.DelayedCommand.prototype.executeInternal_(file:///C:/Users/prakashs/AppData/Local/Temp/anonymous8510135338227479925webdriver-profile/extensions/fxdriver@googlecode.com/components/command-processor.js:12666)
+	at &lt;anonymous class&gt;.DelayedCommand.prototype.execute/&lt;(file:///C:/Users/prakashs/AppData/Local/Temp/anonymous8510135338227479925webdriver-profile/extensions/fxdriver@googlecode.com/components/command-processor.js:12608)
+</pre></div></td>
+<td>0</td>
+<td>com.eperium.jumpstart.JumpStartTestSuite@47db50c5</td></tr>
+</table><p>
+<table width='100%' border='1' class='invocation-passed'>
+<tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='com.eperium.jumpstart.JumpStartTestSuite.enterAndSearchStringSTAR()'><b>enterAndSearchStringSTAR</b><br>Test class: com.eperium.jumpstart.JumpStartTestSuite<br>Test method: Search with * Search String</td>
+<td></td>
+<td>21</td>
+<td>com.eperium.jumpstart.JumpStartTestSuite@47db50c5</td></tr>
+</table><p>
+</body>
+</html>
